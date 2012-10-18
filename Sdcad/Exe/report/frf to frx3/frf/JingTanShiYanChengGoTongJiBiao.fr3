@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TfrxReport ScriptLanguage="PascalScript" ScriptText.text="begin&#13;&#10;&#13;&#10;end.&#13;&#10;" Propdata="0844617461736574730E0107446174615365740D0B446174615365744E616D65060C667244424461746153657431000107446174615365740D0B446174615365744E616D65060E6672557365724461746173657431000107446174615365740D0B446174615365744E616D65060E66725573657244617461736574320000095661726961626C65730D00" ReportOptions.Name="" ReportOptions.Author="" ReportOptions.Description.text="" ReportOptions.CreateDate="38120.4712472801" ReportOptions.LastChange="39092.4061816319" ReportOptions.VersionMajor="" ReportOptions.VersionMinor="" ReportOptions.VersionRelease="" ReportOptions.VersionBuild="" ReportOptions.Password="">
-<TfrxReportPage Name="Page1" Orientation="poLandscape" PaperWidth="420" PaperHeight="297" PaperSize="8" LeftMargin="4" RightMargin="4" TopMargin="4" BottomMargin="4" Columns="0" ColumnWidth="0">
-<TfrxPageHeader Name="页头1" Top="20" Height="35" Columns="1" ColumnWidth="200" ColumnGap="20"/>
-<TfrxMasterData Name="主项数据1" Top="364" Height="25" Columns="1" ColumnWidth="200" ColumnGap="20"/>
-<TfrxHeader Name="主项头1" Top="144" Height="121" Columns="1" ColumnWidth="200" ColumnGap="20" ReprintOnNewPage="True" ReprintOnNewPage="True"/>
-</TfrxReportPage>
-</TfrxReport>
