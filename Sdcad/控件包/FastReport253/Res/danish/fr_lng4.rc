@@ -1,0 +1,26 @@
+#include "FR_Const.pas"
+
+STRINGTABLE
+{
+;--- LinesEditorForm resources -------------------------------------------------
+  frRes + 4000, "Streng liste editor"
+;--- SQLEditorForm resources -------------------------------------------------
+  frRes + 4010, "SQL editor"
+
+;--- String resources ----------------------------------------------------------
+  SInsertLabel, "Indsæt Label kontrol"
+  SInsertEdit, "Indsæt Edit kontrol"
+  SInsertMemo, "Indsæt Memo kontrol"
+  SInsertButton, "Indsæt Knap kontrol"
+  SInsertCheckBox, "Indsæt Checkboks kontrol"
+  SInsertRadioButton, "Indsæt Valgknap kontrol"
+  SInsertListBox, "Indsæt ListeBoks kontrol"
+  SInsertComboBox, "Indsæt KomboBoks kontrol"
+  SInsertDateEdit, "Indsæt DatoEdit kontrol"
+  SInsertCheckListBox, "Indsæt CheckListeBoks kontrol"
+
+  SInsertDB, "Indsæt database"
+  SInsertTable, "Indsæt tabel"
+  SInsertQuery, "Indsæt forespørgsel"
+  SInsertDBLookup, "Indsæt DBOpslagsKomboBoks kontrol"
+}

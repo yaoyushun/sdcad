@@ -1,0 +1,26 @@
+#include "FR_Const.pas"
+
+STRINGTABLE
+{
+;--- LinesEditorForm resources -------------------------------------------------
+  frRes + 4000, "Stränglisteditor"
+;--- SQLEditorForm resources -------------------------------------------------
+  frRes + 4010, "SQL editor"
+
+;--- String resources ----------------------------------------------------------
+  SInsertLabel, "Infoga Label"
+  SInsertEdit, "Infoga Edit"
+  SInsertMemo, "Infoga Memo"
+  SInsertButton, "Infoga Button"
+  SInsertCheckBox, "Infoga CheckBox"
+  SInsertRadioButton, "Infoga RadioButton"
+  SInsertListBox, "Infoga ListBox"
+  SInsertComboBox, "Infoga ComboBox"
+  SInsertDateEdit, "Infoga DateEdit"
+  SInsertCheckListBox, "Infoga CheckListBox"
+
+  SInsertDB, "Infoga databas"
+  SInsertTable, "Infoga tabell"
+  SInsertQuery, "Infoga fråga"
+  SInsertDBLookup, "Infoga DBLookupComboBox"
+}

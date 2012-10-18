@@ -1,0 +1,47 @@
+package TeeGL76Clx;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{ DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{ LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $43100000}
+{$DESCRIPTION 'TeeChart Pro 7 CLX for OpenGL'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+{$LIBSUFFIX ''}
+{$DEFINE CLX}
+
+requires
+  visualclx,
+  Tee76Clx,
+  TeeUI76Clx;
+
+contains
+  {$IFDEF LINUX}
+  OpenGLLinux in 'OpenGLLinux.pas',
+  {$ELSE}
+  OpenGL2 in 'OpenGL2.pas',
+  TeeGeometry in 'TeeGeometry.pas',
+  {$ENDIF}
+  TeeGLCanvas in 'TeeGLCanvas.pas',
+  TeeOpenGL in 'TeeOpenGL.pas',
+  TeeGLEditor in 'TeeGLEditor.pas' {FormTeeGLEditor};
+
+end.

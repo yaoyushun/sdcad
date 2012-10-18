@@ -1,0 +1,99 @@
+object TeeFontEditor: TTeeFontEditor
+  Left = 211
+  Top = 233
+  AutoScroll = False
+  Caption = 'TeeFont Editor'
+  ClientHeight = 136
+  ClientWidth = 224
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  Position = poScreenCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object SHText: TShape
+    Left = 94
+    Top = 9
+    Width = 23
+    Height = 23
+    Cursor = crHandPoint
+    OnMouseUp = SHTextMouseUp
+  end
+  object Label2: TLabel
+    Left = 57
+    Top = 44
+    Width = 88
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '&Inter-char spacing:'
+    FocusControl = Edit2
+  end
+  object Button3: TButton
+    Left = 8
+    Top = 8
+    Width = 75
+    Height = 25
+    HelpContext = 213
+    Caption = '&Font...'
+    TabOrder = 0
+    OnClick = BFontClick
+  end
+  object Edit2: TEdit
+    Left = 151
+    Top = 40
+    Width = 34
+    Height = 21
+    HelpContext = 1458
+    TabOrder = 1
+    Text = '0'
+    OnChange = Edit2Change
+  end
+  object UDInter: TUpDown
+    Left = 185
+    Top = 40
+    Width = 15
+    Height = 21
+    HelpContext = 1458
+    Associate = Edit2
+    Min = -100
+    TabOrder = 2
+  end
+  object BOutline: TButtonPen
+    Left = 136
+    Top = 8
+    HelpContext = 1457
+    Caption = '&Outline...'
+    TabOrder = 3
+  end
+  object BShadow: TButton
+    Left = 136
+    Top = 72
+    Width = 75
+    Height = 25
+    HelpContext = 1834
+    Caption = '&Shadow...'
+    TabOrder = 4
+    OnClick = BShadowClick
+  end
+  object BGradient: TButton
+    Left = 8
+    Top = 72
+    Width = 75
+    Height = 25
+    HelpContext = 1835
+    Caption = '&Gradient...'
+    TabOrder = 5
+    OnClick = BGradientClick
+  end
+  object CBOutGrad: TCheckBox
+    Left = 11
+    Top = 107
+    Width = 185
+    Height = 17
+    HelpContext = 1833
+    Caption = 'O&utline gradient'
+    TabOrder = 6
+    OnClick = CBOutGradClick
+  end
+end

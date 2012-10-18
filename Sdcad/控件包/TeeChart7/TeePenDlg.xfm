@@ -1,0 +1,127 @@
+object PenDialog: TPenDialog
+  Left = 437
+  Top = 286
+  ActiveControl = CBVisible
+  AutoScroll = False
+  BorderIcons = [biSystemMenu]
+  Caption = 'Border Editor'
+  ClientHeight = 104
+  ClientWidth = 247
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  Position = poScreenCenter
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object LWidth: TLabel
+    Left = 154
+    Top = 38
+    Width = 31
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '&Width:'
+    FocusControl = SEWidth
+  end
+  object Label1: TLabel
+    Left = 77
+    Top = 9
+    Width = 26
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '&Style:'
+    FocusControl = CBStyle
+  end
+  object CBVisible: TCheckBox
+    Left = 6
+    Top = 8
+    Width = 57
+    Height = 17
+    HelpContext = 680
+    Caption = '&Visible'
+    TabOrder = 0
+    OnClick = CBVisibleClick
+  end
+  object SEWidth: TEdit
+    Left = 192
+    Top = 34
+    Width = 33
+    Height = 21
+    HelpContext = 1457
+    TabOrder = 3
+    Text = '1'
+    OnChange = SEWidthChange
+  end
+  object BOk: TButton
+    Left = 82
+    Top = 72
+    Width = 75
+    Height = 25
+    Caption = 'OK'
+    Default = True
+    ModalResult = 1
+    TabOrder = 5
+  end
+  object BCancel: TButton
+    Left = 166
+    Top = 72
+    Width = 75
+    Height = 25
+    Cancel = True
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 6
+    OnClick = BCancelClick
+  end
+  object UDWidth: TUpDown
+    Left = 225
+    Top = 34
+    Width = 15
+    Height = 21
+    HelpContext = 1457
+    Associate = SEWidth
+    Min = 1
+    Position = 1
+    TabOrder = 4
+  end
+  object CBStyle: TComboFlat
+    Left = 106
+    Top = 6
+    Width = 135
+    Height = 22
+    HelpContext = 1457
+    Style = csOwnerDrawFixed
+    ItemHeight = 16
+    TabOrder = 1
+    OnChange = CBStyleChange
+    OnDrawItem = CBStyleDrawItem
+    Items.Strings = (
+      'Solid'
+      'Dash'
+      'Dot'
+      'Dash Dot'
+      'Dash Dot Dot')
+  end
+  object BColor: TButtonColor
+    Left = 6
+    Top = 34
+    HelpContext = 1457
+    Caption = '&Color...'
+    TabOrder = 2
+    OnClick = BColorClick
+  end
+  object CBEndStyle: TComboFlat
+    Left = 6
+    Top = 73
+    Width = 68
+    HelpContext = 1828
+    TabOrder = 7
+    OnChange = CBEndStyleChange
+    Items.Strings = (
+      'Round'
+      'Square'
+      'Flat')
+  end
+end

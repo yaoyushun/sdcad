@@ -1,0 +1,35 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.02.5
+#------------------------------------------------------------------------------
+MAKE = make -$(MAKEFLAGS) -f$**
+DCC =dcc -u/root/kylix/lib $<
+#------------------------------------------------------------------------------
+PROJECTS = bplTee7K3.so bplTeeUI7K3.so bplTeeDB7K3.so dclTee7K3.so bplTeePro7K3.so \
+  bplTeeLanguage7K3.so dclTeePro7K3.so bplTeeImage7K3.so
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+bplTee7K3.so: Tee7K3.dpk
+			$(DCC)
+
+bplTeeDB7K3.so: TeeDB7K3.dpk
+			$(DCC)
+
+bplTeeUI7K3.so: TeeUI7K3.dpk
+			$(DCC)
+
+dclTee7K3.so: dclTee7K3.dpk
+			$(DCC)
+
+bplTeePro7K3.so: TeePro7K3.dpk
+			$(DCC)
+
+bplTeeLanguage7K3.so: TeeLanguage7K3.dpk
+			$(DCC)
+
+dclTeePro7K3.so: dclTeePro7K3.dpk
+			$(DCC)
+
+bplTeeImage7K3.so: TeeImage7K3.dpk
+			$(DCC)

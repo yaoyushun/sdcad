@@ -1,0 +1,156 @@
+#include "FR_Const.pas"
+
+; ----------------------------------------------------------------------------
+; TRANSLATION TO CZECH
+; Translated: Pavel Malinsky
+; Date      : 23.01.2004
+; Contact   : malinsky@pmcom.cz
+; Comment   : Doplnìn/opraven pøedchozí pøeklad z 29.12.2000
+; ----------------------------------------------------------------------------
+; > Pøedchozí pøeklad >>>>>>>>>>>>>>>>>>>>>>>>>>>
+; > ----------------------------------------------------------------------------
+; > TRANSLATION TO CZECH
+; > Translated: Arpad Toth
+; > Date      : 29.12.2000 - První verze
+; > Contact   : i.smid@dobruska.cz
+; > Comment   : Opravdová èeská verze
+; > ----------------------------------------------------------------------------
+
+STRINGTABLE
+{
+;--- DatasetsForm resources --------------------------------------------------
+  frRes + 3000, "Datové zdroje sestavy"
+  frRes + 3001, "&Vlastnosti..."
+  frRes + 3002, "Nová &tabulka..."
+  frRes + 3003, "Nový &dotaz..."
+  frRes + 3004, "&Odstranit"
+  frRes + 3005, "&Ukonèit"
+  frRes + 3006, "Nová &databáze..."
+;--- TablePropForm resources -------------------------------------------------
+  frRes + 3020, "Hlavní"
+  frRes + 3021, "&Jméno"
+  frRes + 3022, "&Položky"
+  frRes + 3023, "&Editor položek..."
+  frRes + 3024, "Ostatní"
+  frRes + 3025, "&Index"
+  frRes + 3026, "Filtrovací &výraz"
+  frRes + 3027, "&Master"
+  frRes + 3028, "Ma&ster položky"
+;--- FieldsEditorForm resources ----------------------------------------------
+  frRes + 3040, "&Pøidat položky..."
+  frRes + 3041, "Pøidat vy&hledávání..."
+  frRes + 3042, "&Oznaèit všechny"
+  frRes + 3043, "&Vymaž"
+  frRes + 3044, "&Ukonèit"
+;--- FieldsListForm resources ------------------------------------------------
+  frRes + 3060, "Dostupné položky"
+;--- LookupFieldForm resources -----------------------------------------------
+  frRes + 3070, "Nová vyhledávací položka"
+  frRes + 3071, "Položka"
+  frRes + 3072, "&Jméno"
+  frRes + 3073, "&Typ"
+  frRes + 3074, "&Velikost"
+  frRes + 3075, "Definice vyhledávání"
+  frRes + 3076, "&Klíè položky"
+  frRes + 3077, "&Datový zdroj"
+  frRes + 3078, "&Vyhledávací klíè"
+  frRes + 3079, "&Cílová položka"
+;--- QueryPropForm resources -------------------------------------------------
+  frRes + 3090, "Parametry dotazu"
+  frRes + 3091, "Ostatní"
+  frRes + 3092, "&Master - datový zdroj"
+  frRes + 3093, "Obecné"
+  frRes + 3094, "&Jméno"
+  frRes + 3095, "&Alias nebo cesta"
+  frRes + 3096, "&SQL"
+  frRes + 3097, "&Editor položek..."
+  frRes + 3098, "E&ditor parametrù..."
+  frRes + 3099, "Naèti pøíkaz SQL ze souboru"
+  frRes + 3100, "Ulož pøíkaz SQL do souboru"
+  frRes + 3101, "SQL návrháø..."
+;--- ParamsForm resources ----------------------------------------------------
+  frRes + 3110, "Parametry"
+  frRes + 3111, "&Datový typ"
+  frRes + 3112, "&Jméno"
+  frRes + 3113, "&Hodnota:"
+  frRes + 3114, "Vyžá&dat hodnotu pøed tiskem"
+  frRes + 3115, "Pøiøadit hodnotu z &master datového zdroje"
+  frRes + 3116, "Pr&omìnná:"
+;--- FieldsLinkForm resources ------------------------------------------------
+  frRes + 3130, "&Detailní položky"
+  frRes + 3131, "&Hlavní položky"
+  frRes + 3132, "&Spojené položky"
+  frRes + 3133, "&Pøidat"
+  frRes + 3134, "&Vymazat"
+;--- ParamsDialogForm resources ----------------------------------------------
+  frRes + 3150, "Vstupní parametry"
+  frRes + 3151, "4 body"
+  frRes + 3152, "8 bodù"
+  frRes + 3153, "Zarovnat k møížce"
+  frRes + 3154, "Ukonèit"
+;--- PropForm resources ------------------------------------------------------
+  frRes + 3170, "Vlastnosti"
+  frRes + 3171, "&Text"
+  frRes + 3172, "&Písmo..."
+  frRes + 3173, "Vyhledávání"
+  frRes + 3174, "&Datový zdroj"
+  frRes + 3175, "&Klíèová položka"
+  frRes + 3176, "&Seznam položek"
+  frRes + 3177, "Druh"
+  frRes + 3178, "&Editaèní pole"
+  frRes + 3179, "&Seznam"
+  frRes + 3180, "Vyh&ledání"
+  frRes + 3181, "Seznam"
+  frRes + 3182, "&Automatická velikost"
+;--- DBPropForm resources ----------------------------------------------------
+  frRes + 3200, "Vlastnosti databáze"
+  frRes + 3201, "Hlavní"
+  frRes + 3202, "Parametry"
+  frRes + 3203, "&Jméno"
+  frRes + 3204, "&Pøipojovací øetìzec"    ; pro ADO
+  frRes + 3205, "&Jméno souboru"          ; pro IBX
+  frRes + 3206, "&Alias"                ; pro BDE
+  frRes + 3207, "&Ovladaè"
+  frRes + 3208, "Vyžá&dat pøihlášení"
+;--- SelectTblForm resources -------------------------------------------------
+  frRes + 3220, "Výbìr tabulky"
+  frRes + 3221, "Vybrat z databáze"
+  frRes + 3222, "Vybrat ze souboru"
+  frRes + 3223, "&Databáze"
+  frRes + 3224, "&Tabulka"
+  frRes + 3225, "&Nalistovat..."
+;--- Strings resources -------------------------------------------------------
+  SFields, "Položky"
+  SPath, "Cesta"
+  SRemoveDS, "Vymazat tuto komponentu?"
+  STables, "Tabulky"
+  SFieldType1, "String"
+  SFieldType2, "Smallint"
+  SFieldType3, "Integer"
+  SFieldType4, "Word"
+  SFieldType5, "Boolean"
+  SFieldType6, "Float"
+  SFieldType7, "Currency"
+  SFieldType8, "Date"
+  SFieldType9, "Time"
+  SFieldType10, "Blob"
+  SParamType1, "BCD"
+  SParamType2, "Boolean"
+  SParamType3, "Currency"
+  SParamType4, "Date"
+  SParamType5, "DateTime"
+  SParamType6, "Integer"
+  SParamType7, "Float"
+  SParamType8, "Smallint"
+  SParamType9, "String"
+  SParamType10, "Time"
+  SParamType11, "Word"
+  SDataManager, "Datový manager"
+  SParams, "parametry"
+  SQueryError, "Chybný pøíkaz SQL nebo jeho parametry"
+  STableProps, "Vlastnosti tabulky"
+  SParamDialog, "Dialog parametrù"
+  SInvalidParamValue, "Chybná hodnota parametru"
+  SDatabase, "Databáze"
+  SFieldSizeError, "Chybná velikost položky"
+}

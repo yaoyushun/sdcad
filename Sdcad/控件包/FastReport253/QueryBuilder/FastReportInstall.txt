@@ -1,0 +1,24 @@
+            Working with Open QueryBuilder in FastReport.
+               (only in registered FastReport version)
+
+1. Install QueryBuilder
+
+1.1. Add paths to library path
+- in the Delphi IDE, select "Tools|Environmet options..." menu
+- go "Library" tab, "Library path" edit box
+- add path to FastReport\QueryBuilder\Source
+  
+1.2. Install QueryBuilder packages
+- open OQB*0.dpk (* - your delphi version) and compile it, do not install
+- copy Delphi_dir\Projects\Bpl\OQB*0.bpl to Windows\System32 dir (or 
+  Window\System for Win9x/Me)
+- open dclOQB*0.dpk, compile and install it
+
+
+2. Uncomment line 150 {$DEFINE QBUILDER} in file FastReport\Sources\fr.inc
+Change
+//{$DEFINE QBUILDER} 
+to
+{$DEFINE QBUILDER} 
+
+3. Recompile FastReport package.

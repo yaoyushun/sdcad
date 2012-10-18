@@ -1,0 +1,73 @@
+object SelectorToolEditor: TSelectorToolEditor
+  Left = 368
+  Top = 224
+  AutoScroll = False
+  ClientHeight = 173
+  ClientWidth = 237
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 92
+    Top = 141
+    Width = 23
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '&Size:'
+    FocusControl = Edit1
+  end
+  object ButtonPen1: TButtonPen
+    Left = 8
+    Top = 8
+    Width = 121
+    Caption = '&Handles...'
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Left = 121
+    Top = 138
+    Width = 33
+    Height = 21
+    TabOrder = 1
+    Text = '3'
+    OnChange = Edit1Change
+  end
+  object UDSize: TUpDown
+    Left = 154
+    Top = 138
+    Width = 15
+    Height = 21
+    Associate = Edit1
+    Min = 1
+    Position = 3
+    TabOrder = 2
+  end
+  object ButtonColor1: TButtonColor
+    Left = 8
+    Top = 40
+    Width = 121
+    Caption = '&Color...'
+    TabOrder = 3
+  end
+  object CBAllowDrag: TCheckBox
+    Left = 8
+    Top = 80
+    Width = 209
+    Height = 17
+    Caption = '&Allow Drag'
+    TabOrder = 4
+    OnClick = CBAllowDragClick
+  end
+  object CBResizeChart: TCheckBox
+    Left = 8
+    Top = 104
+    Width = 201
+    Height = 17
+    Caption = 'Allow &Resize Chart'
+    TabOrder = 5
+    OnClick = CBResizeChartClick
+  end
+end

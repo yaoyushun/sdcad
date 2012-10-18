@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="TeePro7C6.bpl"/>
+    <OBJFILES value="TeePro7C6.obj TeeBezie.obj BigCandl.obj CandleCh.obj CurvFitt.obj 
+      ErrorBar.obj ImageBar.obj ImaPoint.obj MyPoint.obj OHLChart.obj 
+      StatChar.obj TeeAnnToolEdit.obj TeeAxisArrowEdit.obj TeeAxisToolEdit.obj 
+      TeeBarJoinEditor.obj Bar3D.obj TeeDonut.obj TeeBoxPlotEditor.obj 
+      TeeCalendar.obj TeeCalendarEditor.obj TeeCandlEdi.obj TeeChartActions.obj 
+      TeeClockEditor.obj TeeColorBandEdit.obj TeeColorGridEditor.obj 
+      TeeColorLineEditor.obj TeeComma.obj TeeContourEdit.obj TeeCount.obj 
+      TeeCumu.obj TeeCursorEdit.obj TeeBoxPlot.obj TeeMapSeries.obj 
+      TeeDragMarksEdit.obj TeeDraw3D.obj TeeDrawLineEditor.obj TeeEdit.obj 
+      TeeEditPro.obj TeeErrBarEd.obj TeeFunnel.obj TeeFunnelEditor.obj 
+      TeeGriEd.obj TeeHighLowEdit.obj TeeHistoEdit.obj TeeImaEd.obj 
+      TeeImageToolEdit.obj TeeLinePointEditor.obj TeeDonutEdit.obj 
+      TeeSeriesTextEd.obj TeeMarksTipToolEdit.obj TeeNearestToolEditor.obj 
+      TeePageNumTool.obj TeePo3DEdit.obj TeePoin3.obj TeePolar.obj 
+      TeePolarEditor.obj TeePoly.obj TeePreviewPanelEditor.obj TeeProCo.obj 
+      TeePyramid.obj TeePyramidEdit.obj TeeRose.obj TeeScroB.obj 
+      TeeMapSeriesEdit.obj TeeWindRoseEditor.obj TeeSmithEdit.obj TeeSurfa.obj 
+      TeeSurfEdit.obj TeeTools.obj TeeToolSeriesEdit.obj TeeTriSurface.obj 
+      TeeTriSurfEdit.obj TeeVolEd.obj TeeWaterFallEdit.obj TeeSmith.obj
+      TeeDragPoint.obj TeeInspector.obj TeeSurfaceTool.obj TeeSelectorTool.obj
+      TeeSeriesBandTool.obj"/>
+    <RESFILES value="TeePro7C6.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) TeeAnnToolEdit.dfm TeeAxisToolEdit.dfm TeeBarJoinEditor.dfm 
+      TeeBoxPlotEditor.dfm TeeCalendarEditor.dfm TeeCandlEdi.dfm 
+      TeeColorBandEdit.dfm TeeColorLineEditor.dfm TeeContourEdit.dfm 
+      TeeErrBarEd.dfm TeeFunnelEditor.dfm TeeGriEd.dfm TeeHighLowEdit.dfm 
+      TeeHistoEdit.dfm TeeImaEd.dfm TeeLinePointEditor.dfm TeeDonutEdit.dfm 
+      TeeSeriesTextEd.dfm TeePo3DEdit.dfm TeePolarEditor.dfm 
+      TeePreviewPanelEditor.dfm TeePyramidEdit.dfm TeeMapSeriesEdit.dfm 
+      TeeWindRoseEditor.dfm TeeSmithEdit.dfm TeeSurfEdit.dfm 
+      TeeToolSeriesEdit.dfm TeeTriSurfEdit.dfm TeeVolEd.dfm TeeWaterFallEdit.dfm
+      TeeSurfaceTool.dfm TeeSelectorTool.dfm TeeSeriesBandTool.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="rtl.lib"/>
+    <PACKAGES value="rtl.bpi vcl.bpi tee7C6.bpi teeui7C6.bpi teedb7C6.bpi dbrtl.bpi 
+      bdertl.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="NO_STRICT;_RTLDLL;USEPACKAGES"/>
+    <MAINSOURCE value="TeePro7C6.cpp"/>
+    <INCLUDEPATH value="$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I$(BCB)\include -I$(BCB)\include\vcl -src_suffix cpp -boa"/>
+    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -a8 -6 -b- -k- -vi -c -tWM"/>
+    <PFLAGS value="-$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="-GB&quot;TeePro7C6&quot; -D&quot;TeeChart Pro 7 Components&quot; -aa -Tpp -Gpr -x -Gn -Gl -Gi"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0pkg32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="TeePro7C6.res" FORMNAME="" UNITNAME="TeePro7C6.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeePro7C6.cpp" FORMNAME="" UNITNAME="TeePro7C6" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="rtl.bpi" FORMNAME="" UNITNAME="rtl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeBezie.pas" FORMNAME="" UNITNAME="TeeBezie" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="BigCandl.pas" FORMNAME="" UNITNAME="BigCandl" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CandleCh.pas" FORMNAME="" UNITNAME="CandleCh" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CurvFitt.pas" FORMNAME="" UNITNAME="CurvFitt" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ErrorBar.pas" FORMNAME="" UNITNAME="ErrorBar" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ImageBar.pas" FORMNAME="" UNITNAME="ImageBar" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ImaPoint.pas" FORMNAME="" UNITNAME="ImaPoint" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MyPoint.pas" FORMNAME="" UNITNAME="MyPoint" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="OHLChart.pas" FORMNAME="" UNITNAME="OHLChart" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="StatChar.pas" FORMNAME="" UNITNAME="StatChar" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeAnnToolEdit.pas" FORMNAME="AnnotationToolEdit" UNITNAME="TeeAnnToolEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeAxisArrowEdit.pas" FORMNAME="" UNITNAME="TeeAxisArrowEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeAxisToolEdit.pas" FORMNAME="AxisToolEditor" UNITNAME="TeeAxisToolEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeBarJoinEditor.pas" FORMNAME="BarJoinEditor" UNITNAME="TeeBarJoinEditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Bar3D.pas" FORMNAME="" UNITNAME="Bar3D" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="vcl.bpi" FORMNAME="" UNITNAME="vcl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="tee7C6.bpi" FORMNAME="" UNITNAME="tee7C6" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeDonut.pas" FORMNAME="" UNITNAME="TeeDonut" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeBoxPlotEditor.pas" FORMNAME="BoxSeriesEditor" UNITNAME="TeeBoxPlotEditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeCalendar.pas" FORMNAME="" UNITNAME="TeeCalendar" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeCalendarEditor.pas" FORMNAME="CalendarSeriesEditor" UNITNAME="TeeCalendarEditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeCandlEdi.pas" FORMNAME="CandleEditor" UNITNAME="TeeCandlEdi" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeChartActions.pas" FORMNAME="" UNITNAME="TeeChartActions" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeClockEditor.pas" FORMNAME="" UNITNAME="TeeClockEditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeColorBandEdit.pas" FORMNAME="ColorBandToolEditor" UNITNAME="TeeColorBandEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeColorGridEditor.pas" FORMNAME="" UNITNAME="TeeColorGridEditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeColorLineEditor.pas" FORMNAME="ColorLineToolEditor" UNITNAME="TeeColorLineEditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeComma.pas" FORMNAME="" UNITNAME="TeeComma" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeContourEdit.pas" FORMNAME="ContourSeriesEditor" UNITNAME="TeeContourEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeCount.pas" FORMNAME="" UNITNAME="TeeCount" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeCumu.pas" FORMNAME="" UNITNAME="TeeCumu" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeCursorEdit.pas" FORMNAME="" UNITNAME="TeeCursorEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeBoxPlot.pas" FORMNAME="" UNITNAME="TeeBoxPlot" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="teeui7C6.bpi" FORMNAME="" UNITNAME="teeui7C6" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="teedb7C6.bpi" FORMNAME="" UNITNAME="teedb7C6" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="dbrtl.bpi" FORMNAME="" UNITNAME="dbrtl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="bdertl.bpi" FORMNAME="" UNITNAME="bdertl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeMapSeries.pas" FORMNAME="" UNITNAME="TeeMapSeries" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeDragMarksEdit.pas" FORMNAME="" UNITNAME="TeeDragMarksEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeDraw3D.pas" FORMNAME="" UNITNAME="TeeDraw3D" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeDrawLineEditor.pas" FORMNAME="" UNITNAME="TeeDrawLineEditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeEdit.pas" FORMNAME="" UNITNAME="TeeEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeEditPro.pas" FORMNAME="" UNITNAME="TeeEditPro" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeErrBarEd.pas" FORMNAME="ErrorSeriesEditor" UNITNAME="TeeErrBarEd" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeFunnel.pas" FORMNAME="" UNITNAME="TeeFunnel" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeFunnelEditor.pas" FORMNAME="FunnelSeriesEditor" UNITNAME="TeeFunnelEditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeGriEd.pas" FORMNAME="Grid3DSeriesEditor" UNITNAME="TeeGriEd" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeHighLowEdit.pas" FORMNAME="HighLowEditor" UNITNAME="TeeHighLowEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeHistoEdit.pas" FORMNAME="HistogramSeriesEditor" UNITNAME="TeeHistoEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeImaEd.pas" FORMNAME="ImageBarSeriesEditor" UNITNAME="TeeImaEd" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeImageToolEdit.pas" FORMNAME="" UNITNAME="TeeImageToolEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeLinePointEditor.pas" FORMNAME="LinePointEditor" UNITNAME="TeeLinePointEditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeDonutEdit.pas" FORMNAME="DonutSeriesEditor" UNITNAME="TeeDonutEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeSeriesTextEd.pas" FORMNAME="SeriesTextEditor" UNITNAME="TeeSeriesTextEd" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeMarksTipToolEdit.pas" FORMNAME="" UNITNAME="TeeMarksTipToolEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeNearestToolEditor.pas" FORMNAME="" UNITNAME="TeeNearestToolEditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeePageNumTool.pas" FORMNAME="" UNITNAME="TeePageNumTool" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeePo3DEdit.pas" FORMNAME="Point3DSeriesEditor" UNITNAME="TeePo3DEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeePoin3.pas" FORMNAME="" UNITNAME="TeePoin3" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeePolar.pas" FORMNAME="" UNITNAME="TeePolar" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeePolarEditor.pas" FORMNAME="PolarSeriesEditor" UNITNAME="TeePolarEditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeePoly.pas" FORMNAME="" UNITNAME="TeePoly" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeePreviewPanelEditor.pas" FORMNAME="FormPreviewPanelEditor" UNITNAME="TeePreviewPanelEditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeProCo.pas" FORMNAME="" UNITNAME="TeeProCo" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeePyramid.pas" FORMNAME="" UNITNAME="TeePyramid" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeePyramidEdit.pas" FORMNAME="PyramidSeriesEditor" UNITNAME="TeePyramidEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeRose.pas" FORMNAME="" UNITNAME="TeeRose" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeScroB.pas" FORMNAME="" UNITNAME="TeeScroB" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeMapSeriesEdit.pas" FORMNAME="MapSeriesEditor" UNITNAME="TeeMapSeriesEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeWindRoseEditor.pas" FORMNAME="WindRoseEditor" UNITNAME="TeeWindRoseEditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeSmithEdit.pas" FORMNAME="SmithSeriesEdit" UNITNAME="TeeSmithEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeSurfa.pas" FORMNAME="" UNITNAME="TeeSurfa" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeSurfEdit.pas" FORMNAME="SurfaceSeriesEditor" UNITNAME="TeeSurfEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeTools.pas" FORMNAME="" UNITNAME="TeeTools" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeToolSeriesEdit.pas" FORMNAME="SeriesToolEditor" UNITNAME="TeeToolSeriesEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeTriSurface.pas" FORMNAME="" UNITNAME="TeeTriSurface" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeTriSurfEdit.pas" FORMNAME="TriSurfaceSeriesEditor" UNITNAME="TeeTriSurfEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeVolEd.pas" FORMNAME="VolumeSeriesEditor" UNITNAME="TeeVolEd" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeWaterFallEdit.pas" FORMNAME="WaterFallEditor" UNITNAME="TeeWaterFallEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeSmith.pas" FORMNAME="" UNITNAME="TeeSmith" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeDragPoint.pas" FORMNAME="" UNITNAME="TeeDragPoint" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeInspector.pas" FORMNAME="" UNITNAME="TeeInspector" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeSurfaceTool.pas" FORMNAME="SurfaceNearest" UNITNAME="TeeSurfaceTool" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeSelectorTool.pas" FORMNAME="SelectorToolEditor" UNITNAME="TeeSelectorTool" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TeeSeriesBandTool.pas" FORMNAME="SeriesBandToolEditor" UNITNAME="TeeSeriesBandTool" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=7
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=1
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=David Berneda
+FileDescription=TeeChart Pro 7.0 Components
+FileVersion=7.0.0.0
+InternalName=TeePro7C6
+LegalCopyright=Copyright © 1996-2003 by David Berneda.
+LegalTrademarks=
+OriginalFilename=TeePro7C6
+ProductName=TeeChart Pro
+ProductVersion=7.0.0.0
+Comments=
+
+[Excluded Packages]
+
+[HistoryLists\hlIncludePath]
+
+[HistoryLists\hlLibraryPath]
+
+[HistoryLists\hlDebugSourcePath]
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+
+[Linker]
+LibPrefix=
+LibSuffix=
+LibVersion=
+  </IDEOPTIONS>
+</PROJECT>

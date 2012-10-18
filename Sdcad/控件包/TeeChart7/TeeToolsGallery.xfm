@@ -1,0 +1,73 @@
+object TeeToolsGallery: TTeeToolsGallery
+  Left = 307
+  Top = 228
+  AutoScroll = False
+  BorderIcons = [biSystemMenu]
+  Caption = 'Chart Tools Gallery'
+  ClientHeight = 313
+  ClientWidth = 256
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  Position = poScreenCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object P1: TPanel
+    Left = 0
+    Top = 272
+    Width = 256
+    Height = 41
+    Align = alBottom
+    TabOrder = 0
+    object Panel1: TPanel
+      Left = 65
+      Top = 1
+      Width = 190
+      Height = 39
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 0
+      object BOk: TButtonColor
+        Left = 11
+        Top = 6
+        HelpContext = 1773
+        Caption = '&Add'
+        Default = True
+        ModalResult = 1
+        TabOrder = 0
+      end
+      object BCan: TButtonColor
+        Left = 99
+        Top = 6
+        Cancel = True
+        Caption = 'Cancel'
+        ModalResult = 2
+        TabOrder = 1
+      end
+    end
+  end
+  object TabControl1: TTabControl
+    Left = 0
+    Top = 0
+    Width = 256
+    Height = 272
+    HelpContext = 1474
+    Align = alClient
+    TabOrder = 1
+    OnChange = TabControl1Change
+    object LBTool: TListBox
+      Left = 4
+      Top = 6
+      Width = 248
+      Height = 262
+      Style = lbOwnerDrawFixed
+      Align = alClient
+      ItemHeight = 18
+      Sorted = True
+      TabOrder = 0
+      OnDblClick = LBToolDblClick
+      OnDrawItem = LBToolDrawItem
+    end
+  end
+end

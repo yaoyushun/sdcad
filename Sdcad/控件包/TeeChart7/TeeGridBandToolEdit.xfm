@@ -1,0 +1,122 @@
+inherited GridBandToolEdit: TGridBandToolEdit
+  ClientHeight = 265
+  ClientWidth = 333
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label2: TLabel [0]
+    Left = 48
+    Top = 80
+    Width = 68
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '&Transparency:'
+  end
+  object Label3: TLabel [1]
+    Left = 48
+    Top = 160
+    Width = 68
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '&Transparency:'
+  end
+  inherited PanelTop: TPanel
+    Width = 333
+    Height = 35
+  end
+  object BBand1: TButton
+    Left = 8
+    Top = 40
+    Width = 75
+    Height = 25
+    HelpContext = 1873
+    Caption = 'Band &1...'
+    TabOrder = 1
+    OnClick = BBand1Click
+  end
+  object BBand2: TButton
+    Left = 8
+    Top = 120
+    Width = 75
+    Height = 25
+    HelpContext = 1874
+    Caption = 'Band &2...'
+    TabOrder = 2
+    OnClick = BBand2Click
+  end
+  object Draw3D1: TDraw3D
+    Left = 96
+    Top = 40
+    Width = 25
+    Height = 25
+    Cursor = crHandPoint
+    HelpContext = 1873
+    OnAfterDraw = Draw3D1AfterDraw
+    TabOrder = 3
+    OnClick = Draw3D1Click
+  end
+  object Draw3D2: TDraw3D
+    Left = 96
+    Top = 120
+    Width = 25
+    Height = 25
+    Cursor = crHandPoint
+    HelpContext = 1874
+    OnAfterDraw = Draw3D2AfterDraw
+    TabOrder = 4
+    OnClick = Draw3D2Click
+  end
+  object ButtonColor1: TButtonColor
+    Left = 136
+    Top = 40
+    HelpContext = 1875
+    Caption = 'Ba&ck...'
+    TabOrder = 5
+    OnClick = ButtonColor1Click
+  end
+  object ButtonColor2: TButtonColor
+    Left = 136
+    Top = 120
+    HelpContext = 1875
+    Caption = 'Bac&k...'
+    TabOrder = 6
+    OnClick = ButtonColor2Click
+  end
+  object Edit1: TEdit
+    Left = 121
+    Top = 77
+    Width = 40
+    Height = 21
+    HelpContext = 1876
+    TabOrder = 7
+    Text = '0'
+    OnChange = Edit1Change
+  end
+  object UpDown1: TUpDown
+    Left = 161
+    Top = 77
+    Width = 15
+    Height = 21
+    HelpContext = 1876
+    Associate = Edit1
+    TabOrder = 8
+  end
+  object Edit2: TEdit
+    Left = 121
+    Top = 157
+    Width = 40
+    Height = 21
+    HelpContext = 1876
+    TabOrder = 10
+    Text = '0'
+    OnChange = Edit2Change
+  end
+  object UpDown2: TUpDown
+    Left = 161
+    Top = 157
+    Width = 15
+    Height = 21
+    HelpContext = 1876
+    Associate = Edit2
+    TabOrder = 9
+  end
+end

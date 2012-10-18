@@ -1,0 +1,66 @@
+inherited VolumeSeriesEditor: TVolumeSeriesEditor
+  ActiveControl = nil
+  ClientHeight = 137
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label2: TLabel [2]
+    Left = 104
+    Top = 104
+    Width = 30
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '&Origin:'
+    FocusControl = EOrigin
+  end
+  inherited CBVisible: TCheckBox
+    TabOrder = 1
+  end
+  inherited SEWidth: TEdit
+    TabOrder = 10
+  end
+  inherited BOk: TButton
+    TabOrder = 6
+    Visible = False
+  end
+  inherited BCancel: TButton
+    TabOrder = 5
+    Visible = False
+  end
+  inherited UDWidth: TUpDown
+    TabOrder = 3
+  end
+  inherited CBStyle: TComboFlat
+    TabOrder = 4
+  end
+  object CBColorEach: TCheckBox
+    Left = 8
+    Top = 104
+    Width = 89
+    Height = 17
+    HelpContext = 164
+    Caption = 'Color &Each'
+    TabOrder = 0
+    OnClick = CBColorEachClick
+  end
+  object CBUseOrigin: TCheckBox
+    Left = 106
+    Top = 72
+    Width = 97
+    Height = 17
+    HelpContext = 1738
+    Caption = '&Use Origin'
+    TabOrder = 8
+    OnClick = CBUseOriginClick
+  end
+  object EOrigin: TEdit
+    Left = 139
+    Top = 101
+    Width = 63
+    Height = 21
+    HelpContext = 1872
+    Enabled = False
+    TabOrder = 9
+    Text = '0'
+    OnChange = EOriginChange
+  end
+end

@@ -1,0 +1,91 @@
+inherited XMLSourceEditor: TXMLSourceEditor
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel [0]
+    Left = 38
+    Top = 41
+    Width = 19
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '&File:'
+    FocusControl = EFile
+  end
+  object SpeedButton1: TSpeedButton [1]
+    Left = 237
+    Top = 37
+    Width = 23
+    Height = 22
+    Caption = '...'
+    Flat = True
+    OnClick = SpeedButton1Click
+  end
+  object Label2: TLabel [2]
+    Left = 25
+    Top = 72
+    Width = 32
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '&Series:'
+    FocusControl = CBSeries
+  end
+  object Label3: TLabel [3]
+    Left = 62
+    Top = 103
+    Width = 65
+    Height = 13
+    Caption = '&Value source:'
+    FocusControl = ESource
+  end
+  inherited Pan: TPanel
+    TabOrder = 2
+    inherited BApply: TButton
+      OnClick = BApplyClick
+    end
+  end
+  object EFile: TEdit
+    Left = 62
+    Top = 37
+    Width = 169
+    Height = 21
+    HelpContext = 1865
+    TabOrder = 0
+    OnChange = EFileChange
+  end
+  object CBSeries: TComboFlat
+    Left = 62
+    Top = 68
+    Width = 169
+    HelpContext = 1866
+    TabOrder = 1
+    OnChange = CBSeriesChange
+    OnDropDown = CBSeriesDropDown
+  end
+  object ESource: TEdit
+    Left = 61
+    Top = 120
+    Width = 121
+    Height = 21
+    HelpContext = 1867
+    TabOrder = 3
+    Text = 'Y'
+    OnChange = ESourceChange
+  end
+  object CBActive: TCheckBox
+    Left = 62
+    Top = 152
+    Width = 97
+    Height = 17
+    HelpContext = 1824
+    Caption = '&Active'
+    TabOrder = 4
+    OnClick = CBActiveClick
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = 'xml'
+    Filter = 'XML files|*.xml'
+    Options = [ofHideReadOnly, ofFileMustExist, ofEnableSizing]
+    Left = 312
+    Top = 56
+  end
+end

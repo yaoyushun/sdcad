@@ -1,0 +1,35 @@
+#include "FR_Const.pas"
+
+; ----------------------------------------------------------------------------
+; TRANSLATION TO SLOVAK
+; Translated: Arpad Toth
+; Date      : 29.05.2000 - Prv· verzia
+; Contact   : ekosoft@signalsoft.sk
+; Comment   : Pokiaæ by niekto upravoval t˙to verziu, poölite mi prosÌm emailom
+;             zmenen˙ verziu. œakujem.
+; ----------------------------------------------------------------------------
+
+STRINGTABLE
+{
+;--- LinesEditorForm resources -------------------------------------------------
+  frRes + 4000, "String list editor"
+;--- SQLEditorForm resources -------------------------------------------------
+  frRes + 4010, "SQL editor"
+
+;--- String resources ----------------------------------------------------------
+  SInsertLabel, "Vloûiù Label"
+  SInsertEdit, "Vloûiù Edit"
+  SInsertMemo, "Vloûiù Memo"
+  SInsertButton, "Vloûiù TlaËÌtko"
+  SInsertCheckBox, "Vloûiù CheckBox"
+  SInsertRadioButton, "Vloûiù RadioButton"
+  SInsertListBox, "Vloûiù ListBox"
+  SInsertComboBox, "Vloûiù ComboBox"
+  SInsertDateEdit, "Vloûiù DateEdit"
+  SInsertCheckListBox, "Vloûiù CheckListBox"
+
+  SInsertDB, "Vloûiù datab·zu"
+  SInsertTable, "Vloûiù tabulku"
+  SInsertQuery, "Vloûiù query"
+  SInsertDBLookup, "Vloûiù DBLookupComboBox"
+}

@@ -1,0 +1,26 @@
+#include "FR_Const.pas"
+
+STRINGTABLE
+{
+;--- LinesEditorForm resources -------------------------------------------------
+  frRes + 4000, "Επεξεργαστής λιστών συμβολοσειρών"
+;--- SQLEditorForm resources -------------------------------------------------
+  frRes + 4010, "Επεξεργαστής SQL"
+
+;--- String resources ----------------------------------------------------------
+  SInsertLabel, "Εισαγωγή εξαρτήματος Label"
+  SInsertEdit, "Εισαγωγή εξαρτήματος Edit"
+  SInsertMemo, "Εισαγωγή εξαρτήματος Memo"
+  SInsertButton, "Εισαγωγή εξαρτήματος Button"
+  SInsertCheckBox, "Εισαγωγή εξαρτήματος CheckBox"
+  SInsertRadioButton, "Εισαγωγή εξαρτήματος RadioButton"
+  SInsertListBox, "Εισαγωγή εξαρτήματος ListBox"
+  SInsertComboBox, "Εισαγωγή εξαρτήματος ComboBox"
+  SInsertDateEdit, "Εισαγωγή εξαρτήματος DateEdit"
+  SInsertCheckListBox, "Εισαγωγή εξαρτήματος CheckListBox"
+
+  SInsertDB, "Εισαγωγή βάσης δεδομένων"
+  SInsertTable, "Εισαγωγή πίνακα"
+  SInsertQuery, "Εισαγωγή ερώτησης"
+  SInsertDBLookup, "Εισαγωγή εξαρτήματος DBLookupComboBox"
+}

@@ -1,0 +1,54 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe -Q $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = Tee76.bpl TeeUI76.bpl TeeDB76.bpl DclTee76.bpl TeePro76.bpl \
+  TeeImage76.bpl TeeLanguage76.bpl DCLTeePro76.bpl TeeGL76.bpl DclTGL76.bpl \
+  TeeQR76.bpl DCLTQR76.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+Tee76.bpl: Tee76.dpk
+  $(DCC)
+
+TeeUI76.bpl: TeeUI76.dpk
+  $(DCC)
+
+TeeDB76.bpl: TeeDB76.dpk
+  $(DCC)
+
+DclTee76.bpl: DclTee76.dpk
+  $(DCC)
+
+TeeQR76.bpl: TeeQR76.dpk
+  $(DCC)
+
+DCLTQR76.bpl: DCLTQR76.dpk
+  $(DCC)
+
+TeePro76.bpl: TeePro76.dpk
+  $(DCC)
+
+TeeGL76.bpl: TeeGL76.dpk
+  $(DCC)
+
+TeeLanguage76.bpl: TeeLanguage76.dpk
+  $(DCC)
+
+DCLTeePro76.bpl: DCLTeePro76.dpk
+  $(DCC)
+
+DclTGL76.bpl: DclTGL76.dpk
+  $(DCC)
+
+TeeImage76.bpl: TeeImage76.dpk
+  $(DCC)
+

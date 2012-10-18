@@ -1,0 +1,63 @@
+object TeeJPEGOptions: TTeeJPEGOptions
+  Left = 215
+  Top = 230
+  AutoScroll = False
+  ClientHeight = 117
+  ClientWidth = 161
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 25
+    Top = 75
+    Width = 46
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '% &Quality:'
+    FocusControl = EQuality
+  end
+  object CBGray: TCheckBox
+    Left = 25
+    Top = 48
+    Width = 126
+    Height = 17
+    Caption = '&Gray scale'
+    TabOrder = 0
+  end
+  object RGPerf: TRadioGroup
+    Left = 4
+    Top = 2
+    Width = 156
+    Height = 39
+    Caption = '&Performance:'
+    Columns = 2
+    ItemIndex = 0
+    Items.Strings = (
+      'Q&uality'
+      '&Speed')
+    TabOrder = 1
+  end
+  object EQuality: TEdit
+    Left = 73
+    Top = 72
+    Width = 41
+    Height = 21
+    HelpContext = 1891
+    TabOrder = 2
+    Text = '95'
+  end
+  object UpDown1: TUpDown
+    Left = 114
+    Top = 72
+    Width = 15
+    Height = 21
+    HelpContext = 1891
+    Associate = EQuality
+    Min = 1
+    Position = 95
+    TabOrder = 3
+  end
+end

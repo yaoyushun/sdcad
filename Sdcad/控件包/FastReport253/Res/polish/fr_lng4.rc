@@ -1,0 +1,26 @@
+#include "FR_Const.pas"
+
+STRINGTABLE
+{
+;--- LinesEditorForm resources -------------------------------------------------
+  frRes + 4000, "Edytor zawartoœci kontrolki ListBox"
+;--- SQLEditorForm resources -------------------------------------------------
+  frRes + 4010, "Edytor SQL"
+
+;--- String resources ----------------------------------------------------------
+  SInsertLabel, "Wstaw kontrolkê etykiety"
+  SInsertEdit, "Wstaw kontrolkê edycyjn¹"
+  SInsertMemo, "Wstaw kontrolkê Memo"
+  SInsertButton, "Wstaw kontrolkê klawisza"
+  SInsertCheckBox, "Wstaw kontrolkê CheckBox"
+  SInsertRadioButton, "Wstaw kontrolkê RadioButton"
+  SInsertListBox, "Wstaw kontrolkê ListBox"
+  SInsertComboBox, "Wstaw kontrolkê ComboBox"
+  SInsertDateEdit, "Wstaw kontrolkê DateEdit"
+  SInsertCheckListBox, "Wstaw kontrolkê CheckListBox"
+
+  SInsertDB, "Wstaw kontrolkê Database"
+  SInsertTable, "Wstaw kontrolkê Table"
+  SInsertQuery, "Wstaw kontrolkê Query"
+  SInsertDBLookup, "Wstaw kontrolkê DBLookupComboBox"
+}

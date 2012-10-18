@@ -1,0 +1,149 @@
+#include "FR_Const.pas"
+
+; ----------------------------------------------------------------------------
+; TRANSLATION TO SLOVAK
+; Translated: Arpad Toth
+; Date      : 23.04.2000 - Prv· verzia
+; Contact   : ekosoft@signalsoft.sk
+; Comment   : Pokiaæ by niekto upravoval t˙to verziu, poölite mi prosÌm emailom
+;             zmenen˙ verziu. œakujem.
+; ----------------------------------------------------------------------------
+
+STRINGTABLE
+{
+;--- DatasetsForm resources --------------------------------------------------
+  frRes + 3000, "D·tov˝ manager"
+  frRes + 3001, "&Vlastnosti..."
+  frRes + 3002, "Nov· &tabuæka..."
+  frRes + 3003, "Nov˝ &query..."
+  frRes + 3004, "&Odstr·niù"
+  frRes + 3005, "&UkonËiù"
+  frRes + 3006, "Nov· &datab·za..."
+;--- TablePropForm resources -------------------------------------------------
+  frRes + 3020, "Hlavn˝"
+  frRes + 3021, "&Meno"
+  frRes + 3022, "&Poloûky"
+  frRes + 3023, "&Editor poloûiek..."
+  frRes + 3024, "OstatnÈ"
+  frRes + 3025, "&Index"
+  frRes + 3026, "FiltrovacÌ &v˝raz"
+  frRes + 3027, "&Master"
+  frRes + 3028, "Ma&ster poloûky"
+;--- FieldsEditorForm resources ----------------------------------------------
+  frRes + 3040, "&Pridaù poloûky..."
+  frRes + 3041, "Pridaù &lookup..."
+  frRes + 3042, "&OznaËiù vöetky"
+  frRes + 3043, "&Vymaû"
+  frRes + 3044, "&UkonËiù"
+;--- FieldsListForm resources ------------------------------------------------
+  frRes + 3060, "DostupnÈ poloûky"
+;--- LookupFieldForm resources -----------------------------------------------
+  frRes + 3070, "Nov· lookup poloûka"
+  frRes + 3071, "Poloûka"
+  frRes + 3072, "&Meno"
+  frRes + 3073, "&Typ"
+  frRes + 3074, "&Veækosù"
+  frRes + 3075, "Lookup definÌcia"
+  frRes + 3076, "&Kl˙Ë poloûky"
+  frRes + 3077, "&Dataset"
+  frRes + 3078, "&Lookup kl˙Ë"
+  frRes + 3079, "&N·vratov·"
+;--- QueryPropForm resources -------------------------------------------------
+  frRes + 3090, "Query parametre"
+  frRes + 3091, "OstatnÈ"
+  frRes + 3092, "&Master dataset"
+  frRes + 3093, "General"
+  frRes + 3094, "&Meno"
+  frRes + 3095, "&Alias alebo cesta"
+  frRes + 3096, "&SQL"
+  frRes + 3097, "&Editor poloûiek..."
+  frRes + 3098, "E&ditor parametrov..."
+  frRes + 3099, "NaËÌtaj SQL zo s˙boru"
+  frRes + 3100, "Uloû SQL do s˙boru"
+  frRes + 3101, "SQL builder..."
+;--- ParamsForm resources ----------------------------------------------------
+  frRes + 3110, "Parametre"
+  frRes + 3111, "&D·tov˝ typ"
+  frRes + 3112, "&Meno"
+  frRes + 3113, "&Hodnota:"
+  frRes + 3114, "éi&adaù hodnotu pred vytvorenÌm"
+  frRes + 3115, "Priradenie hodnoty z &master dataset"
+  frRes + 3116, "Pr&emenn·:"
+;--- FieldsLinkForm resources ------------------------------------------------
+  frRes + 3130, "&DetailnÈ poloûky"
+  frRes + 3131, "&HlavnÈ poloûky"
+  frRes + 3132, "&SpojenÈ poloûky"
+  frRes + 3133, "&Pridaù"
+  frRes + 3134, "&Vymazaù"
+;--- ParamsDialogForm resources ----------------------------------------------
+  frRes + 3150, "VstupnÈ parametre"
+  frRes + 3151, "4 body"
+  frRes + 3152, "8 bodov"
+  frRes + 3153, "PrispÙsobiù k mrieûke"
+  frRes + 3154, "UkonËiù"
+;--- PropForm resources ------------------------------------------------------
+  frRes + 3170, "Vlastnosti"
+  frRes + 3171, "&Text"
+  frRes + 3172, "&PÌsmo..."
+  frRes + 3173, "Lookup"
+  frRes + 3174, "&Dataset"
+  frRes + 3175, "&Kl˙Ëov· poloûka"
+  frRes + 3176, "&List field"
+  frRes + 3177, "Druh"
+  frRes + 3178, "&Edit"
+  frRes + 3179, "&Combo"
+  frRes + 3180, "Look&up"
+  frRes + 3181, "Combo"
+  frRes + 3182, "&Autosize"
+;--- DBPropForm resources ----------------------------------------------------
+  frRes + 3200, "Vlastnosti datab·zy"
+  frRes + 3201, "HlavnÈ"
+  frRes + 3202, "Parametre"
+  frRes + 3203, "&Meno"
+  frRes + 3204, "&Connection string"    ; pre ADO
+  frRes + 3205, "&Meno s˙boru"          ; pre IBX
+  frRes + 3206, "&Alias"                ; pre BDE
+  frRes + 3207, "&Ovl·daË"
+  frRes + 3208, "é&iadaù prihl·senie"
+;--- SelectTblForm resources -------------------------------------------------
+  frRes + 3220, "V˝ber tabuæky"
+  frRes + 3221, "Vybraù z datab·zy"
+  frRes + 3222, "Vybraù zo s˙boru"
+  frRes + 3223, "&Datab·za"
+  frRes + 3224, "&Tabuæka"
+  frRes + 3225, "&Nalistovaù..."
+;--- Strings resources -------------------------------------------------------
+  SFields, "Poloûky"
+  SPath, "Cesta"
+  SRemoveDS, "Vymazaù t˙to komponentu?"
+  STables, "Tabuæky"
+  SFieldType1, "String"
+  SFieldType2, "Smallint"
+  SFieldType3, "Integer"
+  SFieldType4, "Word"
+  SFieldType5, "Boolean"
+  SFieldType6, "Float"
+  SFieldType7, "Currency"
+  SFieldType8, "Date"
+  SFieldType9, "Time"
+  SFieldType10, "Blob"
+  SParamType1, "BCD"
+  SParamType2, "Boolean"
+  SParamType3, "Currency"
+  SParamType4, "Date"
+  SParamType5, "DateTime"
+  SParamType6, "Integer"
+  SParamType7, "Float"
+  SParamType8, "Smallint"
+  SParamType9, "String"
+  SParamType10, "Time"
+  SParamType11, "Word"
+  SDataManager, "D·tov˝ manager"
+  SParams, "parametre"
+  SQueryError, "NevhodnÈ SQL zadanie alebo parametrov"
+  STableProps, "Vlastnosti tabuæky"
+  SParamDialog, "DialÛg parametrov"
+  SInvalidParamValue, "Nevhodn· hodnota parametra"
+  SDatabase, "Datab·zy"
+  SFieldSizeError, "Nevhodn· veækosù poloûky"
+}

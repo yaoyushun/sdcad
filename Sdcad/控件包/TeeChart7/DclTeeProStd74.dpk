@@ -1,0 +1,42 @@
+package DclTeeProStd74;
+
+{$R *.RES}
+{$ALIGN ON}
+{$ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{ DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{ LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $00400000}
+{$DESCRIPTION 'TeeChart Pro 7 Components (Std)'}
+{$DESIGNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  Vcl40,
+  Tee74,
+  TeePro74,
+  DclTeeStd74,
+  TeeLanguage74;
+
+contains
+  TeeChartPro in 'TeeChartPro.pas',
+  TeeDesignOptions in 'TeeDesignOptions.pas',
+  TeeSeriesDesign in 'TeeSeriesDesign.pas' {SeriesEditor};
+
+end.
+

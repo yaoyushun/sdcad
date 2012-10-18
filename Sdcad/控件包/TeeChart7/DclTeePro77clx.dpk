@@ -1,0 +1,43 @@
+package DclTeePro77Clx;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{ DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{ LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $52900000}
+{$DESCRIPTION 'TeeChart Pro 7 CLX Components'}
+{$DESIGNONLY}
+{$IMPLICITBUILD OFF}
+{$DEFINE CLX}
+
+requires
+  visualclx,
+  teepro77Clx,
+  dcltee77Clx,
+  teedb77Clx,
+  tee77Clx,
+  teelanguage77Clx;
+
+contains
+  TeeDesignOptions in 'TeeDesignOptions.pas',
+  TeeChartPro in 'TeeChartPro.pas';
+
+end.
+

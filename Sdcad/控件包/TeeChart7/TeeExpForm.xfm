@@ -1,0 +1,459 @@
+object TeeDlgWizard: TTeeDlgWizard
+  Left = 247
+  Top = 116
+  AutoScroll = False
+  Caption = 'TeeChart Wizard'
+  ClientHeight = 339
+  ClientWidth = 471
+  Color = clBtnFace
+  ParentFont = True
+  HelpFile = 'teechart.hlp'
+  KeyPreview = True
+  OldCreateOrder = True
+  Position = poScreenCenter
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
+  OnResize = FormResize
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PageControl: TPageControl
+    Left = 0
+    Top = 0
+    Width = 471
+    Height = 298
+    ActivePage = Buttons
+    Align = alClient
+    HotTrack = True
+    MultiLine = True
+    TabHeight = 1
+    TabOrder = 0
+    TabStop = False
+    object TabStyle: TTabSheet
+      TabVisible = False
+      object Panel4: TPanel
+        Left = 0
+        Top = 0
+        Width = 463
+        Height = 81
+        Align = alTop
+        TabOrder = 0
+        object Image2: TImage
+          Left = 4
+          Top = 4
+          Width = 453
+          Height = 74
+          Center = True
+          Stretch = True
+          OnClick = Image1Click
+        end
+        object LabelURL: TLabel
+          Left = 360
+          Top = 53
+          Width = 84
+          Height = 13
+          Cursor = crHandPoint
+          Alignment = taCenter
+          Caption = 'www.steema.com'
+          Color = clBtnFace
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -11
+          Font.Name = 'Default'
+          Font.Style = [fsUnderline]
+          ParentColor = False
+          ParentFont = False
+          Transparent = True
+          OnClick = LabelURLClick
+        end
+        object Image1: TImage
+          Left = 7
+          Top = 5
+          Width = 121
+          Height = 49
+          AutoSize = True
+        end
+      end
+      object RGDatabase: TRadioGroup
+        Left = 112
+        Top = 104
+        Width = 217
+        Height = 117
+        Caption = 'Select a Chart style:'
+        ItemIndex = 0
+        Items.Strings = (
+          '&Database Chart'
+          'N&on Database Chart'
+          'Chart from &template (*.tee file)')
+        TabOrder = 1
+      end
+    end
+    object TableName: TTabSheet
+      TabVisible = False
+      object Label3: TLabel
+        Left = 23
+        Top = 15
+        Width = 276
+        Height = 19
+        AutoSize = False
+        Caption = 'Select a Database Table:'
+      end
+      object Panel8: TPanel
+        Left = 22
+        Top = 36
+        Width = 411
+        Height = 213
+        TabOrder = 0
+        object LabelAlias: TLabel
+          Left = 71
+          Top = 72
+          Width = 25
+          Height = 13
+          Alignment = taRightJustify
+          Caption = '&Alias:'
+          FocusControl = CBAlias
+        end
+        object Label5: TLabel
+          Left = 66
+          Top = 99
+          Width = 30
+          Height = 13
+          Alignment = taRightJustify
+          Caption = '&Table:'
+          FocusControl = CBTables
+        end
+        object LabelDBStyle: TLabel
+          Left = 60
+          Top = 32
+          Width = 37
+          Height = 13
+          Caption = '&Source:'
+          FocusControl = CBDBStyle
+        end
+        object SpeedButton1: TSpeedButton
+          Left = 270
+          Top = 70
+          Width = 18
+          Height = 18
+          Caption = '...'
+          Flat = True
+          OnClick = SpeedButton1Click
+        end
+        object CBAlias: TComboFlat
+          Left = 104
+          Top = 69
+          Width = 161
+          Style = csDropDown
+          ItemHeight = 0
+          Sorted = True
+          TabOrder = 0
+          OnChange = CBAliasChange
+        end
+        object CBTables: TComboFlat
+          Left = 104
+          Top = 96
+          Width = 161
+          ItemHeight = 0
+          TabOrder = 1
+          OnChange = CBTablesChange
+        end
+        object CBDBStyle: TComboFlat
+          Left = 104
+          Top = 28
+          Width = 161
+          TabOrder = 2
+          OnChange = CBDBStyleChange
+          Items.Strings = (
+            'Borland Database Engine'
+            'Microsoft ADO')
+        end
+      end
+    end
+    object Buttons: TTabSheet
+      TabVisible = False
+      object Label2: TLabel
+        Left = 34
+        Top = 10
+        Width = 323
+        Height = 18
+        AutoSize = False
+        Caption = 'Select the desired Fields to Chart:'
+      end
+      object Panel1: TPanel
+        Left = 33
+        Top = 30
+        Width = 360
+        Height = 163
+        BevelOuter = bvLowered
+        TabOrder = 0
+      end
+      object Panel2: TPanel
+        Left = 33
+        Top = 204
+        Width = 360
+        Height = 69
+        BevelOuter = bvLowered
+        TabOrder = 1
+        object Label6: TLabel
+          Left = 16
+          Top = 12
+          Width = 117
+          Height = 13
+          Caption = 'Select a text &labels Field:'
+          FocusControl = cbLabelsFields
+        end
+        object cbLabelsFields: TComboFlat
+          Left = 16
+          Top = 32
+          Width = 153
+          Style = csDropDown
+          TabOrder = 0
+        end
+      end
+    end
+    object TabSheet1: TTabSheet
+      TabVisible = False
+      object Label4: TLabel
+        Left = 8
+        Top = 4
+        Width = 337
+        Height = 17
+        AutoSize = False
+        Caption = 'Choose the desired Chart type:'
+      end
+      object tmpGallery: TChartGalleryPanel
+        Left = 8
+        Top = 24
+        Width = 441
+        Height = 217
+        NumRows = 2
+        OnSelectedChart = tmpGallerySelectedChart
+        ParentColor = True
+        TabOrder = 0
+      end
+      object Panel3: TPanel
+        Left = 0
+        Top = 247
+        Width = 463
+        Height = 41
+        Align = alBottom
+        BevelOuter = bvNone
+        TabOrder = 1
+        object RG3D: TRadioGroup
+          Left = 9
+          Top = 1
+          Width = 131
+          Height = 37
+          Columns = 2
+          ItemIndex = 1
+          Items.Strings = (
+            '&2D'
+            '&3D')
+          TabOrder = 0
+          OnClick = RG3DClick
+        end
+        object CBSmooth: TCheckBox
+          Left = 152
+          Top = 15
+          Width = 89
+          Height = 17
+          Caption = '&Smooth'
+          TabOrder = 1
+          OnClick = CBSmoothClick
+        end
+        object BTheme: TButton
+          Left = 280
+          Top = 9
+          Width = 75
+          Height = 25
+          Caption = '&Theme...'
+          TabOrder = 2
+          OnClick = BThemeClick
+        end
+      end
+    end
+    object TabSheet2: TTabSheet
+      TabVisible = False
+      object PageControl1: TPageControl
+        Left = 0
+        Top = 0
+        Width = 463
+        Height = 288
+        ActivePage = TabPreviewChart
+        Align = alClient
+        HotTrack = True
+        TabOrder = 0
+        object TabPreviewChart: TTabSheet
+          Caption = 'Chart Preview'
+          object Panel7: TPanel
+            Left = 0
+            Top = 234
+            Width = 455
+            Height = 26
+            Align = alBottom
+            BevelInner = bvLowered
+            BevelOuter = bvNone
+            TabOrder = 0
+            object CB3DOption: TCheckBox
+              Left = 8
+              Top = 4
+              Width = 60
+              Height = 17
+              Caption = '3&D'
+              Checked = True
+              State = cbChecked
+              TabOrder = 0
+              OnClick = CB3DOptionClick
+            end
+            object CBShowLegendOption: TCheckBox
+              Left = 72
+              Top = 4
+              Width = 129
+              Height = 17
+              Caption = 'Show &Legend'
+              Checked = True
+              State = cbChecked
+              TabOrder = 1
+              OnClick = CBShowLegendOptionClick
+            end
+            object CBShowMarksOption: TCheckBox
+              Left = 203
+              Top = 4
+              Width = 108
+              Height = 17
+              Caption = 'Show &Marks'
+              TabOrder = 2
+              OnClick = CBShowMarksOptionClick
+            end
+            object CBColorEach: TCheckBox
+              Left = 315
+              Top = 4
+              Width = 102
+              Height = 17
+              Caption = '&Color each'
+              Checked = True
+              State = cbChecked
+              TabOrder = 3
+              OnClick = CBColorEachClick
+            end
+          end
+        end
+      end
+    end
+    object TabFile: TTabSheet
+      ImageIndex = 5
+      TabVisible = False
+      object BBrowse: TSpeedButton
+        Left = 362
+        Top = 79
+        Width = 23
+        Height = 22
+        Caption = '...'
+        Flat = True
+        OnClick = BBrowseClick
+      end
+      object Label1: TLabel
+        Left = 24
+        Top = 40
+        Width = 164
+        Height = 13
+        Caption = 'Open TeeChart template file from...'
+      end
+      object RBFile: TRadioButton
+        Left = 22
+        Top = 84
+        Width = 104
+        Height = 17
+        Caption = '&File:'
+        Checked = True
+        TabOrder = 0
+        TabStop = True
+        OnClick = RBFileClick
+      end
+      object EFile: TEdit
+        Left = 126
+        Top = 80
+        Width = 227
+        Height = 21
+        TabOrder = 1
+        Text = 'c:\demo.tee'
+        OnChange = EFileChange
+      end
+      object RBWeb: TRadioButton
+        Left = 22
+        Top = 116
+        Width = 104
+        Height = 17
+        Caption = '&Web URL:'
+        TabOrder = 2
+        OnClick = RBFileClick
+      end
+      object EWeb: TEdit
+        Left = 126
+        Top = 112
+        Width = 227
+        Height = 21
+        Enabled = False
+        TabOrder = 3
+        Text = 'http://www.steema.com/demo.tee'
+        OnChange = EFileChange
+      end
+    end
+  end
+  object Panel5: TPanel
+    Left = 0
+    Top = 298
+    Width = 471
+    Height = 41
+    Align = alBottom
+    TabOrder = 1
+    object HelpButton: TButton
+      Left = 16
+      Top = 8
+      Width = 77
+      Height = 25
+      Caption = '&Help'
+      TabOrder = 0
+      OnClick = HelpButtonClick
+    end
+    object PrevButton: TButton
+      Left = 124
+      Top = 8
+      Width = 77
+      Height = 25
+      Caption = '< &Back'
+      Enabled = False
+      TabOrder = 1
+      OnClick = PrevClick
+    end
+    object NextButton: TButton
+      Left = 216
+      Top = 8
+      Width = 77
+      Height = 25
+      Caption = '&Next >'
+      Default = True
+      TabOrder = 2
+      OnClick = NextClick
+    end
+    object CancelBtn: TButton
+      Left = 344
+      Top = 8
+      Width = 77
+      Height = 25
+      Cancel = True
+      Caption = 'Cancel'
+      ModalResult = 2
+      TabOrder = 3
+      OnClick = CancelClick
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = 'tee'
+    Filter = 'Text files|*.txt'
+    Left = 196
+    Top = 160
+  end
+end

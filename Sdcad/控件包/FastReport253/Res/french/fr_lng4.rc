@@ -1,0 +1,26 @@
+#include "FR_Const.pas"
+
+STRINGTABLE
+{
+;--- LinesEditorForm resources -------------------------------------------------
+  frRes + 4000, "Editeur de liste de chaînes"
+;--- SQLEditorForm resources -------------------------------------------------
+  frRes + 4010, "Editeur SQL"
+
+;--- String resources ----------------------------------------------------------
+  SInsertLabel, "Insérer un objet Libellé"
+  SInsertEdit, "Insérer un objet Edite"
+  SInsertMemo, "Insérer un objet Memo"
+  SInsertButton, "Insérer un objet Bouton"
+  SInsertCheckBox, "Insérer un objet Case à cocher"
+  SInsertRadioButton, "Insérer un objet Bouton radio"
+  SInsertListBox, "Insérer un objet boite de liste"
+  SInsertComboBox, "Insérer un objet ComboBox"
+  SInsertDateEdit, "Insérer un objet DateEdit"
+  SInsertCheckListBox, "Insérer un objet CheckListBox"
+
+  SInsertDB, "Insérer une base de données"
+  SInsertTable, "Insérer une table"
+  SInsertQuery, "Insérer une requête"
+  SInsertDBLookup, "Insérer un objet DBLookupComboBox"
+}

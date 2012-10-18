@@ -1,0 +1,111 @@
+object SmithSeriesEdit: TSmithSeriesEdit
+  Left = 284
+  Top = 184
+  AutoScroll = False
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 148
+  ClientWidth = 292
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 135
+    Top = 84
+    Width = 66
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '&Imag. Symbol:'
+    FocusControl = EImag
+  end
+  object CBC: TCheckBox
+    Left = 8
+    Top = 12
+    Width = 85
+    Height = 17
+    HelpContext = 1434
+    Caption = '&C Labels'
+    TabOrder = 0
+    OnClick = CBCClick
+  end
+  object CBR: TCheckBox
+    Left = 8
+    Top = 44
+    Width = 85
+    Height = 17
+    HelpContext = 1431
+    Caption = '&R Labels'
+    TabOrder = 1
+    OnClick = CBRClick
+  end
+  object BCPen: TButtonPen
+    Left = 120
+    Top = 8
+    HelpContext = 1433
+    Caption = 'C &Pen...'
+    TabOrder = 2
+  end
+  object BRPen: TButtonPen
+    Left = 120
+    Top = 40
+    HelpContext = 1430
+    Caption = 'R P&en...'
+    TabOrder = 3
+  end
+  object BCircle: TButtonPen
+    Left = 120
+    Top = 112
+    HelpContext = 1432
+    Caption = '&Circle...'
+    TabOrder = 4
+  end
+  object CBColorEach: TCheckBox
+    Left = 8
+    Top = 83
+    Width = 103
+    Height = 17
+    HelpContext = 164
+    Caption = 'C&olor Each'
+    TabOrder = 5
+    OnClick = CBColorEachClick
+  end
+  object BBorder: TButtonPen
+    Left = 8
+    Top = 112
+    HelpContext = 421
+    Caption = '&Border...'
+    TabOrder = 6
+  end
+  object BCFont: TButton
+    Left = 208
+    Top = 8
+    Width = 75
+    Height = 25
+    HelpContext = 1491
+    Caption = '&Font...'
+    TabOrder = 7
+    OnClick = BCFontClick
+  end
+  object BRFont: TButton
+    Left = 208
+    Top = 40
+    Width = 75
+    Height = 25
+    HelpContext = 1492
+    Caption = 'Fo&nt...'
+    TabOrder = 8
+    OnClick = BRFontClick
+  end
+  object EImag: TEdit
+    Left = 207
+    Top = 81
+    Width = 73
+    Height = 21
+    HelpContext = 1772
+    TabOrder = 9
+    OnChange = EImagChange
+  end
+end

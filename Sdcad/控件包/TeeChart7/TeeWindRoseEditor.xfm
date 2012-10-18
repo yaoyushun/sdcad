@@ -1,0 +1,17 @@
+inherited WindRoseEditor: TWindRoseEditor
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited PageControl1: TPageControl
+    inherited TabSheet2: TTabSheet
+      object CBMirror: TCheckBox
+        Left = 8
+        Top = 96
+        Width = 97
+        Height = 17
+        Caption = 'Mirr&ored'
+        TabOrder = 7
+        OnClick = CBMirrorClick
+      end
+    end
+  end
+end

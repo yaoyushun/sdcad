@@ -1,0 +1,524 @@
+unit ExportPrj;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, DB, ADODB, ComCtrls, StdCtrls, Buttons, Grids, ExtCtrls;
+
+type
+  TExportPrjForm = class(TForm)
+    GroupBox4: TGroupBox;
+    btnCreateReport: TBitBtn;
+    STDir: TStaticText;
+    btnBrowse: TBitBtn;
+    edtFileName: TEdit;
+    pbCreateReport: TProgressBar;
+    qryProject: TADOQuery;
+    ADO02_All: TADOQuery;
+    SEFDlg: TSaveDialog;
+    pnlQuery: TPanel;
+    sgQuery: TStringGrid;
+    btnExecute: TBitBtn;
+    GroupBox1: TGroupBox;
+    lblFieldDisplay: TLabel;
+    lblValue1: TLabel;
+    lblValue2: TLabel;
+    cboFieldDisplay: TComboBox;
+    cboSymbol1: TComboBox;
+    edtValue1: TEdit;
+    dtp1: TDateTimePicker;
+    dtp2: TDateTimePicker;
+    cboFieldName: TComboBox;
+    cboSymbol2: TComboBox;
+    edtValue2: TEdit;
+    cboGrade: TComboBox;
+    cbo_type: TComboBox;
+    procedure FormCreate(Sender: TObject);
+    procedure sgProjectSelectCell(Sender: TObject; ACol, ARow: Integer;
+      var CanSelect: Boolean);
+    procedure btnBrowseClick(Sender: TObject);
+    procedure btnCreateReportClick(Sender: TObject);
+    procedure btnExecuteClick(Sender: TObject);
+    procedure sgQuerySelectCell(Sender: TObject; ACol, ARow: Integer;
+      var CanSelect: Boolean);
+    procedure cboFieldDisplayChange(Sender: TObject);
+    procedure cboFieldDisplayKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure edtValue1KeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure FormActivate(Sender: TObject);
+  private
+    { Private declarations }
+    procedure getAllProjects;
+    procedure InitQuery;
+    function GetQuerySQL: string;
+    procedure VisibleQueryControl(aVisible:integer);
+  public
+    { Public declarations }
+  end;
+
+var
+  ExportPrjForm: TExportPrjForm;
+  m_Prj_no:string;
+implementation
+
+uses MainDM, public_unit;
+
+{$R *.dfm}
+
+procedure TExportPrjForm.FormCreate(Sender: TObject);
+begin
+  self.Left := trunc((screen.Width -self.Width)/2);
+  self.Top  := trunc((Screen.Height - self.Height)/2);  
+
+//  sgProject.ColCount := 3;
+//  sgProject.RowHeights[0] := 16;
+//  sgProject.Cells[1,0] := '工程编号';
+//  sgProject.Cells[2,0] := '工程名称';
+//  sgProject.ColWidths[0]:=10;
+//  sgProject.ColWidths[1]:=100;
+//  sgProject.ColWidths[2]:=200;
+//
+//  getAllProjects;
+  Clear_Data(self);
+  InitQuery;
+  Enable_Components(Self,True);
+  
+end;
+
+procedure TExportPrjForm.getAllProjects;
+var 
+  i: integer;
+  strCurrentPrj_no: string;
+begin
+//  strCurrentPrj_no := stringReplace(g_projectinfo.prj_no,'''','''''',[rfReplaceAll]);
+//  with MainDataModule.qryProjects do
+//    begin
+//      close;
+//      sql.Clear;
+//      //sql.Add('select prj_no,prj_name,area_name,builder,begin_date,end_date,consigner from projects');
+//      sql.Add('select prj_no,prj_name from projects WHERE prj_no<>'''+strCurrentPrj_no+'''');
+//      open;
+//      i:=0;
+//      sgProject.Tag := 1;
+//      while not Eof do
+//        begin
+//          i:=i+1;
+//          sgProject.RowCount := i+1;
+//          sgProject.Cells[1,i] := MainDataModule.qryProjects.FieldByName('prj_no').AsString;
+//          sgProject.Cells[2,i] := MainDataModule.qryProjects.FieldByName('prj_name').AsString;
+//          Next;
+//        end;
+//      close;
+//      sgProject.Tag := 0;
+//      sgProject.Row := 1;
+//    end;
+end;
+
+procedure TExportPrjForm.sgProjectSelectCell(Sender: TObject; ACol,
+  ARow: Integer; var CanSelect: Boolean);
+begin
+  if TStringGrid(Sender).Tag = 1 then exit; //设置Tag是因为每次给StringGrid赋值都会触发它的SelectCell事件，为了避免这种情况，
+                         //在SelectCell事件中用Tag值来判断是否应该执行在SelectCell中的操作.
+
+  if (ARow <>0) and (ARow<>TStringGrid(Sender).Row) then
+    if TStringGrid(Sender).Cells[1,ARow]<>'' then
+    begin
+      edtFileName.Text := GetCurrentDir+'\report\'+TStringGrid(Sender).Cells[1,ARow]+'.'+BACKUP_PROJECT_FILE_EXT;
+      m_Prj_no := TStringGrid(Sender).Cells[1,ARow];
+      pbCreateReport.Position:=0;
+    end
+    else
+    begin
+      //clear_data(self);
+    end;
+end;
+
+procedure TExportPrjForm.btnBrowseClick(Sender: TObject);
+var
+   SaveFName:string;
+begin
+
+   SEFDlg.DefaultExt :=BACKUP_PROJECT_FILE_EXT;
+   SEFDlg.Title :='保存';
+   SEFDlg.FileName :=trim(edtFileName.text);
+   SEFDlg.Filter :=BACKUP_PROJECT_FILE_EXT;
+   if not SEFDlg.Execute then exit;
+   SaveFName:=SEFDlg.FileName ;
+   edtFileName.text:=SaveFName;
+
+end;
+
+procedure TExportPrjForm.btnCreateReportClick(Sender: TObject);
+var
+  strPrj_No:string;
+  pFile:TextFile;
+begin
+  strPrj_No := stringReplace(m_Prj_no,'''','''''',[rfReplaceAll]);
+  AssignFile(pFile,edtFileName.Text);
+  Rewrite(pFile);
+  CloseFile(pFile);
+  Append(pFile);
+  //开始插入数据前的数据库连接设置，以使数据库效率高些
+  Writeln(pFile,'SET NUMERIC_ROUNDABORT OFF');
+  Writeln(pFile,'GO');
+  Writeln(pFile,'SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT, QUOTED_IDENTIFIER, ANSI_NULLS, NOCOUNT ON');
+  Writeln(pFile,'GO');
+  Writeln(pFile,'SET DATEFORMAT YMD');
+  Writeln(pFile,'GO');
+  Writeln(pFile,'SET XACT_ABORT ON');
+  Writeln(pFile,'GO');
+  Writeln(pFile,'SET TRANSACTION ISOLATION LEVEL SERIALIZABLE');
+  Writeln(pFile,'GO');
+  Writeln(pFile,'BEGIN TRANSACTION');
+  //开始插入工程本身数据
+  with ADO02_All do
+  begin
+    Close;
+    SQL.Clear;
+    SQL.Add('SELECT * FROM [projects] WHERE prj_no='+''''+strPrj_No+'''');
+    Open;
+    while not Eof do
+    begin
+
+      Writeln(pFile,'INSERT INTO projects ([prj_no], [prj_name], [area_name],[builder],[begin_date],[end_date],[consigner],[area_x1], [area_y1], [area_x2],[area_y2], [prj_grade],[buzhitubili],[buzhitufx],[prj_type],[prj_name_en]) VALUES('
+                                           +'N'''+FieldByName('prj_no').AsString+''','+'N'''+FieldByName('prj_name').AsString+''','+'N'''+FieldByName('area_name').AsString+''','+'N'''+FieldByName('builder').AsString+''','
+                                           +'N'''+FieldByName('begin_date').AsString+''','+'N'''+FieldByName('end_date').AsString+''','+'N'''+FieldByName('consigner').AsString+''','+floattostr(FieldByName('area_x1').AsFloat)+','
+                                           +floattostr(FieldByName('area_y1').AsFloat)+','+floattostr(FieldByName('area_x2').AsFloat)+','+floattostr(FieldByName('area_y2').AsFloat)+','''+FieldByName('prj_grade').AsString+''','
+                                           +inttostr(FieldByName('buzhitubili').asinteger)+','+IIF(FieldByName('buzhitufx').AsBoolean,'1','0')+','+IIF(FieldByName('prj_type').AsBoolean,'1','0')+',N'''+FieldByName('prj_name_en').AsString+''')');
+      Next;
+    end;
+    Close;
+  end;
+  Writeln(pfile,'COMMIT TRANSACTION');
+  Writeln(pfile,'GO');
+  pbCreateReport.Position:=10;
+  //开始工程土层数据备份
+  Writeln(pFile,'BEGIN TRANSACTION');
+  with ADO02_All do
+  begin
+    Close;
+    SQL.Clear;
+    SQL.Add('SELECT * FROM [stratum_description] WHERE prj_no='+''''+strPrj_No+'''');
+    Open;
+    while not Eof do
+    begin
+
+      Writeln(pFile,'INSERT INTO stratum_description ([prj_no], [stra_no],[sub_no],[id],[ea_name],[stra_category],[description], [description_en], [stra_fao],[stra_qik], [stra_category92]) VALUES('
+                                           +'N'''+FieldByName('prj_no').AsString+''','+'N'''+FieldByName('stra_no').AsString+''','+'N'''+FieldByName('sub_no').AsString+''','+FieldByName('id').AsString+','
+                                           +'N'''+FieldByName('ea_name').AsString+''','+'N'''+FieldByName('stra_category').AsString+''','+'N'''+FieldByName('description').AsString+''','
+                                           +'N'''+FieldByName('description_en').AsString+''','
+                                           +inttostr(FieldByName('stra_fao').asinteger)+','+inttostr(FieldByName('stra_qik').asinteger)+','+inttostr(FieldByName('stra_category92').asinteger)+')');
+      Next;
+    end;
+    Close;
+  end;
+  Writeln(pfile,'COMMIT TRANSACTION');
+  Writeln(pfile,'GO');
+  //开始钻孔数据的备份
+  Writeln(pFile,'BEGIN TRANSACTION');
+
+  Writeln(pfile,'COMMIT TRANSACTION');
+  Writeln(pfile,'GO');
+  CloseFile(pFile);
+end;
+
+procedure TExportPrjForm.InitQuery;
+begin
+  sgQuery.ColWidths[0]:=10;
+  cboFieldDisplay.Clear;
+  cboFieldDisplay.Items.Add('工程编号');
+  cboFieldDisplay.Items.Add('工程项目名称');
+  cboFieldDisplay.Items.Add('工程英文名称');
+  cboFieldDisplay.Items.Add('开工日期');
+  cboFieldDisplay.Items.Add('完工日期');
+  cboFieldDisplay.Items.Add('委托单位名称');
+  cboFieldDisplay.Items.Add('地区名');
+  cboFieldDisplay.Items.Add('施工队名称');
+  cboFieldDisplay.Items.Add('岩土工程勘察等级');
+  cboFieldDisplay.Items.Add('工程类型');
+  cboFieldDisplay.ItemIndex := 0;
+  
+  cboFieldName.Clear;
+  cboFieldName.Items.Add('prj_no');
+  cboFieldName.Items.Add('prj_name');
+  cboFieldName.Items.Add('prj_name_en');
+  cboFieldName.Items.Add('begin_date');
+  cboFieldName.Items.Add('end_date');
+  cboFieldName.Items.Add('consigner');
+  cboFieldName.Items.Add('area_name');
+  cboFieldName.Items.Add('builder');
+  cboFieldName.Items.Add('prj_grade');
+  cboFieldName.Items.Add('prj_type');
+  cboFieldName.ItemIndex := 0;
+
+  cboSymbol1.Clear;
+  cboSymbol1.Items.Add('like');
+  cboSymbol1.Items.Add('='); 
+  cboSymbol1.Items.Add('<>');
+  cboSymbol1.Items.Add('>');
+  cboSymbol1.Items.Add('<');
+  cboSymbol1.Items.Add('>=');
+  cboSymbol1.Items.Add('<=');
+
+  cboSymbol1.ItemIndex := 0;
+
+  cboSymbol2.Clear;
+  cboSymbol2.Items.Add('like');
+  cboSymbol2.Items.Add('='); 
+  cboSymbol2.Items.Add('<>');
+  cboSymbol2.Items.Add('>');
+  cboSymbol2.Items.Add('<');
+  cboSymbol2.Items.Add('>=');
+  cboSymbol2.Items.Add('<=');
+
+  cboSymbol2.ItemIndex := 0;
+
+  
+  sgQuery.RowCount := 2;
+  sgQuery.ColCount := 10;
+  sgQuery.ColWidths[0]:=10;
+  sgQuery.Cells[1,0] := '工程编号';
+  sgQuery.ColWidths[1]:=100;
+  sgQuery.Cells[2,0] := '工程项目名称';
+  sgQuery.ColWidths[2]:=150;
+  sgQuery.Cells[3,0] := '开工日期';
+  sgQuery.ColWidths[3]:=70;
+  sgQuery.Cells[4,0] := '完工日期';
+  sgQuery.ColWidths[4]:=70;
+  sgQuery.Cells[5,0] := '委托单位名称';
+  sgQuery.ColWidths[5]:=150;
+  sgQuery.Cells[6,0] := '地区名';
+  sgQuery.ColWidths[6]:=70;
+  sgQuery.Cells[7,0] := '施工队名称';
+  sgQuery.ColWidths[7]:=100;
+  sgQuery.Cells[8,0] := '岩土工程勘察等级';
+  sgQuery.ColWidths[8]:=100;
+  sgQuery.Cells[9,0] := '工程英文名称';
+  sgQuery.ColWidths[9]:=150;
+  sgQuery.Options :=[goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing,goRowSelect];
+  sgQuery.RowCount :=2;
+  DeleteStringGridRow(sgQuery,1);
+end;
+
+procedure TExportPrjForm.btnExecuteClick(Sender: TObject);
+var
+  strSQL: string;
+  i: integer;
+begin
+  sgQuery.RowCount :=2;
+  DeleteStringGridRow(sgQuery,1);
+  strSQL:=GetQuerySQL;
+  with MainDataModule.qryProjects do
+    begin
+      close;
+      sql.Clear;
+      sql.Add(strSQL); 
+      //showmessage(sql.Text); 
+      open;
+      i:=0;
+      sgQuery.Tag := 1;
+      while not Eof do
+        begin
+          i:=i+1;
+          sgQuery.RowCount := i +1;
+          sgQuery.Cells[1,i] := FieldByName('prj_no').AsString;  
+          sgQuery.Cells[2,i] := FieldByName('prj_name').AsString;
+          sgQuery.Cells[3,i] := FieldByName('begin_date').AsString;
+          sgQuery.Cells[4,i] := FieldByName('end_date').AsString;
+          sgQuery.Cells[5,i] := FieldByName('consigner').AsString;
+          sgQuery.Cells[6,i] := FieldByName('area_name').AsString;
+          sgQuery.Cells[7,i] := FieldByName('builder').AsString;
+          sgQuery.Cells[8,i] := FieldByName('prj_grade').AsString;
+
+          if FieldByName('prj_type').AsString<>'' then
+              begin
+                 if FieldByName('prj_type').AsBoolean  then
+                     sgQuery.Cells[10,i] :=  '1'
+                 else
+                     sgQuery.Cells[10,i] :=  '0'
+              end
+          else
+              sgQuery.Cells[10,i] :=  '0';
+
+          sgQuery.Cells[9,i] := FieldByName('prj_name_en').AsString;
+          next;
+        end;
+      sgQuery.Tag := 0;
+
+      if i>0 then
+      begin
+        sgQuery.Row := 1;
+        edtFileName.Text := GetCurrentDir+'\report\'+sgQuery.Cells[1,1]+'.'+BACKUP_PROJECT_FILE_EXT;
+        m_Prj_no := sgQuery.Cells[1,1];
+        pbCreateReport.Position:=0;
+        btnCreateReport.Enabled := true;
+      end;
+      close;
+    end; 
+end;
+
+procedure TExportPrjForm.sgQuerySelectCell(Sender: TObject; ACol,
+  ARow: Integer; var CanSelect: Boolean);
+begin
+  if TStringGrid(Sender).Tag = 1 then exit; //设置Tag是因为每次给StringGrid赋值都会触发它的SelectCell事件，为了避免这种情况，
+                         //在SelectCell事件中用Tag值来判断是否应该执行在SelectCell中的操作.
+
+  if (ARow <>0) and (ARow<>TStringGrid(Sender).Row) then
+    if TStringGrid(Sender).Cells[1,ARow]<>'' then
+    begin
+      edtFileName.Text := GetCurrentDir+'\report\'+TStringGrid(Sender).Cells[1,ARow]+'.'+BACKUP_PROJECT_FILE_EXT;
+      m_Prj_no := TStringGrid(Sender).Cells[1,ARow];
+      pbCreateReport.Position:=0;
+    end
+    else
+    begin
+      //clear_data(self);
+    end;
+end;
+
+function TExportPrjForm.GetQuerySQL: string;
+var 
+  strQuerySQL:string;
+  strClause1,strClause2:string;
+begin
+  strClause1:= '';
+  strClause2:='';
+  strQuerySQL:= 'select prj_no,prj_name,prj_name_en,area_name,builder,begin_date,end_date,consigner,prj_grade,prj_type from projects';
+  strQuerySQL:= strQuerySQL+' where ';
+  strClause1:= '('+cboFieldName.Text+' '+ cboSymbol1.Text;
+  if (lowercase(cboFieldName.Text) = 'begin_date') or (lowercase(cboFieldName.Text) = 'end_date') then
+  begin
+     strClause1 := strClause1 +''''+ datetimetostr(dtp1.Date)+''''+')';
+     strClause2 := '(' +cboFieldName.Text+ ' '+cboSymbol2.Text
+       +''''+ datetimetostr(dtp2.Date)+''''+')';
+  end
+  else if lowercase(cboFieldName.Text) = 'prj_type' then
+     strClause1 := strClause1 +' '+''''+ IntToStr(cbo_type.itemIndex)+''''+')'
+  else if lowercase(cboFieldName.Text) = 'prj_grade' then
+     strClause1 := strClause1 +' '+''''+ cboGrade.Text+''''+')'
+  else
+  begin
+     if lowercase(cboSymbol1.Text) ='like' then
+       strClause1 := strClause1 +' '+''''+'%'+ edtValue1.Text +'%'+''''+')'
+     else
+       strClause1 := strClause1 +' '+''''+ edtValue1.Text+''''+')';
+     //if lowercase(cboSymbol2.Text) ='like' then 
+     //  strClause2 := '(' +cboFieldName.Text+ cboSymbol2.Text +' '+''''+'%'+ edtValue2.Text +'%'+''''+')'
+     //else
+     //  strClause2 := '(' +cboFieldName.Text+ cboSymbol2.Text +' '+''''+edtValue2.Text +''''+')';
+  end;
+  if strClause2<>'' then
+    strQuerySQL := strQuerySQL + strClause1 + ' AND ' + strClause2
+  else
+    strQuerySQL := strQuerySQL + strClause1;
+  Result := strQuerySQL;
+
+
+end;
+
+procedure TExportPrjForm.cboFieldDisplayChange(Sender: TObject);
+begin
+  cboFieldName.ItemIndex := cboFieldDisplay.ItemIndex;
+  edtValue1.Text := '';
+  edtValue2.Text := '';
+  dtp1.Date := now;
+  dtp2.Date := now; 
+  if (lowercase(cboFieldName.Text) = 'begin_date') or (lowercase(cboFieldName.Text) = 'end_date') then
+    VisibleQueryControl(2)
+  else if (lowercase(cboFieldName.Text) = 'prj_grade') then
+    VisibleQueryControl(3)
+  else if (lowercase(cboFieldName.Text) = 'prj_type') then
+    VisibleQueryControl(4)
+  else
+    VisibleQueryControl(1);
+end;
+
+procedure TExportPrjForm.VisibleQueryControl(aVisible: integer);
+begin
+
+  edtValue1.Text := '';
+  edtValue2.Text := '';
+  dtp1.Date := now;
+  dtp2.Date := now;
+  cboSymbol1.ItemIndex := 0;  
+  cboSymbol2.ItemIndex := 0;
+  dtp1.Left := edtValue1.Left;
+  dtp1.Top := edtValue1.Top;
+  dtp2.Left := edtValue2.Left;
+  dtp2.Top := edtValue2.Top;
+  cboGrade.Left := edtValue1.Left;
+  cboGrade.Top := edtValue1.Top;
+  cbo_type.Left := edtValue1.Left;
+  cbo_type.Top := edtValue1.Top ;
+  case aVisible of
+    1:  //normal ,一般需要直接输入值的字段
+      begin
+        edtValue1.Visible := true;
+        edtValue2.Visible := false;  
+        dtp1.Visible := false;
+        dtp2.Visible := false;
+        cboSymbol2.Visible := false;
+        lblValue2.Visible := false;
+        
+        cboGrade.Visible := false;
+        cbo_type.Visible := false;
+      end;
+    2://日期型字段
+      begin
+        edtValue1.Visible := false; 
+         
+        dtp1.Visible := true;
+        dtp2.Visible := true;
+        cboSymbol2.Visible := true;
+        lblValue2.Visible := true;
+        
+        cboGrade.Visible := false;
+        cbo_type.Visible := false;
+      end;
+    3://选择性字段 ,工程等级
+      begin
+        edtValue1.Visible := false;
+
+        dtp1.Visible := false;
+        dtp2.Visible := false;
+        cboSymbol2.Visible := false;
+        lblValue2.Visible := false;
+        cbo_type.Visible := false;
+        cboGrade.Visible := true;
+      end;
+    4://选择性字段 ,工程类型
+      begin
+        edtValue1.Visible := false;
+
+        dtp1.Visible := false;
+        dtp2.Visible := false;
+        cboSymbol2.Visible := false;
+        lblValue2.Visible := false;
+
+        cboGrade.Visible := false;
+        cbo_type.Visible := true;
+      end;
+  end;
+end;
+
+procedure TExportPrjForm.cboFieldDisplayKeyDown(Sender: TObject;
+  var Key: Word; Shift: TShiftState);
+begin
+  if key=VK_RETURN then
+    postMessage(self.Handle, wm_NextDlgCtl,0,0);
+end;
+
+procedure TExportPrjForm.edtValue1KeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  change_focus(key,self); 
+end;
+
+procedure TExportPrjForm.FormActivate(Sender: TObject);
+begin
+  edtValue1.SetFocus;
+end;
+
+end.

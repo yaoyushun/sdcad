@@ -1,0 +1,62 @@
+ * This help file was created with HelpScribble 6.2.0
+ * Registered to: Alexander Tzyganenko
+
+:BASE Fruser.hlp
+:TITLE FastReport 2.4
+1 Генератор звітів FastReport 
+2 Можливості=Scribble1700 
+2 Історія змін=Scribble1710 
+1 Опис візуальних об'єктів 
+2 Об'єкт "Текст"=Scribble1300 
+2 Об'єкт "Секція" (бенд)=Scribble1310 
+2 Об'єкт "Рисунок"=Scribble1320 
+2 Об'єкт "Вкладений звіт"=Scribble1330 
+2 Об'єкт "Лінія"=Scribble1340 
+2 Об'єкт "CheckBox"=Scribble1350 
+2 Об'єкт "RichText"=Scribble1360 
+2 Об'єкт "OLE"=Scribble1370 
+2 Об'єкт "Діаграма"=Scribble1380 
+2 Об'єкт "Фігура"=Scribble1390 
+2 Об'єкт "Штрихкод"=Scribble1400 
+1 Дизайнер 
+2 Опис дизайнера=Scribble1000 
+2 Клавіші керування=Scribble1010 
+2 Керування мишею=Scribble1020 
+2 Опції дизайнера=Scribble1030 
+2 Опції документа=Scribble1050 
+2 Опції сторінки=Scribble1060 
+2 Список змінних звіту=Scribble1040 
+2 Інспектор=Scribble1070 
+2 Виділення=Scribble1080 
+2 Майстри=Scribble1090 
+1 Попередній перегляд 
+2 Клавіші керування=Scribble1200 
+1 Створення звітів 
+2 Простий звіт (список)=Scribble1500 
+2 Master-Detail звіт=Scribble1510 
+2 Master-Detail-Subdetail звіт=Scribble1520 
+2 Cross-tab звіт=Scribble1530 
+2 Звіт із змінною висотою рядка=Scribble1540 
+2 Звіт із декількома рядками даних=Scribble1550 
+2 Багатостовпчиковий звіт=Scribble1560 
+2 Звіт із декількох сторінок=Scribble1570 
+2 Вкладений звіт=Scribble1580 
+2 Master-Detail-Detail звіт=Scribble1590 
+2 Композитный (складовий) звіт=Scribble1600 
+2 Звіт із рядками, що можуть розриватися=Scribble1610 
+2 Звіт без бендів=Scribble1620 
+2 Звіт із групами=Scribble1630 
+1 Enduser-звіти 
+2 Компонент TfrDataStorage=Scribble1900 
+2 Створення бази даних=Scribble1905 
+2 Створення таблиці=Scribble1910 
+2 Створення запиту=Scribble1920 
+2 Редактор полів=Scribble1930 
+2 Створення lookup-статі=Scribble1940 
+2 Редактор параметрів запиту=Scribble1950 
+2 Зв'язування даних=Scribble1960 
+2 Діалог вводу значень параметрів=Scribble1970 
+2 Дизайнер діалогу=Scribble1980 
+1 Опис умонтованих мовних засобів 
+2 Разбірник виразів (парсер)=Scribble1800 
+2 Умонтований інтерпретатор=Scribble1810

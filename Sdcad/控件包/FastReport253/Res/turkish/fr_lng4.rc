@@ -1,0 +1,26 @@
+#include "FR_Const.pas"
+
+STRINGTABLE
+{
+;--- LinesEditorForm resources -------------------------------------------------
+  frRes + 4000, "Metin listesi editörü"
+;--- SQLEditorForm resources -------------------------------------------------
+  frRes + 4010, "SQL editörü"
+
+;--- String resources ----------------------------------------------------------
+  SInsertLabel, "Baþlýk kontrolü ekle"
+  SInsertEdit, "Edit kontrolü ekle"
+  SInsertMemo, "Memo kontrolü ekle"
+  SInsertButton, "Button kontrolü ekle"
+  SInsertCheckBox, "CheckBox kontrolü ekle"
+  SInsertRadioButton, "RadioButton kontrolü ekle"
+  SInsertListBox, "ListBox kontrolü ekle"
+  SInsertComboBox, "ComboBox kontrolü ekle"
+  SInsertDateEdit, "DateEdit kontrolü ekle"
+  SInsertCheckListBox, "CheckListBox kontrolü ekle"
+
+  SInsertDB, "Database ekle"
+  SInsertTable, "Table ekle"
+  SInsertQuery, "Query ekle"
+  SInsertDBLookup, "DBLookupComboBox kontrolu ekle"
+}

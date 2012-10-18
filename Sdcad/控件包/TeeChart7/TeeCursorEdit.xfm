@@ -1,0 +1,66 @@
+inherited CursorToolEditor: TCursorToolEditor
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label2: TLabel [1]
+    Left = 48
+    Top = 43
+    Width = 26
+    Height = 13
+    Alignment = taRightJustify
+    Caption = 'S&tyle:'
+    FocusControl = CBStyle
+  end
+  inherited CBSeries: TComboFlat
+    HelpContext = 1229
+    TabOrder = 4
+  end
+  object BPen: TButtonPen
+    Left = 48
+    Top = 144
+    HelpContext = 1275
+    Caption = '&Pen...'
+    TabOrder = 0
+  end
+  object CBStyle: TComboFlat
+    Left = 78
+    Top = 40
+    Width = 145
+    HelpContext = 1277
+    TabOrder = 1
+    OnChange = CBStyleChange
+    Items.Strings = (
+      'Horizontal'
+      'Vertical'
+      'Both')
+  end
+  object CBSnap: TCheckBox
+    Left = 48
+    Top = 72
+    Width = 145
+    Height = 17
+    HelpContext = 1276
+    Caption = 'S&nap'
+    TabOrder = 2
+    OnClick = CBSnapClick
+  end
+  object CBFollow: TCheckBox
+    Left = 48
+    Top = 95
+    Width = 145
+    Height = 17
+    HelpContext = 1274
+    Caption = '&Follow mouse'
+    TabOrder = 3
+    OnClick = CBFollowClick
+  end
+  object CBZ: TCheckBox
+    Left = 48
+    Top = 118
+    Width = 145
+    Height = 17
+    HelpContext = 1276
+    Caption = 'Use Series &Z'
+    TabOrder = 5
+    OnClick = CBZClick
+  end
+end

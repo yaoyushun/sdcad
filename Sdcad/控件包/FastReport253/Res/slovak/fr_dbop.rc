@@ -1,0 +1,22 @@
+; ----------------------------------------------------------------------------
+; TRANSLATION TO SLOVAK
+; Translated: Arpad Toth
+; Date      : 23.04.2000 - Prvá verzia
+; Contact   : ekosoft@signalsoft.sk
+; Comment   : Pokia¾ by niekto upravoval túto verziu, pošlite mi prosím emailom
+;             zmenenú verziu. Ïakujem.
+; ----------------------------------------------------------------------------
+
+#include "FR_Const.pas"
+
+STRINGTABLE
+{
+  frRes + 6000, "&Alias:"
+  frRes + 6001, "Žiaden"
+}
+
+ALIASDLGTEMPLATE DIALOG 0, 0, 400, 16
+STYLE WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif"
+{
+}

@@ -1,0 +1,64 @@
+object MovAveFuncEditor: TMovAveFuncEditor
+  Left = 294
+  Top = 240
+  Width = 273
+  Height = 118
+
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 55
+    Top = 17
+    Width = 33
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '&Period:'
+    FocusControl = Edit1
+  end
+  object Label2: TLabel
+    Left = 45
+    Top = 52
+    Width = 43
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '&Average:'
+    FocusControl = CBStyle
+  end
+  object Edit1: TEdit
+    Left = 94
+    Top = 14
+    Width = 51
+    Height = 21
+    HelpContext = 382
+    TabOrder = 0
+    Text = '1'
+    OnChange = Edit1Change
+  end
+  object UpDown1: TUpDown
+    Left = 145
+    Top = 14
+    Width = 15
+    Height = 21
+    HelpContext = 382
+    Associate = Edit1
+    Min = 1
+    Max = 32767
+    Position = 1
+    TabOrder = 1
+  end
+  object CBStyle: TComboFlat
+    Left = 94
+    Top = 49
+    Width = 147
+    HelpContext = 1852
+    TabOrder = 2
+    OnChange = Edit1Change
+    Items.Strings = (
+      'Normal'
+      'Weighted'
+      'Weighted by Index')
+  end
+end
