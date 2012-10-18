@@ -1,0 +1,444 @@
+object AnnotationToolEdit: TAnnotationToolEdit
+  Left = 343
+  Top = 217
+  ActiveControl = PageControl1
+  AutoScroll = False
+  ClientHeight = 197
+  ClientWidth = 280
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 0
+    Width = 280
+    Height = 197
+    ActivePage = TabSheet4
+    Align = alClient
+    HotTrack = True
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'Options'
+      object Label1: TLabel
+        Left = 7
+        Top = 1
+        Width = 24
+        Height = 13
+        Caption = '&Text:'
+        FocusControl = MemoText
+      end
+      object Label3: TLabel
+        Left = 11
+        Top = 115
+        Width = 72
+        Height = 13
+        Caption = 'Text &alignment:'
+        FocusControl = CBTextAlign
+      end
+      object Label9: TLabel
+        Left = 136
+        Top = 115
+        Width = 33
+        Height = 13
+        Caption = '&Cursor:'
+        FocusControl = CBCursor
+      end
+      object MemoText: TMemo
+        Left = 8
+        Top = 16
+        Width = 233
+        Height = 94
+        HelpContext = 1893
+        TabOrder = 0
+        OnChange = EFormatChange
+      end
+      object CBTextAlign: TComboFlat
+        Left = 8
+        Top = 131
+        Width = 121
+        HelpContext = 1894
+        TabOrder = 1
+        OnChange = CBTextAlignChange
+        Items.Strings = (
+          'Left'
+          'Center'
+          'Right')
+      end
+      object CBCursor: TComboFlat
+        Left = 136
+        Top = 131
+        Width = 105
+        HelpContext = 1895
+        Sorted = True
+        TabOrder = 2
+        OnChange = CBCursorChange
+        Items.Strings = (
+          'Center'
+          'Left'
+          'Right')
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Position'
+      object Label2: TLabel
+        Left = 39
+        Top = 18
+        Width = 25
+        Height = 13
+        Alignment = taRightJustify
+        Caption = '&Auto:'
+        FocusControl = CBPos
+      end
+      object Label4: TLabel
+        Left = 44
+        Top = 71
+        Width = 21
+        Height = 13
+        Alignment = taRightJustify
+        Caption = 'L&eft:'
+        FocusControl = ECustLeft
+      end
+      object Label5: TLabel
+        Left = 43
+        Top = 95
+        Width = 22
+        Height = 13
+        Alignment = taRightJustify
+        Caption = 'T&op:'
+        FocusControl = ECustTop
+      end
+      object Label13: TLabel
+        Left = 38
+        Top = 125
+        Width = 27
+        Height = 13
+        Alignment = taRightJustify
+        Caption = '&Units:'
+        FocusControl = CBUnits
+      end
+      object CBPos: TComboFlat
+        Left = 69
+        Top = 15
+        Width = 143
+        HelpContext = 1892
+        TabOrder = 0
+        OnChange = CBPosChange
+        Items.Strings = (
+          'Left top'
+          'Left bottom'
+          'Right top'
+          'Right bottom')
+      end
+      object CBCustPos: TCheckBox
+        Left = 70
+        Top = 46
+        Width = 137
+        Height = 17
+        HelpContext = 1442
+        Caption = '&Custom'
+        TabOrder = 1
+        OnClick = CBCustPosClick
+      end
+      object ECustLeft: TEdit
+        Left = 69
+        Top = 68
+        Width = 41
+        Height = 21
+        HelpContext = 1461
+        Enabled = False
+        TabOrder = 2
+        Text = '0'
+        OnChange = ECustLeftChange
+      end
+      object UDLeft: TUpDown
+        Left = 110
+        Top = 68
+        Width = 15
+        Height = 21
+        HelpContext = 1461
+        Associate = ECustLeft
+        Enabled = False
+        Min = -100
+        Max = 1000
+        Increment = 5
+        TabOrder = 3
+      end
+      object ECustTop: TEdit
+        Left = 69
+        Top = 92
+        Width = 41
+        Height = 21
+        HelpContext = 1462
+        Enabled = False
+        TabOrder = 4
+        Text = '0'
+        OnChange = ECustTopChange
+      end
+      object UDTop: TUpDown
+        Left = 110
+        Top = 92
+        Width = 15
+        Height = 21
+        HelpContext = 1462
+        Associate = ECustTop
+        Enabled = False
+        Min = -100
+        Max = 1000
+        Increment = 5
+        TabOrder = 5
+      end
+      object CBUnits: TComboFlat
+        Left = 69
+        Top = 122
+        Width = 145
+        TabOrder = 6
+        OnChange = CBUnitsChange
+        Items.Strings = (
+          'Percent'
+          'Pixels')
+      end
+    end
+    object TabSheet4: TTabSheet
+      Caption = 'Size'
+      object Label14: TLabel
+        Left = 34
+        Top = 39
+        Width = 31
+        Height = 13
+        Alignment = taRightJustify
+        Caption = '&Width:'
+        FocusControl = ECustWidth
+      end
+      object Label15: TLabel
+        Left = 31
+        Top = 63
+        Width = 34
+        Height = 13
+        Alignment = taRightJustify
+        Caption = '&Height:'
+        FocusControl = ECustHeight
+      end
+      object ECustWidth: TEdit
+        Left = 69
+        Top = 35
+        Width = 41
+        Height = 21
+        HelpContext = 1461
+        Enabled = False
+        TabOrder = 0
+        Text = '0'
+        OnChange = ECustWidthChange
+      end
+      object ECustHeight: TEdit
+        Left = 69
+        Top = 59
+        Width = 41
+        Height = 21
+        HelpContext = 1462
+        Enabled = False
+        TabOrder = 1
+        Text = '0'
+        OnChange = ECustHeightChange
+      end
+      object UDWidth: TUpDown
+        Left = 110
+        Top = 35
+        Width = 16
+        Height = 21
+        HelpContext = 1461
+        Associate = ECustWidth
+        Enabled = False
+        Max = 2000
+        TabOrder = 2
+        Thousands = False
+      end
+      object UDHeight: TUpDown
+        Left = 110
+        Top = 59
+        Width = 16
+        Height = 21
+        HelpContext = 1462
+        Associate = ECustHeight
+        Enabled = False
+        Max = 2000
+        TabOrder = 3
+        Thousands = False
+      end
+      object CBAutoSize: TCheckBox
+        Left = 70
+        Top = 13
+        Width = 137
+        Height = 17
+        HelpContext = 1442
+        Caption = '&Automatic'
+        TabOrder = 4
+        OnClick = CBAutoSizeClick
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'Callout'
+      object Label10: TLabel
+        Left = 164
+        Top = 40
+        Width = 45
+        Height = 13
+        Alignment = taRightJustify
+        Caption = '&Distance:'
+        FocusControl = EArrowDist
+      end
+      object Label11: TLabel
+        Left = 160
+        Top = 69
+        Width = 57
+        Height = 13
+        Caption = '&Arrow head:'
+      end
+      object Label12: TLabel
+        Left = 184
+        Top = 115
+        Width = 23
+        Height = 13
+        Alignment = taRightJustify
+        Caption = '&Size:'
+        FocusControl = Edit1
+      end
+      object BCalloutPen: TButtonPen
+        Left = 6
+        Top = 8
+        HelpContext = 1896
+        Caption = '&Border...'
+        TabOrder = 0
+      end
+      object BCalloutPointer: TButton
+        Left = 94
+        Top = 8
+        Width = 75
+        Height = 25
+        HelpContext = 1897
+        Caption = '&Pointer...'
+        TabOrder = 1
+        OnClick = BCalloutPointerClick
+      end
+      object GroupBox1: TGroupBox
+        Left = 8
+        Top = 55
+        Width = 137
+        Height = 89
+        Caption = 'P&osition:'
+        TabOrder = 2
+        object Label6: TLabel
+          Left = 38
+          Top = 17
+          Width = 10
+          Height = 13
+          Alignment = taRightJustify
+          Caption = '&X:'
+          FocusControl = EX
+        end
+        object Label7: TLabel
+          Left = 38
+          Top = 41
+          Width = 10
+          Height = 13
+          Alignment = taRightJustify
+          Caption = '&Y:'
+          FocusControl = EY
+        end
+        object Label8: TLabel
+          Left = 38
+          Top = 65
+          Width = 10
+          Height = 13
+          Alignment = taRightJustify
+          Caption = '&Z:'
+          FocusControl = EZ
+        end
+        object EX: TEdit
+          Left = 52
+          Top = 14
+          Width = 75
+          Height = 21
+          HelpContext = 1898
+          TabOrder = 0
+          OnChange = EXChange
+        end
+        object EY: TEdit
+          Left = 52
+          Top = 38
+          Width = 75
+          Height = 21
+          HelpContext = 1899
+          TabOrder = 1
+          OnChange = EYChange
+        end
+        object EZ: TEdit
+          Left = 52
+          Top = 62
+          Width = 75
+          Height = 21
+          HelpContext = 1900
+          TabOrder = 2
+          OnChange = EZChange
+        end
+      end
+      object EArrowDist: TEdit
+        Left = 211
+        Top = 37
+        Width = 32
+        Height = 21
+        HelpContext = 1901
+        TabOrder = 3
+        Text = '0'
+        OnChange = EArrowDistChange
+      end
+      object UDArrowDist: TUpDown
+        Left = 243
+        Top = 37
+        Width = 15
+        Height = 21
+        HelpContext = 1901
+        Associate = EArrowDist
+        Min = -1000
+        Max = 1000
+        TabOrder = 4
+      end
+      object CBHead: TComboFlat
+        Left = 160
+        Top = 85
+        Width = 99
+        HelpContext = 1902
+        TabOrder = 5
+        OnChange = CBHeadChange
+        Items.Strings = (
+          'None'
+          'Line'
+          'Solid')
+      end
+      object Edit1: TEdit
+        Left = 211
+        Top = 112
+        Width = 32
+        Height = 21
+        HelpContext = 1903
+        TabOrder = 6
+        Text = '0'
+        OnChange = Edit1Change
+      end
+      object UDHeadSize: TUpDown
+        Left = 243
+        Top = 112
+        Width = 15
+        Height = 21
+        HelpContext = 1903
+        Associate = Edit1
+        Min = -1000
+        Max = 1000
+        TabOrder = 7
+      end
+    end
+  end
+end

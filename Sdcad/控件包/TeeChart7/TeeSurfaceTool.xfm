@@ -1,0 +1,108 @@
+object SurfaceNearest: TSurfaceNearest
+  Left = 192
+  Top = 107
+  AutoScroll = False
+  ClientHeight = 143
+  ClientWidth = 281
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  Position = poScreenCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 10
+    Top = 3
+    Width = 40
+    Height = 13
+    Caption = '&Surface:'
+    FocusControl = CBSeries
+  end
+  object ButtonColor1: TButtonColor
+    Left = 8
+    Top = 48
+    Caption = '&Cell...'
+    TabOrder = 0
+    OnClick = ButtonColor1Click
+  end
+  object ButtonColor2: TButtonColor
+    Left = 8
+    Top = 80
+    Caption = '&Row...'
+    TabOrder = 1
+    OnClick = ButtonColor2Click
+  end
+  object ButtonColor3: TButtonColor
+    Left = 8
+    Top = 112
+    Caption = '&Column...'
+    TabOrder = 2
+    OnClick = ButtonColor3Click
+  end
+  object CheckBox1: TCheckBox
+    Left = 96
+    Top = 52
+    Width = 82
+    Height = 17
+    Caption = 'Default'
+    TabOrder = 3
+    OnClick = CheckBox1Click
+  end
+  object CheckBox2: TCheckBox
+    Left = 96
+    Top = 84
+    Width = 82
+    Height = 17
+    Caption = 'Default'
+    TabOrder = 4
+    OnClick = CheckBox2Click
+  end
+  object CheckBox3: TCheckBox
+    Left = 96
+    Top = 116
+    Width = 82
+    Height = 17
+    Caption = 'Default'
+    TabOrder = 5
+    OnClick = CheckBox3Click
+  end
+  object CBSeries: TComboBox
+    Left = 8
+    Top = 18
+    Width = 145
+    Height = 21
+    HelpContext = 1121
+    Style = csDropDownList
+    ItemHeight = 13
+    TabOrder = 6
+    OnChange = CBSeriesChange
+  end
+  object CheckBox4: TCheckBox
+    Left = 192
+    Top = 52
+    Width = 82
+    Height = 17
+    Caption = 'None'
+    TabOrder = 7
+    OnClick = CheckBox4Click
+  end
+  object CheckBox5: TCheckBox
+    Left = 192
+    Top = 84
+    Width = 82
+    Height = 17
+    Caption = 'None'
+    TabOrder = 8
+    OnClick = CheckBox5Click
+  end
+  object CheckBox6: TCheckBox
+    Left = 192
+    Top = 116
+    Width = 82
+    Height = 17
+    Caption = 'None'
+    TabOrder = 9
+    OnClick = CheckBox6Click
+  end
+end

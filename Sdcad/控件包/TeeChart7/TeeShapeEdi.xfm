@@ -1,0 +1,265 @@
+object ChartShapeEditor: TChartShapeEditor
+  Left = 221
+  Top = 232
+  ActiveControl = CBStyle
+  AutoScroll = False
+  ClientHeight = 195
+  ClientWidth = 341
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 0
+    Width = 341
+    Height = 195
+    ActivePage = TabSheet1
+    Align = alClient
+    HotTrack = True
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'Style'
+      object Label3: TLabel
+        Left = 4
+        Top = 8
+        Width = 37
+        Height = 17
+        Alignment = taRightJustify
+        AutoSize = False
+        Caption = '&Style:'
+        FocusControl = CBStyle
+      end
+      object Label5: TLabel
+        Left = 111
+        Top = 33
+        Width = 45
+        Height = 14
+        AutoSize = False
+        Caption = 'Te&xt:'
+        FocusControl = MemoText
+      end
+      object CBStyle: TComboFlat
+        Left = 44
+        Top = 4
+        Width = 145
+        HelpContext = 446
+        TabOrder = 0
+        OnChange = CBStyleChange
+        Items.Strings = (
+          'Rectangle'
+          'Circle'
+          'Vertical Line'
+          'Horiz. Line'
+          'Triangle'
+          'Invert. Triangle'
+          'Line'
+          'Diamond'
+          'Cube'
+          'Cross'
+          'Diagonal Cross'
+          'Star'
+          'Pyramid'
+          'Invert. Pyramid')
+      end
+      object BShapeColor: TButtonColor
+        Left = 15
+        Top = 35
+        HelpContext = 421
+        Caption = '&Color...'
+        TabOrder = 1
+      end
+      object BShapePen: TButtonPen
+        Left = 15
+        Top = 68
+        HelpContext = 376
+        Caption = 'Bor&der...'
+        TabOrder = 2
+      end
+      object CBTrans: TCheckBox
+        Left = 201
+        Top = 24
+        Width = 120
+        Height = 17
+        HelpContext = 657
+        Caption = 'Tra&nsparent'
+        TabOrder = 3
+        OnClick = CBTransClick
+      end
+      object BShapeBrush: TButton
+        Left = 15
+        Top = 101
+        Width = 75
+        Height = 25
+        HelpContext = 117
+        Caption = '&Pattern...'
+        TabOrder = 4
+        OnClick = BShapeBrushClick
+      end
+      object MemoText: TMemo
+        Left = 111
+        Top = 50
+        Width = 129
+        Height = 72
+        HelpContext = 641
+        TabOrder = 5
+        OnChange = MemoTextChange
+      end
+      object RGAlign: TRadioGroup
+        Left = 112
+        Top = 125
+        Width = 205
+        Height = 37
+        HelpContext = 41
+        Caption = '&Horiz. Alignment'
+        Columns = 3
+        Items.Strings = (
+          'Left'
+          'Center'
+          'Right')
+        TabOrder = 6
+        OnClick = RGAlignClick
+      end
+      object CBRound: TCheckBox
+        Left = 201
+        Top = 5
+        Width = 130
+        Height = 17
+        HelpContext = 412
+        Caption = '&Round Rectangle'
+        TabOrder = 7
+        OnClick = CBRoundClick
+      end
+      object RGVertAlign: TRadioGroup
+        Left = 248
+        Top = 45
+        Width = 69
+        Height = 77
+        HelpContext = 1421
+        Caption = '&Alignment'
+        Items.Strings = (
+          'Top'
+          'Center'
+          'Bottom')
+        TabOrder = 8
+        OnClick = RGVertAlignClick
+      end
+      object Button1: TButton
+        Left = 15
+        Top = 134
+        Width = 75
+        Height = 25
+        HelpContext = 117
+        Caption = '&Gradient...'
+        TabOrder = 9
+        OnClick = Button1Click
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Position'
+      object Label1: TLabel
+        Left = 20
+        Top = 84
+        Width = 41
+        Height = 21
+        Alignment = taRightJustify
+        AutoSize = False
+        Caption = '&Left:'
+        FocusControl = SEX0
+      end
+      object LX1: TLabel
+        Left = 260
+        Top = 84
+        Width = 41
+        Height = 21
+        AutoSize = False
+        Caption = '&Right'
+        FocusControl = SEX1
+      end
+      object Label2: TLabel
+        Left = 88
+        Top = 60
+        Width = 37
+        Height = 18
+        Alignment = taRightJustify
+        AutoSize = False
+        Caption = '&Top:'
+        FocusControl = SEY0
+      end
+      object LY1: TLabel
+        Left = 72
+        Top = 108
+        Width = 53
+        Height = 21
+        Alignment = taRightJustify
+        AutoSize = False
+        Caption = '&Bottom:'
+        FocusControl = SEY1
+      end
+      object Label4: TLabel
+        Left = 64
+        Top = 18
+        Width = 61
+        Height = 23
+        Alignment = taRightJustify
+        AutoSize = False
+        Caption = '&Units:'
+        FocusControl = CBUnits
+      end
+      object SEX0: TEdit
+        Left = 64
+        Top = 80
+        Width = 65
+        Height = 21
+        HelpContext = 693
+        TabOrder = 0
+        OnChange = SEX0Change
+      end
+      object SEX1: TEdit
+        Left = 192
+        Top = 80
+        Width = 65
+        Height = 21
+        HelpContext = 693
+        TabOrder = 1
+        OnChange = SEX1Change
+      end
+      object SEY0: TEdit
+        Left = 128
+        Top = 56
+        Width = 65
+        Height = 21
+        HelpContext = 693
+        TabOrder = 2
+        OnChange = SEY0Change
+      end
+      object SEY1: TEdit
+        Left = 128
+        Top = 104
+        Width = 65
+        Height = 21
+        HelpContext = 693
+        TabOrder = 3
+        OnChange = SEY1Change
+      end
+      object CBUnits: TComboFlat
+        Left = 128
+        Top = 15
+        Width = 105
+        HelpContext = 700
+        TabOrder = 4
+        OnChange = CBUnitsChange
+        Items.Strings = (
+          'Pixels'
+          'Axis'
+          'Axis Origin')
+      end
+    end
+    object TabFont: TTabSheet
+      Caption = 'Text'
+    end
+  end
+end

@@ -1,0 +1,38 @@
+;{******************************************}
+;{                                          }
+;{             FastReport v2.52             }
+;{              Resource File               }
+;{                                          }
+;{Copyright(c) 1998-2004 by FastReports Inc.}
+;{                                          }
+;{ Translated by: Sorin Pohontu             }
+;{      http://www.frontline.ro             }
+;{                                          }
+;{******************************************}
+
+#include "FR_Const.pas"
+
+STRINGTABLE
+{
+;--- LinesEditorForm resources -------------------------------------------------
+  frRes + 4000, "String list editor"
+;--- SQLEditorForm resources -------------------------------------------------
+  frRes + 4010, "SQL editor"
+
+;--- String resources ----------------------------------------------------------
+  SInsertLabel, "Insereaza control de tip Label"
+  SInsertEdit, "Insereaza control de tip Edit"
+  SInsertMemo, "Insereaza control de tip Memo"
+  SInsertButton, "Insereaza control de tip Button"
+  SInsertCheckBox, "Insereaza control de tip CheckBox"
+  SInsertRadioButton, "Insereaza control de tip RadioButton"
+  SInsertListBox, "Insereaza control de tip ListBox"
+  SInsertComboBox, "Insereaza control de tip ComboBox"
+  SInsertDateEdit, "Insereaza control de tip DateEdit"
+  SInsertCheckListBox, "Insereaza control de tip CheckListBox"
+
+  SInsertDB, "Insereaza baza de date"
+  SInsertTable, "Insereaza tabela"
+  SInsertQuery, "Insereaza query"
+  SInsertDBLookup, "Insereaza control de tip DBLookupComboBox"
+}

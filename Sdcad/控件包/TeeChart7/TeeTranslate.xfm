@@ -1,0 +1,93 @@
+object AskLanguage: TAskLanguage
+  Left = 155
+  Top = 168
+  AutoScroll = False
+  BorderIcons = [biSystemMenu]
+  Caption = 'Available Languages'
+  ClientHeight = 311
+  ClientWidth = 216
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 11
+    Top = 6
+    Width = 99
+    Height = 13
+    Caption = '&Choose a Language:'
+    FocusControl = LBLangs
+  end
+  object OKBtn: TButton
+    Left = 133
+    Top = 24
+    Width = 75
+    Height = 25
+    HelpContext = 1767
+    Caption = 'OK'
+    Default = True
+    ModalResult = 1
+    TabOrder = 1
+    OnClick = OKBtnClick
+  end
+  object CancelBtn: TButton
+    Left = 133
+    Top = 60
+    Width = 75
+    Height = 25
+    HelpContext = 1767
+    Cancel = True
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 2
+  end
+  object LBLangs: TListBox
+    Left = 8
+    Top = 24
+    Width = 113
+    Height = 279
+    HelpContext = 1767
+    ItemHeight = 13
+    Items.Strings = (
+      'English,0'
+      'Arabic,21'
+      'Brazilian,1'
+      'Catalan,2'
+      'Chinese Simp.,3'
+      'Chinese Trad.,4'
+      'Czech,32'
+      'Danish,5'
+      'Dutch,6'
+      'Farsi,31'
+      'Finnish,26'
+      'French,7'
+      'Galician,20'
+      'German,8'
+      'Hebrew,22'
+      'Hellenic,28'
+      'Hindi,33'
+      'Hungarian,19'
+      'Indonesian,25'
+      'Italian,9'
+      'Japanese,15'
+      'Korean,24'
+      'Norwegian,14'
+      'Polish,16'
+      'Portuguese,10'
+      'Romanian,29'
+      'Russian,11'
+      'Serbian,30'
+      'Slovak,27'
+      'Slovene,17'
+      'Spanish,12'
+      'Swedish,13'
+      'Turkish,18'
+      'Ukrainian,23'
+      'Urdu,34')
+    TabOrder = 0
+    OnDblClick = LBLangsDblClick
+  end
+end

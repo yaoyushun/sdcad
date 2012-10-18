@@ -1,0 +1,110 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MiniCAD - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "e:\Temp\RSP40B.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Release/" /Fp"Release/MiniCAD.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp"
+]
+Creating command line "cl.exe @e:\Temp\RSP40B.tmp" 
+Creating temporary file "e:\Temp\RSP40C.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/MiniCAD_EN.pdb" /machine:I386 /out:"E:\Project_CN\suzhouProject\sdcad\ProjectCAD\MiniCAD_EN.exe" 
+.\Release\Function_Graphics.obj
+.\Release\Function_System.obj
+.\Release\Functoin_String.obj
+.\Release\CompressionCurve.obj
+.\Release\CrossBoardIniFile.obj
+.\Release\HistogramIniFile.obj
+.\Release\HistogramIniFile2.obj
+.\Release\HistogramIniFile3.obj
+.\Release\HistogramIniFile4.obj
+.\Release\LayoutIniFile.obj
+.\Release\Project_LegendDisplay.obj
+.\Release\ProjectIniFile.obj
+.\Release\StaticIniFile.obj
+.\Release\StaticIniFile2.obj
+.\Release\ADEntities.obj
+.\Release\ADGraphics.obj
+.\Release\ADLayerGroup.obj
+.\Release\Display.obj
+.\Release\DxfFile.obj
+.\Release\ArcTool.obj
+.\Release\CircleTool.obj
+.\Release\DrawTool.obj
+.\Release\InsertTool.obj
+.\Release\LabelCoordTool.obj
+.\Release\LineTool.obj
+.\Release\MoveTool.obj
+.\Release\PanTool.obj
+.\Release\pointTool.obj
+.\Release\PolyLineTool.obj
+.\Release\RectTool.obj
+.\Release\RotateTool.obj
+.\Release\SectionLineTool.obj
+.\Release\SelectTool.obj
+.\Release\Spline_AddPoint_Tool.obj
+.\Release\SplineTool.obj
+.\Release\TextTool.obj
+.\Release\ChildFrm.obj
+.\Release\Dlg_PaperSetup.obj
+.\Release\DlgCompass.obj
+.\Release\DlgEntityProperty.obj
+.\Release\DlgLayerAdmin.obj
+.\Release\DlgSection.obj
+.\Release\DlgTextEdit.obj
+.\Release\InsertBlockDlg.obj
+.\Release\InsertHoleLayerDlg.obj
+.\Release\LineCombo.obj
+.\Release\MainFrm.obj
+.\Release\MiniCAD.obj
+.\Release\MiniCADDoc.obj
+.\Release\MiniCADView.obj
+.\Release\MyRichEdit.obj
+.\Release\StdAfx.obj
+.\Release\MiniCAD.res
+]
+Creating command line "link.exe @e:\Temp\RSP40C.tmp"
+<h3>Output Window</h3>
+Compiling...
+ProjectIniFile.cpp
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(81) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(133) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(427) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(541) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(555) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(668) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(803) : warning C4101: 'layerDeep' : unreferenced local variable
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(825) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(1439) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(1452) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(1489) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(1501) : warning C4018: '==' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(1577) : warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(1739) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(1780) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(2237) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(2242) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(2260) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(2356) : warning C4018: '==' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(2366) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(2496) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(2563) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(2585) : warning C4305: '=' : truncation from 'const double' to 'float'
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(2606) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(2693) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD_EN\Project\ProjectIniFile.cpp(2701) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+Linking...
+
+
+
+<h3>Results</h3>
+MiniCAD_EN.exe - 0 error(s), 26 warning(s)
+</pre>
+</body>
+</html>

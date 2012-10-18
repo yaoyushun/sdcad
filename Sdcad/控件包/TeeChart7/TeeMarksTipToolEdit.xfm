@@ -1,0 +1,75 @@
+inherited MarksTipToolEdit: TMarksTipToolEdit
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label2: TLabel [1]
+    Left = 16
+    Top = 44
+    Width = 26
+    Height = 13
+    Alignment = taRightJustify
+    Caption = 'S&tyle:'
+    FocusControl = CBMarkStyle
+  end
+  object Label3: TLabel [2]
+    Left = 100
+    Top = 128
+    Width = 30
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '&Delay:'
+    FocusControl = EDelay
+  end
+  object Label4: TLabel [3]
+    Left = 201
+    Top = 128
+    Width = 28
+    Height = 13
+    Caption = 'msec.'
+  end
+  object CBMarkStyle: TComboFlat
+    Left = 48
+    Top = 40
+    Width = 145
+    HelpContext = 1545
+    TabOrder = 1
+    OnChange = CBMarkStyleChange
+  end
+  object RGMouseAction: TRadioGroup
+    Left = 48
+    Top = 72
+    Width = 145
+    Height = 41
+    HelpContext = 1544
+    Caption = 'Mouse action:'
+    Columns = 2
+    ItemIndex = 0
+    Items.Strings = (
+      'Move'
+      'Click')
+    TabOrder = 2
+    OnClick = RGMouseActionClick
+  end
+  object EDelay: TEdit
+    Left = 137
+    Top = 125
+    Width = 41
+    Height = 21
+    HelpContext = 1546
+    TabOrder = 3
+    Text = '0'
+    OnChange = EDelayChange
+  end
+  object UDDelay: TUpDown
+    Left = 178
+    Top = 125
+    Width = 16
+    Height = 21
+    HelpContext = 1546
+    Associate = EDelay
+    Max = 30000
+    Increment = 50
+    TabOrder = 4
+    Thousands = False
+  end
+end

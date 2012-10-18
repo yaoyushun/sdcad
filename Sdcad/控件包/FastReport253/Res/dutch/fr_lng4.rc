@@ -1,0 +1,26 @@
+#include "FR_Const.pas"
+
+STRINGTABLE
+{
+;--- LinesEditorForm resources -------------------------------------------------
+  frRes + 4000, "String list editor"
+;--- SQLEditorForm resources -------------------------------------------------
+  frRes + 4010, "SQL editor"
+
+;--- String resources ----------------------------------------------------------
+  SInsertLabel, "Tekst object invoegen"
+  SInsertEdit, "Invoer object invoegen"
+  SInsertMemo, "Memo object invoegen"
+  SInsertButton, "Knop invoegen"
+  SInsertCheckBox, "CheckBox invoegen"
+  SInsertRadioButton, "RadioButton invoegen"
+  SInsertListBox, "ListBox object invoegen"
+  SInsertComboBox, "ComboBox invoegen"
+  SInsertDateEdit, "Datum object"
+  SInsertCheckListBox, "CheckListBox object"
+
+  SInsertDB, "Database object invoegen"
+  SInsertTable, "Tabel object invoegen"
+  SInsertQuery, "Query object invoegen"
+  SInsertDBLookup, "DBLookupComboBox invoegen"
+}

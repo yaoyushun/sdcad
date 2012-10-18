@@ -1,0 +1,168 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MiniCAD - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "e:\Temp\RSP3EC.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Release/" /Fp"Release/MiniCAD.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"J:\work\sdcad\CAD\Project\ProjectIniFile.cpp"
+]
+Creating command line "cl.exe @e:\Temp\RSP3EC.tmp" 
+Creating temporary file "e:\Temp\RSP3ED.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/MiniCAD.pdb" /machine:I386 /out:"E:\Project_CN\suzhouProject\sdcad\ProjectCAD\MiniCAD.exe" 
+.\Release\Function_Graphics.obj
+.\Release\Function_System.obj
+.\Release\Functoin_String.obj
+.\Release\CompressionCurve.obj
+.\Release\CrossBoardIniFile.obj
+.\Release\HistogramIniFile.obj
+.\Release\HistogramIniFile2.obj
+.\Release\HistogramIniFile3.obj
+.\Release\HistogramIniFile4.obj
+.\Release\LayoutIniFile.obj
+.\Release\Project_LegendDisplay.obj
+.\Release\ProjectIniFile.obj
+.\Release\StaticIniFile.obj
+.\Release\StaticIniFile2.obj
+.\Release\ADEntities.obj
+.\Release\ADGraphics.obj
+.\Release\ADLayerGroup.obj
+.\Release\Display.obj
+.\Release\DxfFile.obj
+.\Release\ArcTool.obj
+.\Release\CircleTool.obj
+.\Release\DrawTool.obj
+.\Release\InsertTool.obj
+.\Release\LabelCoordTool.obj
+.\Release\LineTool.obj
+.\Release\MoveTool.obj
+.\Release\PanTool.obj
+.\Release\pointTool.obj
+.\Release\PolyLineTool.obj
+.\Release\RectTool.obj
+.\Release\RotateTool.obj
+.\Release\SectionLineTool.obj
+.\Release\SelectTool.obj
+.\Release\Spline_AddPoint_Tool.obj
+.\Release\SplineTool.obj
+.\Release\TextTool.obj
+.\Release\ChildFrm.obj
+.\Release\Dlg_PaperSetup.obj
+.\Release\DlgCompass.obj
+.\Release\DlgEntityProperty.obj
+.\Release\DlgLayerAdmin.obj
+.\Release\DlgSection.obj
+.\Release\DlgTextEdit.obj
+.\Release\InsertBlockDlg.obj
+.\Release\InsertHoleLayerDlg.obj
+.\Release\LineCombo.obj
+.\Release\MainFrm.obj
+.\Release\MiniCAD.obj
+.\Release\MiniCADDoc.obj
+.\Release\MiniCADView.obj
+.\Release\MyRichEdit.obj
+.\Release\StdAfx.obj
+.\Release\MiniCAD.res
+]
+Creating command line "link.exe @e:\Temp\RSP3ED.tmp"
+<h3>Output Window</h3>
+Compiling...
+ProjectIniFile.cpp
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(79) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(131) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(425) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(539) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(553) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(666) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(801) : warning C4101: 'layerDeep' : unreferenced local variable
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(823) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(1437) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(1450) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(1487) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(1499) : warning C4018: '==' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(1575) : warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(1737) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(1778) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(2235) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(2240) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(2258) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(2354) : warning C4018: '==' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(2364) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(2494) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(2561) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(2583) : warning C4305: '=' : truncation from 'const double' to 'float'
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(2604) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(2691) : warning C4018: '<' : signed/unsigned mismatch
+J:\work\sdcad\CAD\Project\ProjectIniFile.cpp(2699) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+Linking...
+Creating temporary file "e:\Temp\RSP3EF.tmp" with contents
+[
+/nologo /o"Release/MiniCAD.bsc" 
+.\Release\StdAfx.sbr
+.\Release\Function_Graphics.sbr
+.\Release\Function_System.sbr
+.\Release\Functoin_String.sbr
+.\Release\CompressionCurve.sbr
+.\Release\CrossBoardIniFile.sbr
+.\Release\HistogramIniFile.sbr
+.\Release\HistogramIniFile2.sbr
+.\Release\HistogramIniFile3.sbr
+.\Release\HistogramIniFile4.sbr
+.\Release\LayoutIniFile.sbr
+.\Release\Project_LegendDisplay.sbr
+.\Release\ProjectIniFile.sbr
+.\Release\StaticIniFile.sbr
+.\Release\StaticIniFile2.sbr
+.\Release\ADEntities.sbr
+.\Release\ADGraphics.sbr
+.\Release\ADLayerGroup.sbr
+.\Release\Display.sbr
+.\Release\DxfFile.sbr
+.\Release\ArcTool.sbr
+.\Release\CircleTool.sbr
+.\Release\DrawTool.sbr
+.\Release\InsertTool.sbr
+.\Release\LabelCoordTool.sbr
+.\Release\LineTool.sbr
+.\Release\MoveTool.sbr
+.\Release\PanTool.sbr
+.\Release\pointTool.sbr
+.\Release\PolyLineTool.sbr
+.\Release\RectTool.sbr
+.\Release\RotateTool.sbr
+.\Release\SectionLineTool.sbr
+.\Release\SelectTool.sbr
+.\Release\Spline_AddPoint_Tool.sbr
+.\Release\SplineTool.sbr
+.\Release\TextTool.sbr
+.\Release\ChildFrm.sbr
+.\Release\Dlg_PaperSetup.sbr
+.\Release\DlgCompass.sbr
+.\Release\DlgEntityProperty.sbr
+.\Release\DlgLayerAdmin.sbr
+.\Release\DlgSection.sbr
+.\Release\DlgTextEdit.sbr
+.\Release\InsertBlockDlg.sbr
+.\Release\InsertHoleLayerDlg.sbr
+.\Release\LineCombo.sbr
+.\Release\MainFrm.sbr
+.\Release\MiniCAD.sbr
+.\Release\MiniCADDoc.sbr
+.\Release\MiniCADView.sbr
+.\Release\MyRichEdit.sbr]
+Creating command line "bscmake.exe @e:\Temp\RSP3EF.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+MiniCAD.exe - 0 error(s), 26 warning(s)
+</pre>
+</body>
+</html>

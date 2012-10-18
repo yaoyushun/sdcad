@@ -1,0 +1,72 @@
+object RotateToolEditor: TRotateToolEditor
+  Left = 196
+  Top = 107
+  AutoScroll = False
+  ClientHeight = 192
+  ClientWidth = 178
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 18
+    Top = 32
+    Width = 26
+    Height = 13
+    Caption = '&Style:'
+    FocusControl = CBStyle
+  end
+  object Label2: TLabel
+    Left = 18
+    Top = 80
+    Width = 34
+    Height = 13
+    Caption = '&Button:'
+    FocusControl = CBButton
+  end
+  object CBInverted: TCheckBox
+    Left = 18
+    Top = 8
+    Width = 135
+    Height = 17
+    HelpContext = 1862
+    Caption = '&Inverted'
+    TabOrder = 0
+    OnClick = CBInvertedClick
+  end
+  object CBStyle: TComboFlat
+    Left = 18
+    Top = 49
+    Width = 122
+    HelpContext = 1863
+    TabOrder = 1
+    OnChange = CBStyleChange
+    Items.Strings = (
+      'All'
+      'Rotation'
+      'Elevation')
+  end
+  object CBButton: TComboFlat
+    Left = 18
+    Top = 96
+    Width = 122
+    HelpContext = 1864
+    TabOrder = 2
+    OnChange = CBButtonChange
+    Items.Strings = (
+      'Left'
+      'Middle'
+      'Right')
+  end
+  object BOutline: TButtonPen
+    Left = 18
+    Top = 128
+    HelpContext = 376
+    Caption = '&Outline...'
+    TabOrder = 3
+  end
+end

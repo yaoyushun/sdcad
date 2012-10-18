@@ -1,0 +1,188 @@
+inherited ColorBandToolEditor: TColorBandToolEditor
+  Left = 242
+  Top = 230
+  ClientHeight = 253
+  ClientWidth = 306
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited PanelTop: TPanel
+    Width = 306
+    inherited BPen: TButtonPen
+      Left = 24
+      Top = 37
+      Width = 97
+    end
+  end
+  object BPattern: TButton
+    Left = 139
+    Top = 37
+    Width = 75
+    Height = 25
+    HelpContext = 1154
+    Caption = '&Pattern...'
+    TabOrder = 2
+    OnClick = BPatternClick
+  end
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 73
+    Width = 306
+    Height = 180
+    ActivePage = TabSheet1
+    Align = alClient
+    TabOrder = 1
+    object TabSheet1: TTabSheet
+      Caption = 'Values'
+      object Label2: TLabel
+        Left = 27
+        Top = 16
+        Width = 54
+        Height = 13
+        Alignment = taRightJustify
+        Caption = '&Start value:'
+        FocusControl = EStart
+      end
+      object Label3: TLabel
+        Left = 30
+        Top = 72
+        Width = 51
+        Height = 13
+        Alignment = taRightJustify
+        Caption = '&End value:'
+        FocusControl = EEnd
+      end
+      object EStart: TEdit
+        Left = 85
+        Top = 12
+        Width = 84
+        Height = 21
+        HelpContext = 1157
+        TabOrder = 0
+        OnChange = EStartChange
+      end
+      object CBStart: TCheckBox
+        Left = 85
+        Top = 37
+        Width = 155
+        Height = 17
+        Caption = 'Allo&w drag'
+        TabOrder = 1
+        OnClick = CBStartClick
+      end
+      object EEnd: TEdit
+        Left = 85
+        Top = 68
+        Width = 84
+        Height = 21
+        HelpContext = 1156
+        TabOrder = 2
+        OnChange = EEndChange
+      end
+      object CBEnd: TCheckBox
+        Left = 85
+        Top = 93
+        Width = 155
+        Height = 17
+        Caption = 'Allow &drag'
+        TabOrder = 3
+        OnClick = CBEndClick
+      end
+      object BStart: TButtonPen
+        Left = 176
+        Top = 12
+        Caption = 'B&order...'
+        TabOrder = 4
+      end
+      object BEnd: TButtonPen
+        Left = 176
+        Top = 68
+        Caption = 'Bo&rder...'
+        TabOrder = 5
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Options'
+      ImageIndex = 1
+      object Label4: TLabel
+        Left = 53
+        Top = 72
+        Width = 68
+        Height = 13
+        Caption = '&Transparency:'
+        FocusControl = ETrans
+      end
+      object Label5: TLabel
+        Left = 88
+        Top = 99
+        Width = 33
+        Height = 13
+        Alignment = taRightJustify
+        Caption = 'C&ursor:'
+      end
+      object BGradient: TButton
+        Left = 19
+        Top = 4
+        Width = 97
+        Height = 25
+        HelpContext = 1160
+        Caption = '&Gradient...'
+        TabOrder = 0
+        OnClick = BGradientClick
+      end
+      object ButtonColor1: TButtonColor
+        Left = 19
+        Top = 36
+        Width = 97
+        HelpContext = 1159
+        Caption = '&Color...'
+        TabOrder = 1
+      end
+      object ETrans: TEdit
+        Left = 125
+        Top = 68
+        Width = 41
+        Height = 21
+        HelpContext = 1160
+        TabOrder = 2
+        Text = '0'
+        OnChange = ETransChange
+      end
+      object UDTrans: TUpDown
+        Left = 166
+        Top = 68
+        Width = 15
+        Height = 21
+        HelpContext = 1161
+        Associate = ETrans
+        TabOrder = 3
+      end
+      object CBDrawBehind: TCheckBox
+        Left = 128
+        Top = 9
+        Width = 161
+        Height = 17
+        HelpContext = 1158
+        Caption = '&Draw Behind'
+        TabOrder = 4
+        OnClick = CBDrawBehindClick
+      end
+      object CBBeforeAxes: TCheckBox
+        Left = 128
+        Top = 33
+        Width = 161
+        Height = 17
+        HelpContext = 1158
+        Caption = '&Draw Behind A&xes'
+        TabOrder = 5
+        OnClick = CBBeforeAxesClick
+      end
+      object CBCursor: TComboFlat
+        Left = 124
+        Top = 95
+        Width = 101
+        TabOrder = 6
+        OnChange = CBCursorChange
+      end
+    end
+  end
+end

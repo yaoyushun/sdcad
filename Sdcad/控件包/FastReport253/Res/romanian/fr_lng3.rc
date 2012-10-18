@@ -1,0 +1,152 @@
+;{******************************************}
+;{                                          }
+;{             FastReport v2.52             }
+;{              Resource File               }
+;{                                          }
+;{Copyright(c) 1998-2004 by FastReports Inc.}
+;{                                          }
+;{ Translated by: Sorin Pohontu             }
+;{      http://www.frontline.ro             }
+;{                                          }
+;{******************************************}
+
+#include "FR_Const.pas"
+
+STRINGTABLE
+{
+;--- DatasetsForm resources --------------------------------------------------
+  frRes + 3000, "Dataset-urile raportului"
+  frRes + 3001, "&Proprietati..."
+  frRes + 3002, "&Tabela noua..."
+  frRes + 3003, "&Interogare noua..."
+  frRes + 3004, "&Elimina"
+  frRes + 3005, "&Inchide"
+  frRes + 3006, "Baza de &date noua..."
+;--- TablePropForm resources -------------------------------------------------
+  frRes + 3020, "General"
+  frRes + 3021, "&Nume"
+  frRes + 3022, "&Campuri"
+  frRes + 3023, "&Editor campuri..."
+  frRes + 3024, "Altele"
+  frRes + 3025, "&Index"
+  frRes + 3026, "&Expresie filtru"
+  frRes + 3027, "&Master"
+  frRes + 3028, "Campuri ma&ster"
+;--- FieldsEditorForm resources ----------------------------------------------
+  frRes + 3040, "&Adauga campuri..."
+  frRes + 3041, "Adauga &camp de cautare..."
+  frRes + 3042, "&Selecteaza tot"
+  frRes + 3043, "&Elimina"
+  frRes + 3044, "&Iesire"
+;--- FieldsListForm resources ------------------------------------------------
+  frRes + 3060, "Campuri disponibile"
+;--- LookupFieldForm resources -----------------------------------------------
+  frRes + 3070, "Camp de cautare nou"
+  frRes + 3071, "Camp"
+  frRes + 3072, "&Nume"
+  frRes + 3073, "&Tip"
+  frRes + 3074, "&Dimensiune"
+  frRes + 3075, "Definire camp de cautare"
+  frRes + 3076, "&Camp cheie"
+  frRes + 3077, "&Dataset"
+  frRes + 3078, "&Cheie de cautare"
+  frRes + 3079, "&Camp rezultat"
+;--- QueryPropForm resources -------------------------------------------------
+  frRes + 3090, "Proprietati interogare"
+  frRes + 3091, "Altele"
+  frRes + 3092, "Dataset &master"
+  frRes + 3093, "General"
+  frRes + 3094, "&Nume"
+  frRes + 3095, "&Alias sau cale"
+  frRes + 3096, "&SQL"
+  frRes + 3097, "Editare &campuri..."
+  frRes + 3098, "Editare &parametri..."
+  frRes + 3099, "Incarca SQL din fisier"
+  frRes + 3100, "Salveaza SQL in fisier"
+  frRes + 3101, "Constructor SQL..."
+;--- ParamsForm resources ----------------------------------------------------
+  frRes + 3110, "Parametri"
+  frRes + 3111, "&Tip date"
+  frRes + 3112, "&Nume"
+  frRes + 3113, "&Valoare:"
+  frRes + 3114, "&Cere valoarea inaintea listarii"
+  frRes + 3115, "Aloca valoarea din dataset-ul &master"
+  frRes + 3116, "Va&riabila:"
+;--- FieldsLinkForm resources ------------------------------------------------
+  frRes + 3130, "Campuri &detalii"
+  frRes + 3131, "Campuri &master"
+  frRes + 3132, "Campuri &alaturate"
+  frRes + 3133, "&Adauga"
+  frRes + 3134, "&Clear"
+;--- ParamsDialogForm resources ----------------------------------------------
+  frRes + 3150, "Parametri"
+  frRes + 3151, "4 puncte"
+  frRes + 3152, "8 puncte"
+  frRes + 3153, "Aliniere la grid"
+  frRes + 3154, "Inchide"
+;--- PropForm resources ------------------------------------------------------
+  frRes + 3170, "Proprietati"
+  frRes + 3171, "&Text"
+  frRes + 3172, "&Font..."
+  frRes + 3173, "Camp de cautare"
+  frRes + 3174, "&Dataset"
+  frRes + 3175, "Camp &cheie"
+  frRes + 3176, "&Listeaza camp"
+  frRes + 3177, "Tip"
+  frRes + 3178, "&Edit"
+  frRes + 3179, "&Combo"
+  frRes + 3180, "Look&up"
+  frRes + 3181, "Combo"
+  frRes + 3182, "&Autosize"
+;--- DBPropForm resources ----------------------------------------------------
+  frRes + 3200, "Proprietati baza de date"
+  frRes + 3201, "General"
+  frRes + 3202, "Parametri"
+  frRes + 3203, "&Nume"
+  frRes + 3204, "Parametri de &conectare"	; for ADO
+  frRes + 3205, "Nume &fisier"          	; for IBX
+  frRes + 3206, "Nume &alias"         		; for BDE
+  frRes + 3207, "Nume &driver"
+  frRes + 3208, "&Login prompt"
+;--- SelectTblForm resources -------------------------------------------------
+  frRes + 3220, "Selecteaza tabela"
+  frRes + 3221, "Selecteaza din baza de date"
+  frRes + 3222, "Selecteaza din fisier"
+  frRes + 3223, "&Baza de date"
+  frRes + 3224, "&Tabela"
+  frRes + 3225, "&Alege..."
+;--- Strings resources -------------------------------------------------------
+  SFields, "fields"
+  SPath, "Path"
+  SRemoveDS, "Stergeti aceasta componenta ?"
+  STables, "Tabele"
+  SFieldType1, "String"
+  SFieldType2, "Smallint"
+  SFieldType3, "Integer"
+  SFieldType4, "Word"
+  SFieldType5, "Boolean"
+  SFieldType6, "Float"
+  SFieldType7, "Currency"
+  SFieldType8, "Date"
+  SFieldType9, "Time"
+  SFieldType10, "Blob"
+  SParamType1, "BCD"
+  SParamType2, "Boolean"
+  SParamType3, "Currency"
+  SParamType4, "Date"
+  SParamType5, "DateTime"
+  SParamType6, "Integer"
+  SParamType7, "Float"
+  SParamType8, "Smallint"
+  SParamType9, "String"
+  SParamType10, "Time"
+  SParamType11, "Word"
+  SDataManager, "Data manager"
+  SParams, "parametri"
+  SQueryError, "Interogare SQL sau parametri necorespunzatori"
+  STableProps, "Proprietati tabela"
+  SParamDialog, "Dialog parametri"
+  SInvalidParamValue, "Valoare invalida a parametrului"
+  SDatabase, "Baze de date"
+  SFieldSizeError, "Dimensiune a campului invalida"
+}

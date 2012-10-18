@@ -1,0 +1,42 @@
+package DclTeeStd77;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{ DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{ LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $42600000}
+{$DESCRIPTION 'TeeChart 7 Components (Standard)'}
+{$DESIGNONLY}
+{$IMPLICITBUILD OFF}
+{$LIBSUFFIX ''}
+
+requires
+  Vcl,
+  Tee77,
+  TeeUI77,
+  designide,
+  Vclx;
+
+contains
+  TeeChartReg in 'TeeChartReg.pas',
+  TeeExpForm in 'TeeExpForm.pas',
+  TeeChartExp in 'TeeChartExp.pas';
+
+end.

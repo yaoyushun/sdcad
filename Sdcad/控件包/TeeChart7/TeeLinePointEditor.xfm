@@ -1,0 +1,18 @@
+inherited LinePointEditor: TLinePointEditor
+  Left = 237
+  Top = 211
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited GPPoint: TGroupBox
+    inherited CBPoDark: TCheckBox
+      HelpContext = 176
+    end
+    object BLines: TButtonPen
+      Left = 217
+      Top = 138
+      HelpContext = 275
+      Caption = '&Lines...'
+      TabOrder = 10
+    end
+  end
+end

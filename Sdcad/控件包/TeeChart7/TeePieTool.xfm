@@ -1,0 +1,53 @@
+object PieToolEditor: TPieToolEditor
+  Left = 311
+  Top = 246
+  AutoScroll = False
+  ClientHeight = 161
+  ClientWidth = 221
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 10
+    Top = 16
+    Width = 50
+    Height = 13
+    Caption = '&Pie Series:'
+    FocusControl = CBPieSeries
+  end
+  object CBPieSeries: TComboBox
+    Left = 8
+    Top = 37
+    Width = 145
+    Height = 21
+    HelpContext = 1121
+    Style = csDropDownList
+    ItemHeight = 13
+    TabOrder = 0
+    OnChange = CBPieSeriesChange
+  end
+  object RGStyle: TRadioGroup
+    Left = 8
+    Top = 68
+    Width = 201
+    Height = 41
+    HelpContext = 1877
+    Caption = '&Style:'
+    Columns = 2
+    Items.Strings = (
+      'Focus'
+      'Explode')
+    TabOrder = 1
+    OnClick = RGStyleClick
+  end
+  object BPen: TButtonPen
+    Left = 8
+    Top = 120
+    HelpContext = 376
+    Caption = '&Border...'
+    TabOrder = 2
+  end
+end

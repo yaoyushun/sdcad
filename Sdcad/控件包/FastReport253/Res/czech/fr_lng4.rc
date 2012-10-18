@@ -1,0 +1,42 @@
+#include "FR_Const.pas"
+
+; ----------------------------------------------------------------------------
+; TRANSLATION TO CZECH
+; Translated: Pavel Malinsky
+; Date      : 23.01.2004
+; Contact   : malinsky@pmcom.cz
+; Comment   : Doplnìn/opraven pøedchozí pøeklad z 29.12.2000
+; ----------------------------------------------------------------------------
+; > Pøedchozí pøeklad >>>>>>>>>>>>>>>>>>>>>>>>>>>
+; > ----------------------------------------------------------------------------
+; > TRANSLATION TO CZECH
+; > Translated: Arpad Toth
+; > Date      : 29.12.2000 - První verze
+; > Contact   : i.smid@dobruska.cz
+; > Comment   : Opravdová èeská verze
+; > ----------------------------------------------------------------------------
+
+STRINGTABLE
+{
+;--- LinesEditorForm resources -------------------------------------------------
+  frRes + 4000, "Editor skriptu"
+;--- SQLEditorForm resources -------------------------------------------------
+  frRes + 4010, "SQL editor"
+
+;--- String resources ----------------------------------------------------------
+  SInsertLabel, "Vložit Popisek"
+  SInsertEdit, "Vložit Editaèní pole"
+  SInsertMemo, "Vložit Textové pole"
+  SInsertButton, "Vložit Tlaèítko"
+  SInsertCheckBox, "Vložit CheckBox"
+  SInsertRadioButton, "Vložit RadioButton"
+  SInsertListBox, "Vložit ListBox"
+  SInsertComboBox, "Vložit ComboBox"
+  SInsertDateEdit, "Vložit DateEdit"
+  SInsertCheckListBox, "Vložit CheckListBox"
+
+  SInsertDB, "Vložit databázi"
+  SInsertTable, "Vložit tabulku"
+  SInsertQuery, "Vložit dotaz"
+  SInsertDBLookup, "Vložit DBLookupComboBox"
+}

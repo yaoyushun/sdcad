@@ -1,0 +1,43 @@
+package TeeImage76Clx;
+
+{$R *.RES}
+{$ALIGN 8}
+{$ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $53200000}
+{$DESCRIPTION 'TeeChart Pro 7 CLX Graphic Exporting formats'}
+{$IMPLICITBUILD OFF}
+{$LIBSUFFIX ''}
+{$DEFINE CLX}
+
+requires
+  visualclx,
+  TeeUI76Clx,
+  Tee76Clx;
+
+contains
+  TeeJPEG in 'TeeJPEG.pas',
+  TeePNG in 'TeePNG.pas', {TeePNGOptions}
+  TeeSVGCanvas in 'TeeSVGCanvas.pas',
+  TeePDFCanvas in 'TeePDFCanvas.pas', 
+  TeePSCanvas in 'TeePSCanvas.pas', 
+  TeeVMLCanvas in 'TeeVMLCanvas.pas';
+
+end.

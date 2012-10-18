@@ -1,0 +1,286 @@
+object FormTeeGLEditor: TFormTeeGLEditor
+  Left = 311
+  Top = 318
+  ActiveControl = CBActive
+  AutoScroll = False
+  BorderIcons = [biSystemMenu]
+  Caption = 'TeeOpenGL Editor'
+  ClientHeight = 237
+  ClientWidth = 382
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object CBActive: TCheckBox
+    Left = 8
+    Top = 5
+    Width = 121
+    Height = 17
+    HelpContext = 992
+    Caption = '&Active'
+    TabOrder = 0
+    OnClick = CBActiveClick
+  end
+  object BOK: TButton
+    Left = 214
+    Top = 208
+    Width = 75
+    Height = 25
+    Caption = 'OK'
+    Default = True
+    ModalResult = 1
+    TabOrder = 1
+    OnClick = BOKClick
+  end
+  object BCancel: TButton
+    Left = 301
+    Top = 208
+    Width = 75
+    Height = 25
+    Cancel = True
+    Caption = 'Cancel'
+    TabOrder = 2
+    OnClick = BCancelClick
+  end
+  object TabControl1: TTabControl
+    Left = 208
+    Top = 8
+    Width = 168
+    Height = 193
+    HelpContext = 1832
+    TabOrder = 3
+    OnChange = TabControl1Change
+    object Label4: TLabel
+      Left = 16
+      Top = 97
+      Width = 10
+      Height = 13
+      Caption = '&X:'
+      FocusControl = TBX
+    end
+    object Label5: TLabel
+      Left = 16
+      Top = 123
+      Width = 10
+      Height = 13
+      Caption = '&Y:'
+      FocusControl = TBY
+    end
+    object Label6: TLabel
+      Left = 16
+      Top = 147
+      Width = 10
+      Height = 13
+      Caption = '&Z:'
+      FocusControl = TBZ
+    end
+    object Label7: TLabel
+      Left = 20
+      Top = 65
+      Width = 42
+      Height = 13
+      Alignment = taRightJustify
+      Caption = '&Intensity:'
+      FocusControl = TrackBar5
+    end
+    object CBVisible: TCheckBox
+      Left = 13
+      Top = 34
+      Width = 61
+      Height = 17
+      HelpContext = 1770
+      Caption = '&Visible'
+      TabOrder = 0
+      OnClick = CBVisibleClick
+    end
+    object TBX: TTrackBar
+      Left = 30
+      Top = 92
+      Width = 121
+      Height = 26
+      HelpContext = 843
+      Max = 500
+      Min = -500
+      TabOrder = 1
+      TickMarks = tmBoth
+      TickStyle = tsNone
+      OnChange = TBXChange
+    end
+    object TBY: TTrackBar
+      Left = 30
+      Top = 117
+      Width = 121
+      Height = 26
+      HelpContext = 844
+      Max = 500
+      Min = -500
+      TabOrder = 2
+      TickMarks = tmBoth
+      TickStyle = tsNone
+      OnChange = TBYChange
+    end
+    object TBZ: TTrackBar
+      Left = 30
+      Top = 142
+      Width = 121
+      Height = 26
+      HelpContext = 983
+      Max = 500
+      Min = -500
+      TabOrder = 3
+      TickMarks = tmBoth
+      TickStyle = tsNone
+      OnChange = TBZChange
+    end
+    object TrackBar5: TTrackBar
+      Left = 61
+      Top = 61
+      Width = 90
+      Height = 26
+      Max = 255
+      TabOrder = 4
+      TickMarks = tmBoth
+      TickStyle = tsNone
+      OnChange = TrackBar5Change
+    end
+    object BLightColor: TButtonColor
+      Left = 80
+      Top = 29
+      HelpContext = 953
+      Caption = '&Color...'
+      TabOrder = 5
+      OnClick = BLightColorClick
+    end
+    object CBFixed: TCheckBox
+      Left = 16
+      Top = 168
+      Width = 137
+      Height = 17
+      Caption = '&Fixed position'
+      TabOrder = 6
+      OnClick = CBFixedClick
+    end
+  end
+  object GroupBox1: TGroupBox
+    Left = 8
+    Top = 28
+    Width = 193
+    Height = 173
+    Caption = 'Options:'
+    TabOrder = 4
+    object Label1: TLabel
+      Left = 21
+      Top = 19
+      Width = 67
+      Height = 13
+      Alignment = taRightJustify
+      Caption = 'A&mbient Light:'
+      FocusControl = TBAmbient
+    end
+    object Label2: TLabel
+      Left = 33
+      Top = 146
+      Width = 48
+      Height = 13
+      Alignment = taRightJustify
+      Caption = 'S&hininess:'
+      FocusControl = TBShine
+    end
+    object Label8: TLabel
+      Left = 58
+      Top = 94
+      Width = 73
+      Height = 13
+      Alignment = taRightJustify
+      Caption = 'Font &3D Depth:'
+      FocusControl = Edit1
+    end
+    object Label3: TLabel
+      Left = 33
+      Top = 120
+      Width = 52
+      Height = 13
+      Alignment = taRightJustify
+      Caption = '&Draw style:'
+      FocusControl = CBStyle
+    end
+    object CBOutlines: TCheckBox
+      Left = 37
+      Top = 66
+      Width = 140
+      Height = 17
+      HelpContext = 954
+      Caption = 'Font &Outlines'
+      TabOrder = 0
+      OnClick = CBOutlinesClick
+    end
+    object CBShade: TCheckBox
+      Left = 37
+      Top = 42
+      Width = 137
+      Height = 17
+      HelpContext = 994
+      Caption = '&Smooth Shading'
+      TabOrder = 1
+      OnClick = CBShadeClick
+    end
+    object TBAmbient: TTrackBar
+      Left = 88
+      Top = 15
+      Width = 80
+      Height = 26
+      HelpContext = 993
+      Max = 100
+      TabOrder = 2
+      TickMarks = tmBoth
+      TickStyle = tsNone
+      OnChange = TBAmbientChange
+    end
+    object TBShine: TTrackBar
+      Left = 80
+      Top = 141
+      Width = 80
+      Height = 26
+      HelpContext = 1768
+      Max = 100
+      TabOrder = 3
+      TickMarks = tmBoth
+      TickStyle = tsNone
+      OnChange = TBShineChange
+    end
+    object UDDepth: TUpDown
+      Left = 167
+      Top = 91
+      Width = 15
+      Height = 21
+      HelpContext = 1769
+      Associate = Edit1
+      TabOrder = 4
+    end
+    object Edit1: TEdit
+      Left = 134
+      Top = 91
+      Width = 33
+      Height = 21
+      HelpContext = 1769
+      TabOrder = 5
+      Text = '0'
+      OnChange = Edit1Change
+    end
+    object CBStyle: TComboFlat
+      Left = 87
+      Top = 117
+      Width = 97
+      TabOrder = 6
+      OnChange = CBStyleChange
+      Items.Strings = (
+        'Solid'
+        'Wireframe'
+        'Points')
+    end
+  end
+end

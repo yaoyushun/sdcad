@@ -1,0 +1,80 @@
+inherited BollingerFuncEditor: TBollingerFuncEditor
+  Left = 192
+  Top = 107
+  ClientHeight = 102
+  ClientWidth = 262
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label3: TLabel
+    Left = 52
+    Top = 14
+    Width = 33
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '&Period:'
+    FocusControl = ENum
+  end
+  object Label1: TLabel
+    Left = 37
+    Top = 70
+    Width = 48
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '&Deviation:'
+    FocusControl = Edit1
+  end
+  object ENum: TEdit
+    Left = 90
+    Top = 10
+    Width = 65
+    Height = 21
+    HelpContext = 382
+    TabOrder = 0
+    Text = '0'
+    OnChange = ENumChange
+  end
+  object UpDown1: TUpDown
+    Left = 155
+    Top = 10
+    Width = 15
+    Height = 21
+    HelpContext = 382
+    Associate = ENum
+    Max = 30000
+    TabOrder = 1
+  end
+  object CheckBox1: TCheckBox
+    Left = 90
+    Top = 40
+    Width = 129
+    Height = 17
+    HelpContext = 1804
+    Caption = '&Exponential'
+    TabOrder = 2
+    OnClick = ENumChange
+  end
+  object Edit1: TEdit
+    Left = 90
+    Top = 66
+    Width = 65
+    Height = 21
+    HelpContext = 1805
+    TabOrder = 3
+    Text = '0'
+    OnChange = ENumChange
+  end
+  object ButtonPen1: TButtonPen
+    Left = 176
+    Top = 8
+    HelpContext = 1807
+    Caption = '&Upper...'
+    TabOrder = 4
+  end
+  object ButtonPen2: TButtonPen
+    Left = 176
+    Top = 64
+    HelpContext = 1806
+    Caption = '&Lower...'
+    TabOrder = 5
+  end
+end

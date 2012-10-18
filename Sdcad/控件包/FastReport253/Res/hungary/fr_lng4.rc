@@ -1,0 +1,26 @@
+#include "FR_Const.pas"
+
+STRINGTABLE
+{
+;--- LinesEditorForm resources -------------------------------------------------
+  frRes + 4000, "String lista szerkesztõ"
+;--- SQLEditorForm resources -------------------------------------------------
+  frRes + 4010, "SQL szerkesztõ"
+
+;--- String resources ----------------------------------------------------------
+  SInsertLabel, "Beszúr Címke kontrolt"
+  SInsertEdit, "Beszúr Szerkesztõ kontrolt"
+  SInsertMemo, "Beszúr Memo kontrolt"
+  SInsertButton, "Beszúr Nyomógomb kontrolt"
+  SInsertCheckBox, "Beszúr CheckBox kontrolt"
+  SInsertRadioButton, "Beszúr Rádiógomb kontrolt"
+  SInsertListBox, "Beszúr ListBox kontrolt"
+  SInsertComboBox, "Beszúr ComboBox kontrolt"
+  SInsertDateEdit, "Beszúr Dátumszerkesztõ kontrolt"
+  SInsertCheckListBox, "Beszúr CheckListBox kontrolt"
+
+  SInsertDB, "Beszúr adatbázist"
+  SInsertTable, "Beszúr táblát"
+  SInsertQuery, "Beszúr lekérdezést"
+  SInsertDBLookup, "Beszúr DBLookupComboBox kontrolt"
+}

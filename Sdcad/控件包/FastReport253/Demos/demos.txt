@@ -1,0 +1,35 @@
+- CALENDAR
+  Shows how to print a grid-style calendar
+
+- CHART
+  Demonstrates charting possibilities
+
+- DFMSTORE
+  How to store report in DFM (not in external file)
+
+- DLL
+  Using FR in dll
+
+- ENDUSER
+  Demonstrates how to use TfrBDEComponents in end-user environment
+
+- ENDUSOLD
+  Old TfrDataManager - now outdated
+
+- MANUAL
+  How to control report by code
+
+- MDI
+  MDI-child preview windows
+
+- PRNGRID
+  Different ways of printing a stringgrid component 
+
+- PRNTBL1, PRNTBL2, PRNTBL3
+  Printing a table
+
+- REPORTS, CB4DEMO, CB5DEMO
+  Main demo for Delphi and C++Builder 4,5
+
+- RUNTIME
+  How to build reports with Delphi code

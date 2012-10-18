@@ -1,0 +1,307 @@
+object MapSeriesEditor: TMapSeriesEditor
+  Left = 423
+  Top = 263
+  AutoScroll = False
+  ClientHeight = 203
+  ClientWidth = 388
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PageControl2: TPageControl
+    Left = 0
+    Top = 0
+    Width = 388
+    Height = 203
+    ActivePage = TabGlobal
+    Align = alClient
+    HotTrack = True
+    TabOrder = 0
+    OnChange = PageControl2Change
+    object TabGlobal: TTabSheet
+      Caption = 'Global'
+      object BMapBrush: TButton
+        Left = 24
+        Top = 52
+        Width = 75
+        Height = 25
+        HelpContext = 118
+        Caption = 'B&rush...'
+        TabOrder = 0
+        OnClick = BMapBrushClick
+      end
+      object ButtonPen1: TButtonPen
+        Left = 24
+        Top = 16
+        HelpContext = 1457
+        Caption = '&Border...'
+        TabOrder = 1
+      end
+    end
+    object TabShapes: TTabSheet
+      Caption = 'Shapes'
+      object Splitter1: TSplitter
+        Left = 89
+        Top = 0
+        Height = 175
+      end
+      object PageControl1: TPageControl
+        Left = 92
+        Top = 0
+        Width = 288
+        Height = 175
+        ActivePage = TabSheet1
+        Align = alClient
+        HotTrack = True
+        TabOrder = 0
+        object TabSheet1: TTabSheet
+          Caption = 'Values'
+          object Label2: TLabel
+            Left = 40
+            Top = 11
+            Width = 24
+            Height = 13
+            Alignment = taRightJustify
+            Caption = '&Text:'
+            FocusControl = EText
+          end
+          object Label1: TLabel
+            Left = 53
+            Top = 40
+            Width = 10
+            Height = 13
+            Alignment = taRightJustify
+            Caption = '&Z:'
+            FocusControl = EditZ
+          end
+          object Label3: TLabel
+            Left = 39
+            Top = 80
+            Width = 66
+            Height = 13
+            Alignment = taRightJustify
+            Caption = 'Shape Index: '
+          end
+          object ShapeIndex: TLabel
+            Left = 112
+            Top = 80
+            Width = 6
+            Height = 13
+            Caption = '0'
+          end
+          object EText: TEdit
+            Left = 72
+            Top = 8
+            Width = 129
+            Height = 21
+            HelpContext = 1503
+            TabOrder = 0
+            OnChange = ETextChange
+          end
+          object EditZ: TEdit
+            Left = 72
+            Top = 37
+            Width = 129
+            Height = 21
+            HelpContext = 1504
+            TabOrder = 1
+            Text = '0'
+            OnChange = EditZChange
+          end
+        end
+        object TabFormat: TTabSheet
+          Caption = 'Format'
+          object Label4: TLabel
+            Left = 71
+            Top = 107
+            Width = 68
+            Height = 13
+            Alignment = taRightJustify
+            Caption = '&Transparency:'
+            FocusControl = ETransp
+          end
+          object CBGlobalPen: TCheckBox
+            Left = 93
+            Top = 12
+            Width = 91
+            Height = 17
+            HelpContext = 1457
+            Caption = '&Global'
+            TabOrder = 1
+            OnClick = CBGlobalPenClick
+          end
+          object BBrush: TButton
+            Left = 8
+            Top = 40
+            Width = 75
+            Height = 25
+            HelpContext = 1500
+            Caption = 'Br&ush...'
+            TabOrder = 2
+            OnClick = BBrushClick
+          end
+          object CBGlobalBrush: TCheckBox
+            Left = 93
+            Top = 43
+            Width = 91
+            Height = 17
+            HelpContext = 1500
+            Caption = 'Gl&obal'
+            TabOrder = 3
+            OnClick = CBGlobalBrushClick
+          end
+          object BGradient: TButton
+            Left = 185
+            Top = 8
+            Width = 75
+            Height = 25
+            HelpContext = 1502
+            Caption = '&Gradient...'
+            TabOrder = 5
+            OnClick = BGradientClick
+          end
+          object ButtonPen2: TButtonPen
+            Left = 8
+            Top = 8
+            HelpContext = 1457
+            Caption = 'Bord&er...'
+            TabOrder = 0
+            OnClick = ButtonPen2Click
+          end
+          object ButtonColor1: TButtonColor
+            Left = 8
+            Top = 72
+            HelpContext = 1501
+            Caption = '&Color...'
+            TabOrder = 4
+            OnClick = ButtonColor1Click
+          end
+          object CBDefaultColor: TCheckBox
+            Left = 93
+            Top = 75
+            Width = 91
+            Height = 17
+            Caption = '&Default'
+            TabOrder = 6
+            OnClick = CBDefaultColorClick
+          end
+          object CBClosed: TCheckBox
+            Left = 187
+            Top = 43
+            Width = 91
+            Height = 17
+            Caption = 'Closed'
+            TabOrder = 7
+            OnClick = CBClosedClick
+          end
+          object CBVisible: TCheckBox
+            Left = 187
+            Top = 74
+            Width = 91
+            Height = 17
+            Caption = '&Visible'
+            TabOrder = 8
+            OnClick = CBVisibleClick
+          end
+          object ETransp: TEdit
+            Left = 144
+            Top = 104
+            Width = 41
+            Height = 21
+            TabOrder = 9
+            Text = '0'
+            OnChange = ETranspChange
+          end
+          object UDTransp: TUpDown
+            Left = 185
+            Top = 104
+            Width = 15
+            Height = 21
+            Associate = ETransp
+            TabOrder = 10
+          end
+        end
+        object TabData: TTabSheet
+          Caption = 'Points'
+          object ChartGrid1: TChartGrid
+            Left = 0
+            Top = 0
+            Width = 280
+            Height = 122
+            HelpContext = 1505
+            Align = alClient
+            Options = [goVertLine, goHorzLine, goRangeSelect, goDrawFocusSelected, goRowSizing, goColSizing, goEditing, goTabs, goThumbTracking]
+            TabOrder = 0
+            ShowLabels = False
+            ShowXValues = cgsYes
+            OnSetEditText = ChartGrid1SetEditText
+          end
+          object ChartGridNavigator1: TChartGridNavigator
+            Left = 0
+            Top = 122
+            Width = 280
+            Height = 25
+            HelpContext = 1924
+            Align = alBottom
+            TabOrder = 1
+            Grid = ChartGrid1
+          end
+        end
+      end
+      object Panel1: TPanel
+        Left = 0
+        Top = 0
+        Width = 89
+        Height = 175
+        Align = alLeft
+        BevelOuter = bvNone
+        TabOrder = 1
+        object ChartListBox1: TChartListBox
+          Left = 0
+          Top = 0
+          Width = 89
+          Height = 151
+          HelpContext = 1499
+          EnableChangeType = False
+          OnChangeColor = ChartListBox1ChangeColor
+          ShowSeriesIcon = False
+          Align = alClient
+          ItemHeight = 20
+          TabOrder = 0
+          OnClick = ChartListBox1Click
+        end
+        object Panel2: TPanel
+          Left = 0
+          Top = 151
+          Width = 89
+          Height = 24
+          Align = alBottom
+          BevelOuter = bvNone
+          TabOrder = 1
+          object SBDelete: TSpeedButton
+            Left = 48
+            Top = 2
+            Width = 22
+            Height = 22
+            Caption = '-'
+            Enabled = False
+            Flat = True
+            OnClick = SBDeleteClick
+          end
+          object SBAdd: TSpeedButton
+            Left = 16
+            Top = 2
+            Width = 22
+            Height = 22
+            Caption = '+'
+            Flat = True
+            OnClick = SBAddClick
+          end
+        end
+      end
+    end
+  end
+end

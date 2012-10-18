@@ -1,0 +1,148 @@
+package TeePro77Clx;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{ DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{ LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $52700000}
+{$DESCRIPTION 'TeeChart Pro 7 CLX Components'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+{$DEFINE CLX}
+
+requires
+  visualclx,
+  tee77Clx,
+  teeUI77Clx,
+  rtl;
+
+contains
+  OHLChart in 'OHLChart.pas',
+  CandleCh in 'CandleCh.pas',
+  TeeSurfa in 'TeeSurfa.pas',
+  ErrorBar in 'ErrorBar.pas',
+  CurvFitt in 'CurvFitt.pas',
+  TeePolar in 'TeePolar.pas',
+  Bar3D in 'Bar3D.pas',
+  TeeCount in 'TeeCount.pas',
+  ImaPoint in 'ImaPoint.pas',
+  ImageBar in 'ImageBar.pas',
+  MyPoint in 'MyPoint.pas',
+  BigCandl in 'BigCandl.pas',
+  StatChar in 'StatChar.pas',
+  TeeHistoEdit in 'TeeHistoEdit.pas' {THistogramSeriesEditor},
+  TeePoly in 'TeePoly.pas',
+  TeeProCo in 'TeeProCo.pas',
+  TeeCandlEdi in 'TeeCandlEdi.pas',
+  TeeErrBarEd in 'TeeErrBarEd.pas',
+  TeeSurfEdit in 'TeeSurfEdit.pas',
+  TeeContourEdit in 'TeeContourEdit.pas',
+  TeePolarEditor in 'TeePolarEditor.pas',
+  TeePo3DEdit in 'TeePo3DEdit.pas',
+  TeeGriEd in 'TeeGriEd.pas',
+  TeeVolEd in 'TeeVolEd.pas',
+  TeeImaEd in 'TeeImaEd.pas',
+  TeeEditPro in 'TeeEditPro.pas',
+  TeeCumu in 'TeeCumu.pas',
+  TeeBezie in 'TeeBezie.pas',
+  TeeEdit in 'TeeEdit.pas',
+  TeePoin3 in 'TeePoin3.pas',
+  TeeComma in 'TeeComma.pas',
+  TeeScroB in 'TeeScroB.pas',
+  TeeRose in 'TeeRose.pas',
+  TeeTools in 'TeeTools.pas',
+  TeeChartActions in 'TeeChartActions.pas',
+  TeeTriSurface in 'TeeTriSurface.pas',
+  TeeTriSurfEdit in 'TeeTriSurfEdit.pas' {TriSurfaceSeriesEditor},
+  TeeDonutEdit in 'TeeDonutEdit.pas' {DonutSeriesEditor},
+  TeeDonut in 'TeeDonut.pas',
+  TeeBoxPlot in 'TeeBoxPlot.pas',
+  TeeCursorEdit in 'TeeCursorEdit.pas' {CursorSeriesEditor},
+  TeeDraw3D in 'TeeDraw3D.pas',
+  TeeInspector in 'TeeInspector.pas',
+  TeeBoxPlotEditor in 'TeeBoxPlotEditor.pas' {BoxSeriesEditor},
+  TeeAnnToolEdit in 'TeeAnnToolEdit.pas' {AnnotationToolEdit},
+  TeeAxisToolEdit in 'TeeAxisToolEdit.pas' {AxisToolEditor},
+  TeeBarJoinEditor in 'TeeBarJoinEditor.pas',
+  TeeAxisArrowEdit in 'TeeAxisArrowEdit.pas' {AxisArrowToolEditor},
+  TeeClockEditor in 'TeeClockEditor.pas',
+  TeeColorBandEdit in 'TeeColorBandEdit.pas' {ColorBandToolEditor},
+  TeeColorLineEditor in 'TeeColorLineEditor.pas' {ColorLineToolEditor},
+  TeeDrawLineEditor in 'TeeDrawLineEditor.pas' {DrawLineEdit},
+  TeeHighLowEdit in 'TeeHighLowEdit.pas' {HighLowEditor},
+  TeeLinePointEditor in 'TeeLinePointEditor.pas',
+  TeeToolSeriesEdit in 'TeeToolSeriesEdit.pas' {SeriesToolEditor},
+  TeeColorGridEditor in 'TeeColorGridEditor.pas',
+  TeeWaterFallEdit in 'TeeWaterFallEdit.pas',
+  TeeWindRoseEditor in 'TeeWindRoseEditor.pas',
+  TeeSeriesTextEd in 'TeeSeriesTextEd.pas' {SeriesTextEditor},
+  TeePyramid in 'TeePyramid.pas',
+  TeePyramidEdit in 'TeePyramidEdit.pas' {PyramidSeriesEditor},
+  TeeNearestToolEditor in 'TeeNearestToolEditor.pas' {NearestToolEdit},
+  TeeSmith in 'TeeSmith.pas',
+  TeeSmithEdit in 'TeeSmithEdit.pas' {SmithSeriesEdit},
+  TeeImageToolEdit in 'TeeImageToolEdit.pas' {ChartImageToolEditor},
+  TeeMapSeries in 'teemapseries.pas',
+  TeeMapSeriesEdit in 'TeeMapSeriesEdit.pas' {MapSeriesEditor},
+  TeeMarksTipToolEdit in 'TeeMarksTipToolEdit.pas' {MarksTipToolEdit},
+  TeeDragMarksEdit in 'TeeDragMarksEdit.pas' {DragMarksToolEditor},
+  TeeCalendar in 'teecalendar.pas',
+  TeeCalendarEditor in 'teecalendareditor.pas' {CalendarSeriesEditor},
+  TeeFunnel in 'TeeFunnel.pas',
+  TeeFunnelEditor in 'TeeFunnelEditor.pas' {FunnelSeriesEditor},
+  TeePageNumTool in 'TeePageNumTool.pas',
+  TeeDragPoint in 'TeeDragPoint.pas',
+  TeePreviewPanelEditor in 'TeePreviewPanelEditor.pas' {FormPreviewPanelEditor},
+  TeePVOFunction in 'TeePVOFunction.pas' {PVOFuncEditor},
+  TeeGanttTool in 'TeeGanttTool.pas' {GanttToolEditor},
+  TeeCCIFunction in 'TeeCCIFunction.pas' {CCIFuncEditor},
+  TeeRMSFuncEdit in 'TeeRMSFuncEdit.pas',
+  TeeGridBandToolEdit in 'TeeGridBandToolEdit.pas' {GridBandToolEdit},
+  TeeTransposeTool in 'TeeTransposeTool.pas' {GridTransposeToolEdit},
+  TeeBollingerEditor in 'TeeBollingerEditor.pas' {BollingerFuncEditor},
+  TeeSmoothFuncEdit in 'TeeSmoothFuncEdit.pas' {SmoothFuncEditor},
+  TeeADXFuncEditor in 'TeeADXFuncEditor.pas' {ADXFuncEditor},
+  TeeRotateToolEditor in 'TeeRotateToolEditor.pas' {RotateToolEditor},
+  TeeCompressOHLC in 'TeeCompressOHLC.pas' {CompressFuncEditor},
+  TeeCLVFunction in 'TeeCLVFunction.pas' {CLVFuncEditor},
+  TeeMovAveFuncEdit in 'TeeMovAveFuncEdit.pas' {MovAveFuncEditor},
+  TeeMACDFuncEdit in 'TeeMACDFuncEdit.pas' {MACDFuncEditor},
+  TeeExpAveFuncEdit in 'TeeExpAveFuncEdit.pas' {ExpAveFuncEditor},
+  TeeOBVFunction in 'TeeOBVFunction.pas' {OBVFuncEditor},
+  TeeSpline in 'TeeSpline.pas',
+  TeeXML in 'TeeXML.pas' {XMLSourceEditor},
+  TeeSeriesAnimEdit in 'TeeSeriesAnimEdit.pas' {SeriesAnimToolEditor},
+  TeeExtraLegendTool in 'TeeExtraLegendTool.pas' {ExtraLegendEditor},
+  TeePointFigure in 'TeePointFigure.pas' {PointFigureEditor},
+  TeeGauges in 'TeeGauges.pas',
+  TeePieTool in 'TeePieTool.pas',
+  TeeGaugeEditor in 'TeeGaugeEditor.pas' {GaugeSeriesEditor},
+  TeeTowerEdit in 'TeeTowerEdit.pas' {TowerSeriesEditor},
+  TeeVectorEdit in 'TeeVectorEdit.pas' {VectorSeriesEditor},
+  TeeLighting in 'TeeLighting.pas' {LightToolEditor},
+  TeeThemes in 'TeeThemes.pas',
+  TeeThemeEditor in 'TeeThemeEditor.pas' {ChartThemeSelector},
+  TeeLegendScrollBar in 'TeeLegendScrollBar.pas' {ScrollBarEditor},
+  TeeSurfaceTool in 'TeeSurfaceTool.pas' {SurfaceNearest},
+  TeeSeriesBandTool in 'TeeSeriesBandTool.pas' {SeriesBandToolEditor},
+  TeeSelectorTool in 'TeeSelectorTool.pas' {SelectorToolEditor};
+
+end.
+

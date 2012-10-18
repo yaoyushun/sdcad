@@ -1,0 +1,32 @@
+object SeriesToolEditor: TSeriesToolEditor
+  Left = 337
+  Top = 307
+  AutoScroll = False
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 172
+  ClientWidth = 233
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 42
+    Top = 12
+    Width = 32
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '&Series:'
+    FocusControl = CBSeries
+  end
+  object CBSeries: TComboFlat
+    Left = 78
+    Top = 8
+    Width = 145
+    HelpContext = 1121
+    TabOrder = 0
+    OnChange = CBSeriesChange
+  end
+end

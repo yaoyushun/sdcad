@@ -1,0 +1,45 @@
+ * This help file was created with HelpScribble 6.2.0
+ * Registered to: Alexander Tzyganenko
+
+:BASE Fruser.hlp
+:TITLE FastReport 2.4
+1 Описание визуальных объектов
+2 Объект "Текст"=Scribble1300
+2 Объект "Секция" (бэнд)=Scribble1310
+2 Объект "Рисунок"=Scribble1320
+2 Объект "Вложенный отчет"=Scribble1330
+2 Объект "Линия"=Scribble1340
+2 Объект "CheckBox"=Scribble1350
+2 Объект "RichText"=Scribble1360
+2 Объект "OLE"=Scribble1370
+2 Объект "Диаграмма"=Scribble1380
+2 Объект "Фигура"=Scribble1390
+2 Объект "Штрихкод"=Scribble1400
+1 Дизайнер
+2 Описание дизайнера=Scribble1000
+2 Клавиши управления=Scribble1010
+2 Управление мышью=Scribble1020
+2 Опции дизайнера=Scribble1030
+2 Опции документа=Scribble1050
+2 Опции страницы=Scribble1060
+2 Список переменных отчета=Scribble1040
+2 Инспектор=Scribble1070
+2 Выделение=Scribble1080
+1 Создание отчетов
+2 Простой отчет (список)=Scribble1500
+2 Master-Detail отчет=Scribble1510
+2 Master-Detail-Subdetail отчет=Scribble1520
+2 Cross-tab отчет=Scribble1530
+2 Отчет с переменной высотой строки=Scribble1540
+2 Отчет с несколькими строками данных=Scribble1550
+2 Многоколоночный отчет=Scribble1560
+2 Отчет из нескольких страниц=Scribble1570
+2 Вложенный отчет=Scribble1580
+2 Master-Detail-Detail отчет=Scribble1590
+2 Композитный (составной) отчет=Scribble1600
+2 Отчет с разрываемыми строками=Scribble1610
+2 Отчет без бэндов=Scribble1620
+2 Отчет с группами=Scribble1630
+1 Описание встроенных языковых средств
+2 Встроенный интерпретатор=Scribble1810
+2 Встроенные функции=Scribble1800

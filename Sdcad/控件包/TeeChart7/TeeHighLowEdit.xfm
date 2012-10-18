@@ -1,0 +1,102 @@
+object HighLowEditor: THighLowEditor
+  Left = 192
+  Top = 107
+  AutoScroll = False
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 157
+  ClientWidth = 301
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 21
+    Top = 116
+    Width = 68
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '&Transparency:'
+    FocusControl = Edit1
+  end
+  object BPen: TButtonPen
+    Left = 8
+    Top = 8
+    HelpContext = 1457
+    Caption = '&Lines...'
+    TabOrder = 0
+  end
+  object BHighPen: TButtonPen
+    Left = 8
+    Top = 40
+    HelpContext = 1414
+    Caption = '&High...'
+    TabOrder = 1
+  end
+  object BLowPen: TButtonPen
+    Left = 8
+    Top = 72
+    HelpContext = 1417
+    Caption = 'L&ow...'
+    TabOrder = 2
+  end
+  object BBrush: TButton
+    Left = 96
+    Top = 40
+    Width = 75
+    Height = 25
+    HelpContext = 1413
+    Caption = '&Pattern...'
+    TabOrder = 3
+    OnClick = BBrushClick
+  end
+  object CBColorEach: TCheckBox
+    Left = 184
+    Top = 12
+    Width = 111
+    Height = 17
+    HelpContext = 164
+    Caption = 'Colo&r Each'
+    TabOrder = 4
+    OnClick = CBColorEachClick
+  end
+  object BLowBrush: TButton
+    Left = 96
+    Top = 72
+    Width = 75
+    Height = 25
+    HelpContext = 1416
+    Caption = 'P&attern...'
+    TabOrder = 5
+    OnClick = BLowBrushClick
+  end
+  object BColor: TButtonColor
+    Left = 96
+    Top = 8
+    HelpContext = 421
+    Caption = '&Color...'
+    TabOrder = 6
+  end
+  object Edit1: TEdit
+    Left = 96
+    Top = 112
+    Width = 33
+    Height = 21
+    HelpContext = 1753
+    TabOrder = 7
+    Text = '0'
+    OnChange = Edit1Change
+  end
+  object UDTransp: TUpDown
+    Left = 129
+    Top = 112
+    Width = 15
+    Height = 21
+    HelpContext = 1753
+    Associate = Edit1
+    Increment = 5
+    TabOrder = 8
+  end
+end

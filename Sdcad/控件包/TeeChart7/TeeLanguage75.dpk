@@ -1,0 +1,71 @@
+package TeeLanguage75;
+
+{$R *.RES}
+{$ALIGN ON}
+{$ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{ DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{ LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $43300000}
+{$DESCRIPTION 'TeeChart Pro 7 Languages'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  vcl50,
+  Tee75,
+  TeePro75;
+
+contains
+  TeeSpanish in 'TeeSpanish.pas',
+  TeeGerman in 'TeeGerman.pas',
+  TeeCatalan in 'TeeCatalan.pas',
+  TeeFrench in 'TeeFrench.pas',
+  TeeDanish in 'TeeDanish.pas',
+  TeeDutch in 'TeeDutch.pas',
+  TeeChinese in 'TeeChinese.pas',
+  TeeChineseSimp in 'TeeChineseSimp.pas',
+  TeeBrazil in 'TeeBrazil.pas',
+  TeeSwedish in 'TeeSwedish.pas',
+  TeePortuguese in 'TeePortuguese.pas',
+  TeeRussian in 'TeeRussian.pas',
+  TeeSlovene in 'TeeSlovene.pas',
+  TeeNorwegian in 'TeeNorwegian.pas',
+  TeeJapanese in 'TeeJapanese.pas',
+  TeePolish in 'TeePolish.pas',
+  TeeTurkish in 'TeeTurkish.pas',
+  TeeHungarian in 'TeeHungarian.pas',
+  TeeHellenic in 'TeeHellenic.pas',
+  TeeItalian in 'TeeItalian.pas',
+  TeeHebrew in 'TeeHebrew.pas',
+  TeeArabic in 'TeeArabic.pas',
+  TeeUkrainian in 'TeeUkrainian.pas',
+  TeeKorean in 'TeeKorean.pas',
+  TeeIndonesian in 'TeeIndonesian.pas',
+  TeeGalician in 'TeeGalician.pas',
+  TeeFinnish in 'TeeFinnish.pas',
+  TeeRomanian in 'TeeRomanian.pas',
+  TeeSerbian in 'TeeSerbian.pas',
+  TeeFarsi in 'TeeFarsi.pas',
+  TeeCzech in 'TeeCzech.pas',
+  TeeSlovak in 'TeeSlovak.pas',
+  TeeHindi in 'TeeHindi.pas',
+  TeeUrdu in 'TeeUrdu.pas',
+  TeeTranslate in 'TeeTranslate.pas' {AskLanguage};
+
+end.

@@ -1,0 +1,124 @@
+object ColorGridEditor: TColorGridEditor
+  Left = 365
+  Top = 403
+  AutoScroll = False
+  ClientHeight = 173
+  ClientWidth = 229
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object BGrid: TButtonPen
+    Left = 8
+    Top = 45
+    HelpContext = 1457
+    Caption = '&Grid...'
+    TabOrder = 0
+  end
+  object CBCentered: TCheckBox
+    Left = 104
+    Top = 44
+    Width = 97
+    Height = 17
+    HelpContext = 1813
+    Caption = '&Centered'
+    TabOrder = 1
+    OnClick = CBCenteredClick
+  end
+  object Button2: TButton
+    Left = 8
+    Top = 85
+    Width = 75
+    Height = 25
+    HelpContext = 1814
+    Caption = '&Load...'
+    TabOrder = 2
+    OnClick = Button2Click
+  end
+  object CBSmooth: TCheckBox
+    Left = 104
+    Top = 12
+    Width = 97
+    Height = 17
+    Caption = 'Sm&ooth'
+    TabOrder = 3
+    OnClick = CBSmoothClick
+  end
+  object ButtonPen1: TButtonPen
+    Left = 8
+    Top = 8
+    Caption = '&Frame...'
+    TabOrder = 4
+  end
+  object GroupBox1: TGroupBox
+    Left = 104
+    Top = 72
+    Width = 113
+    Height = 89
+    Caption = 'Grid Every:'
+    TabOrder = 5
+    object Label7: TLabel
+      Left = 34
+      Top = 26
+      Width = 10
+      Height = 13
+      Alignment = taRightJustify
+      Caption = '&X:'
+      FocusControl = Edit2
+    end
+    object Label1: TLabel
+      Left = 34
+      Top = 58
+      Width = 10
+      Height = 13
+      Alignment = taRightJustify
+      Caption = '&Z:'
+      FocusControl = Edit1
+    end
+    object Edit2: TEdit
+      Left = 49
+      Top = 23
+      Width = 32
+      Height = 21
+      HelpContext = 648
+      TabOrder = 0
+      Text = '1'
+      OnChange = Edit2Change
+    end
+    object UDX: TUpDown
+      Left = 81
+      Top = 23
+      Width = 15
+      Height = 21
+      HelpContext = 648
+      Associate = Edit2
+      Min = 1
+      Position = 1
+      TabOrder = 1
+    end
+    object Edit1: TEdit
+      Left = 49
+      Top = 55
+      Width = 32
+      Height = 21
+      HelpContext = 648
+      TabOrder = 2
+      Text = '1'
+      OnChange = Edit1Change
+    end
+    object UDZ: TUpDown
+      Left = 81
+      Top = 55
+      Width = 15
+      Height = 21
+      HelpContext = 648
+      Associate = Edit1
+      Min = 1
+      Position = 1
+      TabOrder = 3
+    end
+  end
+end

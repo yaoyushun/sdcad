@@ -1,0 +1,50 @@
+package Tee76Clx;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{ DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{ LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $52200000}
+{$DESCRIPTION 'TeeChart 7 CLX Components'}
+{$LIBSUFFIX ''}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+{$DEFINE CLX}
+
+requires
+  visualclx;
+
+contains
+  TeeConst in 'TeeConst.pas',
+  TeCanvas in 'TeCanvas.pas',
+  TeeProcs in 'TeeProcs.pas',
+  TeEngine in 'TeEngine.pas',
+  Chart in 'Chart.pas',
+  TeeFunci in 'TeeFunci.pas',
+  Series in 'Series.pas',
+  TeeShape in 'TeeShape.pas',
+  GanttCh in 'GanttCh.pas',
+  BubbleCh in 'BubbleCh.pas',
+  ArrowCha in 'ArrowCha.pas',
+  TeeStore in 'TeeStore.pas',
+  TeeAbout in 'TeeAbout.pas' {TTeeAboutForm};
+
+end.
+

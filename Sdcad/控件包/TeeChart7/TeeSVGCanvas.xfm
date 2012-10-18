@@ -1,0 +1,23 @@
+object SVGOptions: TSVGOptions
+  Left = 207
+  Top = 152
+  AutoScroll = False
+  Caption = 'SVG Options'
+  ClientHeight = 76
+  ClientWidth = 291
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  PixelsPerInch = 96
+  TextHeight = 13
+  object CBAntiAlias: TCheckBox
+    Left = 8
+    Top = 16
+    Width = 257
+    Height = 17
+    Caption = '&Text anti-alias'
+    Checked = True
+    State = cbChecked
+    TabOrder = 0
+  end
+end

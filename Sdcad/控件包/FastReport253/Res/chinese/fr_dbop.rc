@@ -1,0 +1,13 @@
+#include "FR_Const.pas"
+
+STRINGTABLE
+{
+  frRes + 6000, "&别名:"
+  frRes + 6001, "无"
+}
+
+ALIASDLGTEMPLATE DIALOG 0, 0, 400, 16
+STYLE WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS
+FONT 11, "宋体"
+{
+}

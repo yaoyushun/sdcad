@@ -1,0 +1,60 @@
+object ADXFuncEditor: TADXFuncEditor
+  Left = 192
+  Top = 107
+
+  AutoScroll = False
+  ClientHeight = 120
+  ClientWidth = 173
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  OnCloseQuery = FormCloseQuery
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 32
+    Top = 16
+    Width = 33
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '&Period:'
+    FocusControl = EPeriod
+  end
+  object EPeriod: TEdit
+    Left = 74
+    Top = 13
+    Width = 49
+    Height = 21
+    HelpContext = 382
+    TabOrder = 0
+    Text = '2'
+    OnChange = EPeriodChange
+  end
+  object UDPeriod: TUpDown
+    Left = 123
+    Top = 13
+    Width = 15
+    Height = 21
+    HelpContext = 382
+    Associate = EPeriod
+    Min = 2
+    Max = 32767
+    Position = 2
+    TabOrder = 1
+  end
+  object BUp: TButtonPen
+    Left = 72
+    Top = 48
+    HelpContext = 1800
+    Caption = '&Up...'
+    TabOrder = 2
+  end
+  object BDown: TButtonPen
+    Left = 72
+    Top = 80
+    HelpContext = 1801
+    Caption = '&Down...'
+    TabOrder = 3
+  end
+end

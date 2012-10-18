@@ -1,0 +1,21 @@
+; ----------------------------------------------------------------------------
+; TRANSLATION TO CZECH
+; Translated: Arpad Toth
+; Date      : 29.12.2000 - První verze
+; Contact   : i.smid@dobruska.cz
+; Comment   : Opravdová èeská verze
+; ----------------------------------------------------------------------------
+
+#include "FR_Const.pas"
+
+STRINGTABLE
+{
+  frRes + 6000, "&Alternativní jméno:"
+  frRes + 6001, "Žádné"
+}
+
+ALIASDLGTEMPLATE DIALOG 0, 0, 400, 16
+STYLE WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif"
+{
+}

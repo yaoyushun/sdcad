@@ -1,0 +1,37 @@
+inherited BubbleSeriesEditor: TBubbleSeriesEditor
+  ClientHeight = 192
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited GPPoint: TGroupBox
+    Height = 187
+    object Label4: TLabel [3]
+      Left = 21
+      Top = 164
+      Width = 68
+      Height = 13
+      Alignment = taRightJustify
+      Caption = '&Transparency:'
+      FocusControl = Edit1
+    end
+    object Edit1: TEdit
+      Left = 96
+      Top = 160
+      Width = 33
+      Height = 21
+      HelpContext = 1753
+      TabOrder = 11
+      Text = '0'
+      OnChange = Edit1Change
+    end
+    object UDTransp: TUpDown
+      Left = 129
+      Top = 160
+      Width = 15
+      Height = 21
+      HelpContext = 1753
+      Associate = Edit1
+      Increment = 5
+      TabOrder = 10
+    end
+  end
+end

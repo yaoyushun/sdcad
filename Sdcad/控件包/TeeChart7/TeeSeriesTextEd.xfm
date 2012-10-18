@@ -1,0 +1,203 @@
+inherited SeriesTextEditor: TSeriesTextEditor
+  Left = 394
+  Top = 372
+  Width = 383
+  Height = 254
+  Caption = 'Series DataSource Text Editor'
+  Position = poScreenCenter
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Pan: TPanel
+    Width = 375
+    inherited BApply: TButton
+      OnClick = BApplyClick
+    end
+  end
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 32
+    Width = 375
+    Height = 154
+    ActivePage = TabSheet1
+    Align = alClient
+    HotTrack = True
+    TabOrder = 2
+    object TabSheet1: TTabSheet
+      Caption = 'Fields'
+      object Label1: TLabel
+        Left = 8
+        Top = 83
+        Width = 114
+        Height = 13
+        Caption = 'Number of &Header lines:'
+        FocusControl = Edit1
+      end
+      object Label2: TLabel
+        Left = 48
+        Top = 50
+        Width = 49
+        Height = 13
+        Caption = '&Separator:'
+        FocusControl = CBSep
+      end
+      object Label3: TLabel
+        Left = 8
+        Top = 10
+        Width = 32
+        Height = 13
+        Caption = 'S&eries:'
+        FocusControl = CBSeries
+      end
+      object Edit1: TEdit
+        Left = 128
+        Top = 80
+        Width = 41
+        Height = 21
+        TabOrder = 0
+        Text = '0'
+        OnChange = Edit1Change
+      end
+      object UpDown1: TUpDown
+        Left = 169
+        Top = 80
+        Width = 15
+        Height = 21
+        Associate = Edit1
+        TabOrder = 1
+      end
+      object StringGrid1: TStringGrid
+        Left = 200
+        Top = 8
+        Width = 145
+        Height = 113
+        ColCount = 2
+        DefaultRowHeight = 18
+        GridLineWidth = 0
+        Options = [goVertLine, goHorzLine, goEditing]
+        TabOrder = 2
+        OnSetEditText = StringGrid1SetEditText
+        RowHeights = (
+          18
+          18
+          18
+          18
+          18)
+      end
+      object CBSeries: TComboFlat
+        Left = 48
+        Top = 7
+        Width = 138
+        TabOrder = 3
+        OnChange = CBSeriesChange
+      end
+      object CBSep: TComboFlat
+        Left = 104
+        Top = 48
+        Width = 81
+        Style = csDropDown
+        TabOrder = 4
+        Text = 'Comma'
+        OnChange = CBSepChange
+        Items.Strings = (
+          'Comma'
+          'Space'
+          'Tab')
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Source'
+      object BBrowse: TSpeedButton
+        Left = 330
+        Top = 23
+        Width = 23
+        Height = 22
+        Caption = '...'
+        OnClick = SpeedButton1Click
+      end
+      object RBFile: TRadioButton
+        Left = 13
+        Top = 28
+        Width = 82
+        Height = 17
+        Caption = '&File:'
+        Checked = True
+        TabOrder = 0
+        TabStop = True
+        OnClick = RBFileClick
+      end
+      object EFile: TEdit
+        Left = 94
+        Top = 24
+        Width = 227
+        Height = 21
+        TabOrder = 1
+        Text = 'c:\test.txt'
+        OnChange = EFileChange
+      end
+      object RBWeb: TRadioButton
+        Left = 13
+        Top = 60
+        Width = 82
+        Height = 17
+        Caption = '&Web URL:'
+        TabOrder = 2
+        OnClick = RBFileClick
+      end
+      object EWeb: TEdit
+        Left = 94
+        Top = 56
+        Width = 227
+        Height = 21
+        Enabled = False
+        TabOrder = 3
+        Text = 'http://www.steema.com/test.txt'
+        OnChange = EWebChange
+      end
+      object ButtonLoad: TButton
+        Left = 94
+        Top = 92
+        Width = 75
+        Height = 25
+        Caption = '&Load '
+        TabOrder = 4
+        OnClick = ButtonLoadClick
+      end
+    end
+  end
+  object PanBot: TPanel
+    Left = 0
+    Top = 186
+    Width = 375
+    Height = 41
+    Align = alBottom
+    TabOrder = 1
+    object Button1: TButton
+      Left = 196
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'OK'
+      Default = True
+      ModalResult = 1
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Left = 284
+      Top = 8
+      Width = 75
+      Height = 25
+      Cancel = True
+      Caption = 'Cancel'
+      ModalResult = 2
+      TabOrder = 1
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = 'txt'
+    Filter = 'Text files|*.txt'
+    Left = 268
+    Top = 64
+  end
+end

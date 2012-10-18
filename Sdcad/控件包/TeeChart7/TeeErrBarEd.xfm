@@ -1,0 +1,93 @@
+object ErrorSeriesEditor: TErrorSeriesEditor
+  Left = 267
+  Top = 128
+  AutoScroll = False
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 186
+  ClientWidth = 237
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 28
+    Top = 43
+    Width = 56
+    Height = 13
+    Alignment = taRightJustify
+    Caption = 'Error &Width:'
+    FocusControl = SEBarwidth
+  end
+  object SEBarwidth: TEdit
+    Left = 89
+    Top = 40
+    Width = 32
+    Height = 21
+    HelpContext = 201
+    TabOrder = 1
+    Text = '0'
+    OnChange = SEBarwidthChange
+  end
+  object RGWidthUnit: TRadioGroup
+    Left = 147
+    Top = 4
+    Width = 82
+    Height = 85
+    HelpContext = 202
+    Caption = 'Width Units:'
+    Items.Strings = (
+      'P&ercent'
+      'P&ixels')
+    TabOrder = 3
+    OnClick = RGWidthUnitClick
+  end
+  object UDBarWidth: TUpDown
+    Left = 121
+    Top = 40
+    Width = 15
+    Height = 21
+    HelpContext = 201
+    Associate = SEBarwidth
+    TabOrder = 2
+  end
+  object RGStyle: TRadioGroup
+    Left = 8
+    Top = 94
+    Width = 221
+    Height = 81
+    HelpContext = 868
+    Caption = 'Style:'
+    Columns = 2
+    Items.Strings = (
+      '&Left'
+      '&Right'
+      'Left &and Right'
+      '&Top'
+      '&Bottom'
+      'T&op and Bottom')
+    TabOrder = 5
+    OnClick = RGStyleClick
+  end
+  object CBColorEach: TCheckBox
+    Left = 18
+    Top = 68
+    Width = 113
+    Height = 17
+    HelpContext = 164
+    Caption = '&Color Each'
+    TabOrder = 4
+    OnClick = CBColorEachClick
+  end
+  object BPen: TButtonPen
+    Left = 18
+    Top = 8
+    HelpContext = 199
+    Caption = '&Border...'
+    TabOrder = 0
+    OnClick = BPenClick
+  end
+end

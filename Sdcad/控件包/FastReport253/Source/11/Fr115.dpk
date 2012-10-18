@@ -1,0 +1,50 @@
+// Package file for Delphi 5
+
+package fr115;
+
+{$R 'FR_11reg.dcr'}
+{$I FR.inc}
+
+{$DESCRIPTION 'FastReport 2.5 11 Components'}
+{$ALIGN ON}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $00400000}
+{$IMPLICITBUILD ON}
+
+requires
+  VCL50,
+  VCLDB50,
+  VCLBDE50,
+  VCLSMP50,
+  FR5;
+
+contains
+  FR_11Reg        in 'FR_11Reg.pas',
+  FR_11DB         in 'FR_11DB.pas',
+  FR_11Md         in 'FR_11Md.pas',
+{$IFDEF QBUILDER} 
+  FR_11Qb         in 'FR_11Qb.pas',
+{$ENDIF} 
+  FR_11Query      in 'FR_11Query.pas',
+  FR_11QueryParam in 'FR_11QueryParam.pas',
+  FR_11Table      in 'FR_11Table.pas';
+
+end.

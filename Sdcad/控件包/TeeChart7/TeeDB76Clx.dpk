@@ -1,0 +1,46 @@
+package TeeDB76Clx;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{ DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{ LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $52400000}
+{$DESCRIPTION 'TeeChart 7 CLX Database Components'}
+{$LIBSUFFIX ''}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+{$DEFINE CLX}
+
+requires
+  visualclx,
+  visualdbclx,
+  Tee76Clx,
+  TeeUI76Clx;
+
+contains
+  DBChart in 'DBChart.pas',
+  DBEditCh in 'DBEditCh.pas',
+  TeeData in 'TeeData.pas',
+  TeeDBCrosstab in 'TeeDBCrosstab.pas' {DBChartCrossTabEditor},
+  TeeDBEdit in 'TeeDBEdit.pas',
+  TeeDBSumEdit in 'TeeDBSumEdit.pas',
+  TeeDBSourceEditor in 'TeeDBSourceEditor.pas';
+
+end.

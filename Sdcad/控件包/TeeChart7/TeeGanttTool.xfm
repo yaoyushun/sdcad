@@ -1,0 +1,90 @@
+inherited GanttToolEditor: TGanttToolEditor
+  ClientHeight = 203
+  ClientWidth = 232
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label2: TLabel [1]
+    Left = 8
+    Top = 48
+    Width = 111
+    Height = 13
+    Caption = '&Resize pixels tolerance:'
+    FocusControl = Edit1
+  end
+  object Label3: TLabel [2]
+    Left = 40
+    Top = 104
+    Width = 33
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '&Cursor:'
+    FocusControl = CBCursorDrag
+  end
+  object Label4: TLabel [3]
+    Left = 40
+    Top = 160
+    Width = 33
+    Height = 13
+    Alignment = taRightJustify
+    Caption = 'C&ursor:'
+    FocusControl = CBCursorResize
+  end
+  object Edit1: TEdit
+    Left = 127
+    Top = 45
+    Width = 41
+    Height = 21
+    HelpContext = 1836
+    TabOrder = 1
+    Text = '5'
+    OnChange = Edit1Change
+  end
+  object UpDown1: TUpDown
+    Left = 168
+    Top = 45
+    Width = 15
+    Height = 21
+    HelpContext = 1836
+    Associate = Edit1
+    Position = 5
+    TabOrder = 2
+  end
+  object CBAllowDrag: TCheckBox
+    Left = 8
+    Top = 80
+    Width = 197
+    Height = 17
+    HelpContext = 1837
+    Caption = 'Allow &Drag'
+    TabOrder = 3
+    OnClick = CBAllowDragClick
+  end
+  object CBAllowResize: TCheckBox
+    Left = 8
+    Top = 136
+    Width = 197
+    Height = 17
+    HelpContext = 1839
+    Caption = 'Allow &Resize'
+    TabOrder = 4
+    OnClick = CBAllowResizeClick
+  end
+  object CBCursorDrag: TComboFlat
+    Left = 78
+    Top = 101
+    Width = 145
+    HelpContext = 1838
+    Sorted = True
+    TabOrder = 5
+    OnChange = CBCursorDragChange
+  end
+  object CBCursorResize: TComboFlat
+    Left = 78
+    Top = 157
+    Width = 145
+    HelpContext = 1840
+    Sorted = True
+    TabOrder = 6
+    OnChange = CBCursorResizeChange
+  end
+end

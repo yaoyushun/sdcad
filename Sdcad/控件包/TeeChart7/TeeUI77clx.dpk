@@ -1,0 +1,92 @@
+package TeeUI77Clx;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{ DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{ LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $52300000}
+{$DESCRIPTION 'TeeChart 7 UI Components'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+{$DEFINE CLX}
+
+requires
+  visualclx,
+  indy,
+  Tee77Clx,
+  rtl;
+
+contains
+  TeeGally in 'TeeGally.pas',
+  TeeLisB in 'TeeLisB.pas',
+  TeeAxMaxMin in 'TeeAxMaxMin.pas',
+  TeeAxisIncr in 'TeeAxisIncr.pas',
+  EditChar in 'EditChar.pas',
+  TeeAreaedit in 'TeeAreaedit.pas',
+  TeeArrowedi in 'TeeArrowedi.pas',
+  TeeBarEdit in 'TeeBarEdit.pas',
+  TeeCustEdit in 'TeeCustEdit.pas',
+  TeeFLineEdi in 'TeeFLineEdi.pas',
+  TeeGanttEdi in 'TeeGanttEdi.pas',
+  TeePieEdit in 'TeePieEdit.pas',
+  TeeShapeEdi in 'TeeShapeEdi.pas',
+  TeePoEdi in 'TeePoEdi.pas',
+  TeeEditCha in 'TeeEditCha.pas',
+  TeeEdiSeri in 'TeeEdiSeri.pas',
+  TeeEdiGene in 'TeeEdiGene.pas',
+  TeeEdiAxis in 'TeeEdiAxis.pas',
+  TeeEdiPane in 'TeeEdiPane.pas',
+  TeeEdiLege in 'TeeEdiLege.pas',
+  TeeEdiTitl in 'TeeEdiTitl.pas',
+  TeeEdiWall in 'TeeEdiWall.pas',
+  TeeEdiPage in 'TeeEdiPage.pas',
+  TeeEdi3D in 'TeeEdi3D.pas',
+  TeeEdiPeri in 'TeeEdiPeri.pas',
+  TeeEdiGrad in 'TeeEdiGrad.pas' {TeeGradientEditor},
+  TeeGalleryPanel in 'TeeGalleryPanel.pas',
+  TeeCustomShapeEditor in 'TeeCustomShapeEditor.pas' {FormTeeShape},
+  TeeEdiFont in 'TeeEdiFont.pas' {TeeFontEditor},
+  TeeChartGrid in 'TeeChartGrid.pas',
+  TeeEditTools in 'TeeEditTools.pas',
+  TeeToolsGallery in 'TeeToolsGallery.pas',
+  TeePenDlg in 'TeePenDlg.pas',
+  TeeBrushDlg in 'TeeBrushDlg.pas',
+  TeeURL in 'TeeURL.pas',
+  TeeExport in 'TeeExport.pas',
+  TeExport in 'TeExport.pas',
+  TeePrevi in 'TeePrevi.pas',
+  TeePreviewPanel in 'TeePreviewPanel.pas',
+  TeeCircledEdit in 'TeeCircledEdit.pas' {CircledSeriesEditor},
+  TeeFuncEdit in 'TeeFuncEdit.pas',
+  TeeSelectList in 'TeeSelectList.pas' {SelectListForm},
+  TeeSourceEdit in 'TeeSourceEdit.pas' {BaseSourceEditor},
+  TeeStackBarEdit in 'TeeStackBarEdit.pas' {StackBarSeriesEditor},
+  TeeBMPOptions in 'TeeBMPOptions.pas' {BMPOptions},
+  TeeEMFOptions in 'TeeEMFOptions.pas' {EMFOptions},
+  TeeNavigator in 'TeeNavigator.pas',
+  TeeAvgFuncEditor in 'TeeAvgFuncEditor.pas',
+  TeeBaseFuncEdit in 'TeeBaseFuncEdit.pas' {BaseFunctionEditor},
+  TeeShadowEditor in 'TeeShadowEditor.pas' {TeeShadowEditor},
+  TeeCustomFuncEditor in 'TeeCustomFuncEditor.pas' {CustomFunctionEditor},
+  TeeBubbleEdit in 'TeeBubbleEdit.pas' {BubbleSeriesEditor},
+  TeeGalleryAlternate in 'TeeGalleryAlternate.pas' {TeeGalleryForm},
+  TeeFormatting in 'TeeFormatting.pas' {FormatEditor};
+
+end.

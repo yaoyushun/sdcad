@@ -1,0 +1,254 @@
+object PolarSeriesEditor: TPolarSeriesEditor
+  Left = 145
+  Top = 131
+  Width = 380
+  Height = 221
+  HorzScrollBar.Range = 335
+  VertScrollBar.Range = 123
+  AutoScroll = False
+  BorderIcons = [biSystemMenu]
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 0
+    Width = 372
+    Height = 194
+    ActivePage = TabSheet1
+    Align = alClient
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'Options'
+      object LAngleInc: TLabel
+        Left = 23
+        Top = 47
+        Width = 80
+        Height = 13
+        Alignment = taRightJustify
+        Caption = 'Angle &Increment:'
+        FocusControl = SEAngleInc
+        Layout = tlCenter
+      end
+      object Label8: TLabel
+        Left = 17
+        Top = 74
+        Width = 86
+        Height = 13
+        Alignment = taRightJustify
+        Caption = 'Radius Increment:'
+        Layout = tlCenter
+      end
+      object Label1: TLabel
+        Left = 35
+        Top = 107
+        Width = 68
+        Height = 13
+        Alignment = taRightJustify
+        Caption = '&Transparency:'
+        FocusControl = Edit1
+      end
+      object CBClose: TCheckBox
+        Left = 208
+        Top = 107
+        Width = 94
+        Height = 17
+        HelpContext = 157
+        Caption = 'C&lose Circle'
+        Checked = True
+        State = cbChecked
+        TabOrder = 0
+        OnClick = CBCloseClick
+      end
+      object SEAngleInc: TEdit
+        Left = 106
+        Top = 44
+        Width = 48
+        Height = 21
+        HelpContext = 46
+        MaxLength = 32767
+        TabOrder = 1
+        Text = '0'
+        OnChange = SEAngleIncChange
+      end
+      object SERadiusInc: TEdit
+        Left = 106
+        Top = 72
+        Width = 48
+        Height = 21
+        HelpContext = 401
+        MaxLength = 32767
+        TabOrder = 2
+        Text = '0'
+        OnChange = SERadiusIncChange
+      end
+      object UDRadiusInc: TUpDown
+        Left = 154
+        Top = 72
+        Width = 15
+        Height = 21
+        HelpContext = 401
+        Associate = SERadiusInc
+        Max = 32767
+        TabOrder = 3
+      end
+      object UDAngleInc: TUpDown
+        Left = 154
+        Top = 44
+        Width = 15
+        Height = 21
+        HelpContext = 46
+        Associate = SEAngleInc
+        Max = 360
+        TabOrder = 4
+      end
+      object BPen: TButtonPen
+        Left = 8
+        Top = 8
+        HelpContext = 421
+        Caption = '&Pen...'
+        TabOrder = 5
+      end
+      object BPiePen: TButtonPen
+        Left = 208
+        Top = 72
+        HelpContext = 385
+        Caption = '&Circle...'
+        TabOrder = 6
+      end
+      object BBrush: TButton
+        Left = 104
+        Top = 8
+        Width = 75
+        Height = 25
+        HelpContext = 117
+        Caption = 'Pattern...'
+        TabOrder = 7
+        OnClick = BBrushClick
+      end
+      object Edit1: TEdit
+        Left = 106
+        Top = 104
+        Width = 33
+        Height = 21
+        HelpContext = 1749
+        TabOrder = 8
+        Text = '0'
+        OnChange = Edit1Change
+      end
+      object UDTransp: TUpDown
+        Left = 139
+        Top = 104
+        Width = 15
+        Height = 21
+        HelpContext = 1749
+        Associate = Edit1
+        Increment = 5
+        TabOrder = 9
+      end
+      object BColor: TButtonColor
+        Left = 208
+        Top = 8
+        HelpContext = 421
+        Caption = 'Color...'
+        TabOrder = 10
+      end
+      object CBColorEach: TCheckBox
+        Left = 208
+        Top = 42
+        Width = 121
+        Height = 17
+        HelpContext = 164
+        Caption = 'Color Each'
+        TabOrder = 11
+        OnClick = CBColorEachClick
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Labels'
+      ImageIndex = 1
+      object Label2: TLabel
+        Left = 8
+        Top = 52
+        Width = 46
+        Height = 13
+        Caption = '&Margin %:'
+        FocusControl = EMargin
+      end
+      object BFont: TButton
+        Left = 135
+        Top = 54
+        Width = 75
+        Height = 25
+        HelpContext = 861
+        Caption = '&Font...'
+        TabOrder = 0
+        OnClick = BFontClick
+      end
+      object CBAngleLabels: TCheckBox
+        Left = 8
+        Top = 5
+        Width = 129
+        Height = 17
+        HelpContext = 860
+        Caption = '&Visible'
+        TabOrder = 1
+        OnClick = CBAngleLabelsClick
+      end
+      object CBLabelsRot: TCheckBox
+        Left = 8
+        Top = 28
+        Width = 129
+        Height = 17
+        HelpContext = 862
+        Caption = 'R&otated'
+        TabOrder = 2
+        OnClick = CBLabelsRotClick
+      end
+      object CBClockWise: TCheckBox
+        Left = 136
+        Top = 4
+        Width = 129
+        Height = 17
+        HelpContext = 1321
+        Caption = 'ClockWise'
+        TabOrder = 3
+        OnClick = CBClockWiseClick
+      end
+      object CBInside: TCheckBox
+        Left = 136
+        Top = 28
+        Width = 129
+        Height = 17
+        HelpContext = 1322
+        Caption = 'I&nside'
+        TabOrder = 4
+        OnClick = CBInsideClick
+      end
+      object EMargin: TEdit
+        Left = 8
+        Top = 68
+        Width = 57
+        Height = 21
+        TabOrder = 5
+        Text = '0'
+        OnChange = EMarginChange
+      end
+      object UDMargin: TUpDown
+        Left = 65
+        Top = 68
+        Width = 15
+        Height = 21
+        Associate = EMargin
+        Min = -200
+        Max = 200
+        TabOrder = 6
+      end
+    end
+  end
+end

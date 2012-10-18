@@ -1,0 +1,120 @@
+inherited AxisArrowToolEditor: TAxisArrowToolEditor
+  Left = 344
+  Top = 427
+  ClientHeight = 208
+  ClientWidth = 244
+  PixelsPerInch = 96
+  TextHeight = 13
+  object LL: TLabel [0]
+    Left = 32
+    Top = 84
+    Width = 36
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '&Length:'
+    FocusControl = ELength
+  end
+  object Label2: TLabel [1]
+    Left = 29
+    Top = 112
+    Width = 40
+    Height = 13
+    Alignment = taRightJustify
+    Caption = 'P&osition:'
+    FocusControl = CBPos
+  end
+  object Label3: TLabel [2]
+    Left = 54
+    Top = 144
+    Width = 29
+    Height = 13
+    Alignment = taRightJustify
+    Caption = '&Scroll:'
+    FocusControl = Edit1
+  end
+  object Label4: TLabel [3]
+    Left = 147
+    Top = 144
+    Width = 8
+    Height = 13
+    Caption = '%'
+  end
+  inherited PanelTop: TPanel
+    Width = 244
+    inherited BPen: TButtonPen
+      Left = 48
+    end
+  end
+  object Button1: TButton
+    Left = 141
+    Top = 40
+    Width = 75
+    Height = 25
+    HelpContext = 1516
+    Caption = '&Pattern...'
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+  object UDLength: TUpDown
+    Left = 113
+    Top = 81
+    Width = 15
+    Height = 21
+    HelpContext = 1517
+    Associate = ELength
+    TabOrder = 2
+  end
+  object ELength: TEdit
+    Left = 72
+    Top = 81
+    Width = 41
+    Height = 21
+    HelpContext = 1517
+    TabOrder = 3
+    Text = '0'
+    OnChange = ELC
+  end
+  object CBPos: TComboFlat
+    Left = 72
+    Top = 109
+    Width = 123
+    HelpContext = 1515
+    TabOrder = 4
+    OnChange = CBPosChange
+    Items.Strings = (
+      'Start'
+      'End'
+      'Both')
+  end
+  object Edit1: TEdit
+    Left = 91
+    Top = 140
+    Width = 33
+    Height = 21
+    HelpContext = 1519
+    TabOrder = 5
+    Text = '10'
+    OnChange = Edit1Change
+  end
+  object UDScroll: TUpDown
+    Left = 124
+    Top = 140
+    Width = 15
+    Height = 21
+    HelpContext = 1519
+    Associate = Edit1
+    Min = 1
+    Position = 10
+    TabOrder = 7
+  end
+  object CBInv: TCheckBox
+    Left = 72
+    Top = 168
+    Width = 137
+    Height = 17
+    HelpContext = 1762
+    Caption = '&Inverted Scroll'
+    TabOrder = 6
+    OnClick = CBInvClick
+  end
+end

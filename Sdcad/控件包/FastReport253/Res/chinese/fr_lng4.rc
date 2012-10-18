@@ -1,0 +1,26 @@
+#include "FR_Const.pas"
+
+STRINGTABLE
+{
+;--- LinesEditorForm resources -------------------------------------------------
+  frRes + 4000, "字符串表编辑器"
+;--- SQLEditorForm resources -------------------------------------------------
+  frRes + 4010, "SQL 编辑器"
+
+;--- String resources ----------------------------------------------------------
+  SInsertLabel, "放置 Label 控件"
+  SInsertEdit, "放置 Edit 控件"
+  SInsertMemo, "放置 Memo 控件"
+  SInsertButton, "放置 Button 控件"
+  SInsertCheckBox, "放置 CheckBox 控件"
+  SInsertRadioButton, "放置 RadioButton 控件"
+  SInsertListBox, "放置 ListBox 控件"
+  SInsertComboBox, "放置 ComboBox 控件"
+  SInsertDateEdit, "放置 DateEdit 控件"
+  SInsertCheckListBox, "放置 CheckListBox 控件"
+
+  SInsertDB, "放置 database 控件"
+  SInsertTable, "放置 table 控件"
+  SInsertQuery, "放置 query 控件"
+  SInsertDBLookup, "放置 DBLookupComboBox 控件"
+}

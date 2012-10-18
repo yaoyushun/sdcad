@@ -1,0 +1,49 @@
+object BMPOptions: TBMPOptions
+  Left = 275
+  Top = 188
+  AutoScroll = False
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 92
+  ClientWidth = 187
+  Color = clBtnFace
+  ParentFont = True
+  OldCreateOrder = True
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 39
+    Top = 8
+    Width = 32
+    Height = 13
+    Caption = '&Colors:'
+    FocusControl = CBColors
+  end
+  object CBMono: TCheckBox
+    Left = 79
+    Top = 32
+    Width = 102
+    Height = 17
+    HelpContext = 1802
+    Caption = '&Monochrome'
+    TabOrder = 0
+    OnClick = CBMonoClick
+  end
+  object CBColors: TComboFlat
+    Left = 79
+    Top = 5
+    Width = 102
+    HelpContext = 1803
+    TabOrder = 1
+    Items.Strings = (
+      'Default'
+      '2 (1 bit)'
+      '16 (4 bit)'
+      '256 (8 bit)'
+      '32768 (15 bit)'
+      '65536 (16 bit)'
+      '16M (24 bit)'
+      '16M (32 bit)')
+  end
+end

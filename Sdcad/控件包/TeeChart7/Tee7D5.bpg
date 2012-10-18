@@ -1,0 +1,55 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe -Q $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#----------------------------------------------------------------------------------
+PROJECTS = Tee75.bpl TeeUI75.bpl TeeDB75.bpl DclTee75.bpl TeeQR75.bpl \
+  DCLTQR75.bpl TeePro75.bpl TeeGL75.bpl TeeLanguage75.bpl DCLTeePro75.bpl \
+  DclTGL75.bpl TeeImage75.bpl
+#----------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+Tee75.bpl: Tee75.dpk
+  $(DCC)
+
+TeeDB75.bpl: TeeDB75.dpk
+  $(DCC)
+
+TeeUI75.bpl: TeeUI75.dpk
+  $(DCC)
+
+DclTee75.bpl: DclTee75.dpk
+  $(DCC)
+
+TeeQR75.bpl: TeeQR75.dpk
+  $(DCC)
+
+DCLTQR75.bpl: DCLTQR75.dpk
+  $(DCC)
+
+TeePro75.bpl: TeePro75.dpk
+  $(DCC)
+
+TeeGL75.bpl: TeeGL75.dpk
+  $(DCC)
+
+TeeLanguage75.bpl: TeeLanguage75.dpk
+  $(DCC)
+
+DCLTeePro75.bpl: DCLTeePro75.dpk
+  $(DCC)
+
+DclTGL75.bpl: DclTGL75.dpk
+  $(DCC)
+
+TeeImage75.bpl: TeeImage75.dpk
+  $(DCC)
+
+
